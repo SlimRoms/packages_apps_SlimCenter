@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ * Copyright (C) 2012 Slimroms
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+-->
+
+<resources>
+    <!-- SlimOTA main strings -->
+    <string name="app_name">SlimOTA</string>
+    <string name="menu_settings">Settings</string>
+    <string name="device_title">Device</string>
+    <string name="device_name_title">Name:</string>
+    <string name="codename_title">Codename:</string>
+    <string name="version_title">Version:</string>
+    <string name="file_name_title">File:</string>
+    <string name="curVer">Current Version</string>
+    <string name="ok">OK</string>
+    <string name="no">No</string>
+    <string name="title_update">Update</string>
+    <string name="device_info_title">Device Information</string>
+    <string name="up_to_date_title">Your system is up to date</string>
+    <string name="no_data_title">No data connection available</string>
+    <string name="error_reading_title">Cannot read SlimOTA properties</string>
+    <string name="update_file_title">Update:</string>
+
+    <!-- SlimOTA settings -->
+    <string name="settings_title">SlimOTA Settings</string>
+    <string name="about_title">About</string>
+    <string name="update_interval_title">Update interval</string>
+    <string name="update_interval_summary">Set update check interval</string>
+    <string name="update_interval_day">Every 24 hours</string>
+    <string name="update_interval_half_day">Every 12 hours</string>
+    <string name="update_interval_hour">Every hour</string>
+    <string name="update_interval_disable">Disable</string>
+
+    <!-- SlimOTA error messages -->
+    <string name="system_prop_error">Cannot read system properties</string>
+    <string name="noUpdate">No Update available!</string>
+    <string name="bad_url">Unable to get to download area.\nPlease inform your slim device maintainer!</string>
+    <string name="menu_update">Check for Updates</string>
+    <string name="toast_text">Looking for ROM updates...</string>
+    <string name="toast_no_data_text">No data connection. Please turn on</string>
+
+    <!-- SlimOTA shortcut fragment -->
+    <string name="short_cut_release_title">ROM related</string>
+    <string name="short_cut_changelog_title">Changelog</string>
+    <string name="short_cut_changelog_summary_update_available">Important!!! Read changelog and install instructions carefully</string>
+    <string name="short_cut_download_summary_update_available">New SlimBean ROM update available. Download here!</string>
+    <string name="short_cut_changelog_summary">Show changelogs and install instructions</string>
+    <string name="short_cut_additional_title">Additional</string>
+    <string name="short_cut_faq_title">FAQ</string>
+    <string name="short_cut_faq_summary">Show Slim FAQ</string>
+    <string name="short_cut_news_title">News</string>
+    <string name="short_cut_news_summary">Read about latest Slim news</string>
+    <string name="short_cut_download_title">Download SlimBean</string>
+    <string name="short_cut_download_uptodate_summary">Download SlimBean ROM</string>
+    <string name="short_cut_download_gapps_title">Download gapps</string>
+    <string name="short_cut_download_gapps_summary">Download SlimBean addon packages</string>
+
+    <string name="changelog_url">http://otaslim.slimroms.net/changelog.htm</string>
+    <string name="faq_url">http://otaslim.slimroms.net/faq.htm</string>
+    <string name="news_url">http://otaslim.slimroms.net/news.htm</string>
+    <string name="gapps_url">http://otaslim.slimroms.net/gapps.htm</string>
+
+    <!-- SlimOTA update checker -->
+    <string name="xml_url">http://otaslim.slimroms.net/ota.xml</string>
+    <string name="confirm_message">\nROM Update available!\n\nRead changelog carefully and Download SlimBean rom update\n</string>
+    <string name="notification_message">SlimBean ROM update available</string>
+    <string name="noConnection">\nNo data connection available.\nPlease turn on to check for updates.\n</string>
+
+    <!-- SlimOTA About -->
+    <string name="about_home_url"><a href="http://www.slimroms.net">www.slimroms.net</a></string>
+    <string name="about_slim_ota">SlimOTA keeps you always up to date\non your rom and gapps</string>
+    <string name="about_copyright">\u00A9 Copyright Slimroms 2013</string>
+    <string name="about_version">SlimOTA 1.0</string>
+    <string name="about_contact"><a href="http://otaslim.slimroms.net/contact.htm">Contact us</a></string>
+    <string name="about_contact_text">Tell us what you think\nor let us know about a bug or problem</string>
+    <string name="about_license">Open source licenses</string>
+    <string name="about_license_text">SlimOTA app:</string>
+    <string name="about_license_url"><a href="http://otaslim.slimroms.net/license.htm">gpl(2)</a></string>
+
+</resources>

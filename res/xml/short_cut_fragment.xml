@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ *=========================================================================
+ *
+ *  PROJECT:  SlimRoms
+ *            Team Slimroms (http://www.slimroms.net)
+ *
+ *  COPYRIGHT Copyright (C) 2013 Slimroms http://www.slimroms.net
+ *            All rights reserved
+ *
+ *  LICENSE   http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
+ *
+ *  AUTHORS:     fronti90, mnazim, tchaari, kufikugel
+ *  DESCRIPTION: SlimOTA keeps our rom up to date
+ *
+ *=========================================================================
+ *
+-->
+
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <Preference
+        android:key="short_cut_changelog"
+        android:title="@string/short_cut_changelog_title"
+        android:summary="@string/short_cut_changelog_summary" />
+
+    <Preference
+        android:key="short_cut_download"
+        android:title="@string/short_cut_download_title"
+        android:summary="@string/short_cut_download_uptodate_summary" />
+
+    <Preference
+        android:key="short_cut_download_gapps"
+        android:title="@string/short_cut_download_gapps_title"
+        android:summary="@string/short_cut_download_gapps_summary" />
+
+    <PreferenceCategory
+        android:key="short_cut_additional_cat"
+        android:title="@string/short_cut_additional_title">
+
+        <Preference
+            android:key="short_cut_faq"
+            android:title="@string/short_cut_faq_title"
+            android:summary="@string/short_cut_faq_summary" />
+
+        <Preference
+            android:key="short_cut_news"
+            android:title="@string/short_cut_news_title"
+            android:summary="@string/short_cut_news_summary" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

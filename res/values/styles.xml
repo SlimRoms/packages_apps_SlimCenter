@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ *=========================================================================
+ *
+ *  PROJECT:  SlimRoms
+ *            Team Slimroms (http://www.slimroms.net)
+ *
+ *  COPYRIGHT Copyright (C) 2013 Slimroms http://www.slimroms.net
+ *            All rights reserved
+ *
+ *  LICENSE   http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
+ *
+ *  AUTHORS:     fronti90, mnazim, tchaari, kufikugel
+ *  DESCRIPTION: SlimOTA keeps our rom up to date
+ *
+ *=========================================================================
+ *
+-->
+
+<resources>
+    <style name="SlimOTABaseTheme" parent="android:Theme.Holo">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+
+    <!-- SlimOTA theme. -->
+    <style name="SlimOTA" parent="SlimOTABaseTheme">
+         <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+ </resources>
