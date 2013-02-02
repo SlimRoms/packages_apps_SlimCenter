@@ -136,6 +136,8 @@ public class SlimOTA extends Activity implements OnSharedPreferenceChangeListene
                 return true;
             case R.id.menu_update:
                 doTheUpdateCheck();
+                setDeviceInfoContainer();
+                addShortCutFragment();
                 return true;
              default:
                 return super.onContextItemSelected(item);
