@@ -106,18 +106,18 @@ public class ShortCutFragment extends PreferenceFragment {
      }
 
     public void updateView() {
-        if (mStrFileNameNew.equals(mStrCurFile)) {
-            mDownload.setEnabled(true);
-            mDownloadGapps.setEnabled(true);
-            mChangelog.setEnabled(true);
-            mFAQ.setEnabled(true);
-            mNews.setEnabled(true);
-        } else if (!UpdateChecker.connectivityAvailable(getActivity().getBaseContext()) || mStrFileNameNew.equals("")) {
+        if (!UpdateChecker.connectivityAvailable(getActivity().getBaseContext()) || mStrFileNameNew.equals("")) {
             mDownload.setEnabled(false);
             mDownloadGapps.setEnabled(false);
             mChangelog.setEnabled(false);
             mFAQ.setEnabled(false);
             mNews.setEnabled(false);
+        } else if (mStrFileNameNew.equals(mStrCurFile)) {
+            mDownload.setEnabled(true);
+            mDownloadGapps.setEnabled(true);
+            mChangelog.setEnabled(true);
+            mFAQ.setEnabled(true);
+            mNews.setEnabled(true);
         } else {
             mDownload.setEnabled(true);
             mDownloadGapps.setEnabled(true);

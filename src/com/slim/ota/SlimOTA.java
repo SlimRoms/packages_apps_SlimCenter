@@ -135,7 +135,9 @@ public class SlimOTA extends Activity implements OnSharedPreferenceChangeListene
                 startActivity(intent);
                 return true;
             case R.id.menu_update:
-                doTheUpdateCheck();
+                if (UpdateChecker.connectivityAvailable(SlimOTA.this)) {
+                    doTheUpdateCheck();
+                }
                 setDeviceInfoContainer();
                 addShortCutFragment();
                 return true;
@@ -179,16 +181,16 @@ public class SlimOTA extends Activity implements OnSharedPreferenceChangeListene
 
         mUpdateFile.setTextColor(Color.RED);
 
-        if (updateFile.equals(mStrCurFile)) {
-            mUpdateFile.setTextColor(Color.GREEN);
-            mStrUpToDate = getString(R.string.up_to_date_title);
-            mStatusIcon.setImageResource(R.drawable.ic_uptodate);
-        } else if (!UpdateChecker.connectivityAvailable(SlimOTA.this)) {
+        if (!UpdateChecker.connectivityAvailable(SlimOTA.this)) {
             mStrUpToDate = getString(R.string.no_data_title);
             mStatusIcon.setImageResource(R.drawable.ic_no_data);
         } else if (updateFile.equals("")) {
             mStrUpToDate = getString(R.string.error_reading_title);
             mStatusIcon.setImageResource(R.drawable.ic_no_data);
+        } else if (updateFile.equals(mStrCurFile)) {
+            mUpdateFile.setTextColor(Color.GREEN);
+            mStrUpToDate = getString(R.string.up_to_date_title);
+            mStatusIcon.setImageResource(R.drawable.ic_uptodate);
         } else {
             mStatusIcon.setImageResource(R.drawable.ic_need_update);
             mStrUpToDate = updateFile;
