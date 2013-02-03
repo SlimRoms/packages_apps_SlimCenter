@@ -53,7 +53,7 @@ public class UpdateListener implements AlarmListener {
         if (value == 0) {
             interval = AlarmManager.INTERVAL_HALF_DAY;
             prefs.edit().putLong(LAST_INTERVAL, interval).apply();
-        } else if (value != 1) interval = value; {
+        } else if (value != 1) {
             interval = value;
         }
 
