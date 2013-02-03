@@ -122,16 +122,19 @@ public class UpdateChecker extends AsyncTask<Context, Integer, String> {
     @Override
     protected String doInBackground(Context... arg) {
         mContext = arg[0];
+        Message msg;
         if (mContext != null && mContext.toString().contains("SlimOTA")) {
-            Message msg = mHandler.obtainMessage(MSG_CREATE_DIALOG);
+            msg = mHandler.obtainMessage(MSG_CREATE_DIALOG);
             mHandler.sendMessage(msg);
         }
         HttpURLConnection urlConnection = null;
         if (!connectivityAvailable(mContext)) return "connectivityNotAvailable";
         try {
             getDeviceTypeAndVersion();
-            Message msg = mHandler.obtainMessage(MSG_SET_PROGRESS, new Integer(30));
-            mHandler.sendMessage(msg);
+            if (mContext != null && mContext.toString().contains("SlimOTA")) {
+                msg = mHandler.obtainMessage(MSG_SET_PROGRESS, new Integer(30));
+                mHandler.sendMessage(msg);
+            }
             if (mNoLog == false) Log.d(TAG, "strDevice="+strDevice+ "   slimCurVer="+slimCurVer);
             if (strDevice == null || slimCurVer == null) return null;
             String newUpdateUrl = null;
@@ -139,8 +142,10 @@ public class UpdateChecker extends AsyncTask<Context, Integer, String> {
             URL url = new URL(mContext.getString(R.string.xml_url));
             urlConnection = (HttpURLConnection) url.openConnection();
             BufferedReader in = new BufferedReader(new InputStreamReader(urlConnection.getInputStream()));
-            msg = mHandler.obtainMessage(MSG_SET_PROGRESS, new Integer(50));
-            mHandler.sendMessage(msg);
+            if (mContext != null && mContext.toString().contains("SlimOTA")) {
+                msg = mHandler.obtainMessage(MSG_SET_PROGRESS, new Integer(50));
+                mHandler.sendMessage(msg);
+            }
             XmlPullParserFactory factory = XmlPullParserFactory.newInstance();
             factory.setNamespaceAware(true);
             XmlPullParser xpp = factory.newPullParser();
@@ -176,8 +181,10 @@ public class UpdateChecker extends AsyncTask<Context, Integer, String> {
              }
              eventType = xpp.next();
             }
-            msg = mHandler.obtainMessage(MSG_SET_PROGRESS, new Integer(80));
-            mHandler.sendMessage(msg);
+            if (mContext != null && mContext.toString().contains("SlimOTA")) {
+                msg = mHandler.obtainMessage(MSG_SET_PROGRESS, new Integer(80));
+                mHandler.sendMessage(msg);
+            }
             return newUpdateUrl;
         } catch(Exception e) {
             Log.e(TAG, "error while connecting to server", e);
