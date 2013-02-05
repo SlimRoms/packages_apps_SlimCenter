@@ -154,13 +154,13 @@ public class SlimOTA extends Activity implements OnSharedPreferenceChangeListene
             String strLine;
             while ((strLine = br.readLine()) != null) {
                 String[] line = strLine.split("=");
-                if (line[0].equals("ro.product.device")) {
+                if (line[0].equalsIgnoreCase("ro.product.device")) {
                     mStrCodename = line[1];
-                } else if (line[0].equals("slim.ota.version")) {
+                } else if (line[0].equalsIgnoreCase("slim.ota.version")) {
                     mStrCurVer = line[1];
-                } else if (line[0].equals("ro.product.model")) {
+                } else if (line[0].equalsIgnoreCase("ro.product.model")) {
                     mStrDevice = line[1];
-                } else if (line[0].equals("ro.modversion")) {
+                } else if (line[0].equalsIgnoreCase("ro.modversion")) {
                     mStrCurFile = line[1];
                 }
             }
@@ -187,7 +187,7 @@ public class SlimOTA extends Activity implements OnSharedPreferenceChangeListene
         } else if (updateFile.equals("")) {
             mStrUpToDate = getString(R.string.error_reading_title);
             mStatusIcon.setImageResource(R.drawable.ic_no_data);
-        } else if (updateFile.equals(mStrCurFile)) {
+        } else if (updateFile.equalsIgnoreCase(mStrCurFile)) {
             mUpdateFile.setTextColor(Color.GREEN);
             mStrUpToDate = getString(R.string.up_to_date_title);
             mStatusIcon.setImageResource(R.drawable.ic_uptodate);

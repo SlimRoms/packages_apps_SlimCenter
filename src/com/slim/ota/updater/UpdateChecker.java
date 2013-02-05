@@ -51,6 +51,7 @@ public class UpdateChecker extends AsyncTask<Context, Integer, String> {
     private static final int MSG_CREATE_DIALOG = 0;
     private static final int MSG_DISPLAY_MESSAGE = 1;
     private static final int MSG_SET_PROGRESS = 2;
+    private static final int MSG_CLOSE_DIALOG = 3;
 
     private String strDevice, slimCurVer;
     private Context mContext;
@@ -62,37 +63,33 @@ public class UpdateChecker extends AsyncTask<Context, Integer, String> {
 
     final Handler mHandler = new Handler() {
 
-        public void createDialog(){
+        public void createWaitDialog(){
             mProgressDialog = new ProgressDialog(mContext);
             mProgressDialog.setTitle(mContext.getString(R.string.title_update));
             mProgressDialog.setIndeterminate(false);
             mProgressDialog.setMax(100);
-            mProgressDialog.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
             mProgressDialog.setMessage(mContext.getString(R.string.toast_text));
-            mProgressDialog.setButton(DialogInterface.BUTTON_NEGATIVE, mContext.getString(R.string.ok), new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialog, int which) {
-                    mProgressDialog.dismiss();
-                }
-            });
             mProgressDialog.show();
         }
 
         public void handleMessage(Message msg) {
             switch (msg.what) {
                 case MSG_CREATE_DIALOG:
-                    createDialog();
+                    createWaitDialog();
                     break;
                 case MSG_DISPLAY_MESSAGE:
-                    if (mProgressDialog == null) createDialog();
+                    if (mProgressDialog == null) createWaitDialog();
                     if (mProgressDialog.isShowing()) {
-                        mProgressDialog.setProgress(mProgressDialog.getMax());
                         mProgressDialog.setCancelable(true);
+                        mProgressDialog.setProgress(mProgressDialog.getMax());
                         mProgressDialog.setMessage((String) msg.obj);
                     }
                     break;
                 case MSG_SET_PROGRESS:
-                    mProgressDialog.setProgress(((Integer) msg.obj));
+                    if (mProgressDialog != null) mProgressDialog.setProgress(((Integer) msg.obj));
+                    break;
+                case MSG_CLOSE_DIALOG:
+                    if (mProgressDialog != null) mProgressDialog.dismiss();
                     break;
                 default: // should never happen
                     break;
@@ -107,9 +104,9 @@ public class UpdateChecker extends AsyncTask<Context, Integer, String> {
             String strLine;
             while ((strLine = br.readLine()) != null) {
                 String[] line = strLine.split("=");
-                if (line[0].equals("ro.product.device")) {
+                if (line[0].equalsIgnoreCase("ro.product.device")) {
                     strDevice = line[1].trim();
-                } else if (line[0].equals("ro.modversion")) {
+                } else if (line[0].equalsIgnoreCase("ro.modversion")) {
                     slimCurVer = line[1].trim();
                 }
             }
@@ -131,10 +128,6 @@ public class UpdateChecker extends AsyncTask<Context, Integer, String> {
         if (!connectivityAvailable(mContext)) return "connectivityNotAvailable";
         try {
             getDeviceTypeAndVersion();
-            if (mContext != null && mContext.toString().contains("SlimOTA")) {
-                msg = mHandler.obtainMessage(MSG_SET_PROGRESS, new Integer(30));
-                mHandler.sendMessage(msg);
-            }
             if (mNoLog == false) Log.d(TAG, "strDevice="+strDevice+ "   slimCurVer="+slimCurVer);
             if (strDevice == null || slimCurVer == null) return null;
             String newUpdateUrl = null;
@@ -142,10 +135,6 @@ public class UpdateChecker extends AsyncTask<Context, Integer, String> {
             URL url = new URL(mContext.getString(R.string.xml_url));
             urlConnection = (HttpURLConnection) url.openConnection();
             BufferedReader in = new BufferedReader(new InputStreamReader(urlConnection.getInputStream()));
-            if (mContext != null && mContext.toString().contains("SlimOTA")) {
-                msg = mHandler.obtainMessage(MSG_SET_PROGRESS, new Integer(50));
-                mHandler.sendMessage(msg);
-            }
             XmlPullParserFactory factory = XmlPullParserFactory.newInstance();
             factory.setNamespaceAware(true);
             XmlPullParser xpp = factory.newPullParser();
@@ -162,7 +151,7 @@ public class UpdateChecker extends AsyncTask<Context, Integer, String> {
                  else if (tagMatchesDevice && xpp.getName().equalsIgnoreCase("Filename")) inFileName = true;
                  else if (tagMatchesDevice && xpp.getName().equalsIgnoreCase("DownloadUrl")) inDownloadURL = true;
              } else if(eventType == XmlPullParser.END_TAG) {
-                 if (xpp.getName().equals(strDevice)) {
+                 if (xpp.getName().equalsIgnoreCase(strDevice)) {
                      tagMatchesDevice = false;
                      break;
                  }
@@ -180,10 +169,6 @@ public class UpdateChecker extends AsyncTask<Context, Integer, String> {
                  }
              }
              eventType = xpp.next();
-            }
-            if (mContext != null && mContext.toString().contains("SlimOTA")) {
-                msg = mHandler.obtainMessage(MSG_SET_PROGRESS, new Integer(80));
-                mHandler.sendMessage(msg);
             }
             return newUpdateUrl;
         } catch(Exception e) {
@@ -216,8 +201,8 @@ public class UpdateChecker extends AsyncTask<Context, Integer, String> {
         super.onPostExecute(result);
         if (mNoLog == false) Log.d("\r\n"+TAG, "result= "+result+"\n context="+mContext.toString()+"\r\n");
         if (mContext != null && mContext.toString().contains("SlimOTA")) {
-            //showUpdateDialog(result);
-            updateDialog(result);
+            Message msg = mHandler.obtainMessage(MSG_CLOSE_DIALOG);
+            mHandler.sendMessage(msg);
         } else if (result == null) {
             if (mNoLog == false) Log.d(TAG, "onPostExecute() - no new Update detected!" );
         } else {
@@ -226,23 +211,6 @@ public class UpdateChecker extends AsyncTask<Context, Integer, String> {
                 showInvalidLink();
             else
                 showNotification();
-        }
-    }
-
-    private void updateDialog(final String result) {
-        if (result == null || result.equals("connectivityNotAvailable")) {
-            int displayText = (result == null) ? R.string.noUpdate : R.string.noConnection;
-            if (mNoLog == false) Log.d(TAG, mContext.getString(displayText));
-            Message msg = mHandler.obtainMessage(MSG_DISPLAY_MESSAGE, mContext.getString(displayText));
-            mHandler.sendMessage(msg);
-        } else {
-            if (!URLUtil.isValidUrl(result)) {
-                 showInvalidLink();
-                 return;
-            }
-            if (mNoLog == false) Log.d(TAG, "new Update available here: " + result);
-            Message msg = mHandler.obtainMessage(MSG_DISPLAY_MESSAGE, mContext.getString(R.string.confirm_message));
-            mHandler.sendMessage(msg);
         }
     }
 
