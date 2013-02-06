@@ -26,7 +26,6 @@
     <string name="file_name_title">File:</string>
     <string name="curVer">Current Version</string>
     <string name="ok">OK</string>
-    <string name="no">No</string>
     <string name="title_update">Update</string>
     <string name="device_info_title">Device Information</string>
     <string name="up_to_date_title">Your system is up to date</string>
@@ -37,8 +36,8 @@
     <!-- SlimOTA settings -->
     <string name="settings_title">SlimOTA Settings</string>
     <string name="about_title">About</string>
-    <string name="update_interval_title">Update interval</string>
-    <string name="update_interval_summary">Set update check interval</string>
+    <string name="update_interval_title">Automatic update check interval</string>
+    <string name="update_interval_summary">Set automatic update check interval</string>
     <string name="update_interval_day">Every 24 hours</string>
     <string name="update_interval_half_day">Every 12 hours</string>
     <string name="update_interval_hour">Every hour</string>
@@ -46,9 +45,8 @@
 
     <!-- SlimOTA error messages -->
     <string name="system_prop_error">Cannot read system properties</string>
-    <string name="noUpdate">No Update available!</string>
     <string name="bad_url">Unable to get to download area.\nPlease inform your slim device maintainer!</string>
-    <string name="menu_update">Check for Updates</string>
+    <string name="menu_update">Look for Updates now</string>
     <string name="toast_text">Looking for ROM updates...</string>
     <string name="toast_no_data_text">No data connection. Please turn on</string>
 
@@ -75,9 +73,7 @@
 
     <!-- SlimOTA update checker -->
     <string name="xml_url">http://otaslim.slimroms.net/ota.xml</string>
-    <string name="confirm_message">\nROM Update available!\n\nRead changelog carefully and Download SlimBean rom update\n</string>
     <string name="notification_message">SlimBean ROM update available</string>
-    <string name="noConnection">\nNo data connection available.\nPlease turn on to check for updates.\n</string>
 
     <!-- SlimOTA About -->
     <string name="about_home_url"><a href="http://www.slimroms.net">www.slimroms.net</a></string>
