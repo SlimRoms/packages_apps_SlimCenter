@@ -96,16 +96,16 @@ public class Settings extends PreferenceActivity implements
                 case 3:
                     enableUpdateCheck = false;
                     break;
-                default:
-                    break;
             }
             if (enableUpdateCheck) {
                 SharedPreferences prefs = getSharedPreferences(LAST_INTERVAL, 0);
                 prefs.edit().putLong(LAST_INTERVAL, UpdateListener.interval).apply();
-                WakefulIntentService.scheduleAlarms(new UpdateListener(), this, false);
+                WakefulIntentService.cancelAlarms(this);
+                WakefulIntentService.scheduleAlarms(new UpdateListener(), this, true);
             } else {
                 SharedPreferences prefs = getSharedPreferences(LAST_INTERVAL, 0);
                 prefs.edit().putLong(LAST_INTERVAL, 1).apply();
+                com.slim.ota.updater.ConnectivityReceiver.disableReceiver(this);
                 WakefulIntentService.cancelAlarms(this);
             }
     }

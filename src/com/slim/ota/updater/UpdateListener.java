@@ -96,7 +96,7 @@ public class UpdateListener implements AlarmListener {
     @Override
     public long getMaxAge() {
         // TODO Auto-generated method stub
-        return (AlarmManager.INTERVAL_DAY + 60 * 1000);
+        return (interval * 2);
     }
 
 }
