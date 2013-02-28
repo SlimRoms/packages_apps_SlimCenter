@@ -161,7 +161,7 @@ public class UpdateChecker extends AsyncTask<Context, Integer, String> {
                  if (tagMatchesDevice && inFileName) {
                     String tempFileName = xpp.getText().trim();
                     putDataInprefs(mContext, "Filename",tempFileName);
-                    if (!tempFileName.equalsIgnoreCase(slimCurVer)) newFileName = tempFileName;
+                    if (tempFileName.compareToIgnoreCase(slimCurVer)>0) newFileName = tempFileName;
                  }else if (tagMatchesDevice && inDownloadURL) {
                     String tempDownloadURL = xpp.getText().trim();
                     putDataInprefs(mContext, "DownloadUrl",tempDownloadURL);
