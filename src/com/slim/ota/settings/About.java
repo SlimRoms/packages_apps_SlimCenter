@@ -24,6 +24,7 @@ import android.widget.TextView;
 import com.slim.ota.R;
 
 public class About extends Activity {
+    @SuppressWarnings("unused")
     private static final String TAG = "About";
 
     private static final int ID_HOME_URL = R.id.about_home;

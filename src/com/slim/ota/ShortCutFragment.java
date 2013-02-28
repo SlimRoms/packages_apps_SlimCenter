@@ -37,6 +37,7 @@ import java.io.FileInputStream;
 import java.io.InputStreamReader;
 
 public class ShortCutFragment extends PreferenceFragment {
+    @SuppressWarnings("unused")
     private static final String TAG = "ShortCutFragment";
 
     private static final String KEY_DOWNLOAD = "short_cut_download";

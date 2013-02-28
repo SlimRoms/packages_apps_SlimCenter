@@ -42,6 +42,7 @@ import org.xmlpull.v1.XmlPullParserFactory;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 
+import com.slim.center.SlimCenter;
 import com.slim.ota.R;
 import com.slim.ota.SlimOTA;
 
@@ -221,7 +222,7 @@ public class UpdateChecker extends AsyncTask<Context, Integer, String> {
             .setSmallIcon(R.drawable.ic_notification_slimota)
             .setLargeIcon(BitmapFactory.decodeResource(mContext.getResources(), R.drawable.ic_slimota));
 
-        Intent intent = new Intent(mContext, SlimOTA.class);
+        Intent intent = new Intent(mContext, SlimCenter.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         final PendingIntent pendingIntent = PendingIntent.getActivity(mContext,
                     0, intent, PendingIntent.FLAG_ONE_SHOT);

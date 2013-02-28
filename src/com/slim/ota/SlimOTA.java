@@ -30,8 +30,8 @@ import android.content.SharedPreferences;
 import android.content.SharedPreferences.OnSharedPreferenceChangeListener;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -39,7 +39,6 @@ import android.widget.Toast;
 import com.slim.ota.updater.UpdateChecker;
 import com.slim.ota.updater.UpdateListener;
 import com.slim.ota.settings.Settings;
-
 import com.commonsware.cwac.wakeful.WakefulIntentService;
 
 public class SlimOTA extends Activity implements OnSharedPreferenceChangeListener{
@@ -79,6 +78,8 @@ public class SlimOTA extends Activity implements OnSharedPreferenceChangeListene
         mCurFileOut = (TextView) findViewById(ID_CURRENT_FILE);
         mUpdateFile = (TextView) findViewById(ID_UPDATE_FILE);
         mStatusIcon = (ImageView) findViewById(ID_STATUS_IMAGE);
+        final Button setButton = (Button) findViewById(R.id.btn_setting);
+        final Button updateButton = (Button) findViewById(R.id.btn_update);
 
         prefs = getSharedPreferences("UpdateChecker", 0);
         prefs.registerOnSharedPreferenceChangeListener(this);
@@ -93,13 +94,23 @@ public class SlimOTA extends Activity implements OnSharedPreferenceChangeListene
         addShortCutFragment();
 
         setInitialUpdateInterval();
-    }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.slim_ota_base_menu, menu);
-        return true;
+             setButton.setOnClickListener(new View.OnClickListener() {
+                 public void onClick(View v) {
+                     Intent intent = new Intent(SlimOTA.this, Settings.class);
+                    startActivity(intent);
+                    }
+             });
+
+             updateButton.setOnClickListener(new View.OnClickListener() {
+                 public void onClick(View v) {
+                      if (UpdateChecker.connectivityAvailable(SlimOTA.this)) {
+                         doTheUpdateCheck();
+                     }
+                     setDeviceInfoContainer();
+                     addShortCutFragment();
+                 }
+             });
     }
 
     @Override
@@ -126,24 +137,6 @@ public class SlimOTA extends Activity implements OnSharedPreferenceChangeListene
     private void doTheUpdateCheck(){
         UpdateChecker otaChecker = new UpdateChecker();
         otaChecker.execute(SlimOTA.this);
-    }
-
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case R.id.menu_settings:
-                Intent intent = new Intent(this, Settings.class);
-                startActivity(intent);
-                return true;
-            case R.id.menu_update:
-                if (UpdateChecker.connectivityAvailable(SlimOTA.this)) {
-                    doTheUpdateCheck();
-                }
-                setDeviceInfoContainer();
-                addShortCutFragment();
-                return true;
-             default:
-                return super.onContextItemSelected(item);
-        }
     }
 
     private void setDeviceInfoContainer() {
@@ -218,5 +211,4 @@ public class SlimOTA extends Activity implements OnSharedPreferenceChangeListene
             WakefulIntentService.scheduleAlarms(new UpdateListener(), this, false);
         }
     }
-
 }

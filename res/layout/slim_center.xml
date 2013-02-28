@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ *=========================================================================
+ *
+ *  PROJECT:  SlimRoms
+ *            Team Slimroms (http://www.slimroms.net)
+ *
+ *  COPYRIGHT Copyright (C) 2013 Slimroms http://www.slimroms.net
+ *            All rights reserved
+ *
+ *  LICENSE   http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
+ *
+ *  AUTHORS:     fronti90, mnazim, tchaari, kufikugel
+ *  DESCRIPTION: SlimCenter: manage your ROM
+ *
+ *=========================================================================
+ *
+-->
+<TabHost xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@android:id/tabhost"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <TabWidget
+            android:id="@android:id/tabs"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+        <FrameLayout
+            android:id="@android:id/tabcontent"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"/>
+    </LinearLayout>
+</TabHost>
