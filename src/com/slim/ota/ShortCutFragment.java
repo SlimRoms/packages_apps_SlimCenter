@@ -112,7 +112,7 @@ public class ShortCutFragment extends PreferenceFragment {
             mChangelog.setEnabled(false);
             mFAQ.setEnabled(false);
             mNews.setEnabled(false);
-        } else if (mStrFileNameNew.equals(mStrCurFile)) {
+        } else if (mStrFileNameNew.compareToIgnoreCase(mStrCurFile)<=0) {
             mDownload.setEnabled(true);
             mDownloadGapps.setEnabled(true);
             mChangelog.setEnabled(true);
