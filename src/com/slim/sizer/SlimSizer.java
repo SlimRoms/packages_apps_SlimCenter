@@ -107,18 +107,31 @@ public class SlimSizer extends Activity {
         delButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 // check which items are selected
+                String item = null;
                 int len = lv.getCount();
                 SparseBooleanArray checked = lv.getCheckedItemPositions();
                 for (int i = len - 1; i > 0; i--) {
                     if (checked.get(i)) {
-                        String item = sysApp.get(i);
-                        // call delete
-                        boolean successDel = delete(item);
-                        if (successDel == true) {
-                            // remove list entry
-                            lv.setItemChecked(i, false);
-                            adapter.remove(item);
-                            adapter.notifyDataSetChanged();
+                        item = sysApp.get(i);
+                    }
+                }
+                if (item == null) {
+                    toast(getResources().getString(
+                            R.string.sizer_message_noselect));
+                    return;
+                } else {
+                    showDialog(DELETE_DIALOG, item, adapter);
+                }
+                for (int i = len - 1; i > 0; i--) {
+                    if (checked.get(i)) {
+                        item = sysApp.get(i);
+                            // call delete
+                            boolean successDel = delete(item);
+                            if (successDel == true) {
+                                // remove list entry
+                                lv.setItemChecked(i, false);
+                                adapter.remove(item);
+                                adapter.notifyDataSetChanged();
                         }
                     }
                 }
