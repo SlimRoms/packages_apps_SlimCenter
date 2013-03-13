@@ -44,6 +44,9 @@ import com.slim.ota.R;
 public class SlimSizer extends Activity {
     private final int STARTUP_DIALOG = 1;
     private final int DELETE_DIALOG = 2;
+    private final int DELETE_MULTIPLE_DIALOG = 3;
+
+    private ArrayList<String> mSysApp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -75,16 +78,16 @@ public class SlimSizer extends Activity {
         final String path = "/system/app";
         File system = new File(path);
         String[] sysappArray = system.list();
-        final ArrayList<String> sysApp = new ArrayList<String>(
+        mSysApp = new ArrayList<String>(
                 Arrays.asList(sysappArray));
 
         // remove "apps not to be removed" from list and sort list
-        sysApp.removeAll(safetyList);
-        Collections.sort(sysApp);
+        mSysApp.removeAll(safetyList);
+        Collections.sort(mSysApp);
 
         // populate listview via arrayadapter
         final ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
-                android.R.layout.simple_list_item_multiple_choice, sysApp);
+                android.R.layout.simple_list_item_multiple_choice, mSysApp);
 
         // startup dialog
         showDialog(STARTUP_DIALOG, null, adapter);
@@ -112,7 +115,7 @@ public class SlimSizer extends Activity {
                 SparseBooleanArray checked = lv.getCheckedItemPositions();
                 for (int i = len - 1; i > 0; i--) {
                     if (checked.get(i)) {
-                        item = sysApp.get(i);
+                        item = mSysApp.get(i);
                     }
                 }
                 if (item == null) {
@@ -120,20 +123,7 @@ public class SlimSizer extends Activity {
                             R.string.sizer_message_noselect));
                     return;
                 } else {
-                    showDialog(DELETE_DIALOG, item, adapter);
-                }
-                for (int i = len - 1; i > 0; i--) {
-                    if (checked.get(i)) {
-                        item = sysApp.get(i);
-                            // call delete
-                            boolean successDel = delete(item);
-                            if (successDel == true) {
-                                // remove list entry
-                                lv.setItemChecked(i, false);
-                                adapter.remove(item);
-                                adapter.notifyDataSetChanged();
-                        }
-                    }
+                    showDialog(DELETE_MULTIPLE_DIALOG, item, adapter);
                 }
             }
         });
@@ -142,7 +132,7 @@ public class SlimSizer extends Activity {
             @Override
             public void onClick(View v) {
                 // call select dialog
-                selectDialog(sysApp, adapter);
+                selectDialog(mSysApp, adapter);
             }
         });
     }
@@ -185,6 +175,39 @@ public class SlimSizer extends Activity {
                                         // remove list entry
                                         adapter.remove(item);
                                         adapter.notifyDataSetChanged();
+                                    }
+                                }
+                            })
+                    .setNegativeButton(R.string.cancel,
+                            new DialogInterface.OnClickListener() {
+                                public void onClick(DialogInterface dialog,
+                                        int id) {
+                                    // action for cancel
+                                    dialog.cancel();
+                                }
+                            });
+        } else if (id == DELETE_MULTIPLE_DIALOG) {
+            alert.setMessage(R.string.sizer_message_delete)
+                    .setPositiveButton(R.string.ok,
+                            new DialogInterface.OnClickListener() {
+                                public void onClick(DialogInterface dialog,
+                                        int id) {
+                                    String itemMulti = null;
+                                    final ListView lv = (ListView) findViewById(R.string.listsystem);
+                                    int len = lv.getCount();
+                                    SparseBooleanArray checked = lv.getCheckedItemPositions();
+                                    for (int i = len - 1; i > 0; i--) {
+                                        if (checked.get(i)) {
+                                            itemMulti = mSysApp.get(i);
+                                            // call delete
+                                            boolean successDel = delete(itemMulti);
+                                            if (successDel == true) {
+                                                // remove list entry
+                                                lv.setItemChecked(i, false);
+                                                adapter.remove(itemMulti);
+                                                adapter.notifyDataSetChanged();
+                                            }
+                                        }
                                     }
                                 }
                             })
