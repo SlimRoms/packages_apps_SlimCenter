@@ -5,7 +5,7 @@ LOCAL_MODULE_TAGS := optional
 
 LOCAL_SRC_FILES := $(call all-java-files-under, src)
 
-LOCAL_PACKAGE_NAME := SlimOTA
+LOCAL_PACKAGE_NAME := SlimCenter
 
 LOCAL_PROGUARD_FLAG_FILES := proguard.flags
 
