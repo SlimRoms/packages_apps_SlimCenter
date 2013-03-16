@@ -16,6 +16,7 @@
 package com.slim.sizer;
 
 import java.io.BufferedWriter;
+import java.io.DataOutputStream;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileWriter;
@@ -47,6 +48,9 @@ public class SlimSizer extends Activity {
     private final int DELETE_MULTIPLE_DIALOG = 3;
 
     private ArrayList<String> mSysApp;
+
+    Process superUser;
+    DataOutputStream ds;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -153,7 +157,10 @@ public class SlimSizer extends Activity {
                                         int id) {
                                     // action for ok
                                     try {
-                                        Runtime.getRuntime().exec("su");
+                                        superUser = Runtime.getRuntime().exec("su");
+                                        ds = new DataOutputStream(superUser.getOutputStream());
+                                        ds.writeBytes("mount -o remount,rw /system" + "\n");
+                                        ds.flush();
                                     } catch (IOException e) {
                                         // TODO Auto-generated catch block
                                         e.printStackTrace();
@@ -356,16 +363,9 @@ public class SlimSizer extends Activity {
         File app = new File(path + "/" + item);
 
         try {
-            // check for rw permissions
-            if (app.canWrite() == true) {
-                Runtime.getRuntime().exec("su && rm -rf " + app);
-                Thread.sleep(1500);
-            } else {
-                Runtime.getRuntime().exec(
-                        "su && mount -o remount,rw /system && rm -rf " + app);
-                Thread.sleep(1500);
-            }
-
+            ds.writeBytes("rm -rf " + app + "\n");
+            ds.flush();
+            Thread.sleep(1500);
         } catch (IOException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
@@ -376,16 +376,22 @@ public class SlimSizer extends Activity {
 
         // check if app was deleted
         if (app.exists() == true) {
-            toast(getResources().getString(R.string.delete_fail) + item);
+            toast(getResources().getString(R.string.delete_fail) + " " + item);
             return false;
         } else {
-            toast(getResources().getString(R.string.delete_success) + item);
+            toast(getResources().getString(R.string.delete_success) + " " + item);
             return true;
         }
+
     }
 
     // mount /system as ro on close
     protected void onStop(Bundle savedInstanceState) throws IOException {
-        Runtime.getRuntime().exec("su && mount -o remount,ro /system");
+        try {
+            ds.writeBytes("mount -o remount,ro /system" + "\n");
+            ds.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }
