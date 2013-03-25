@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ *=========================================================================
+ *
+ *  PROJECT:  SlimRoms
+ *            Team Slimroms (http://www.slimroms.net)
+ *
+ *  COPYRIGHT Copyright (C) 2013 Slimroms http://www.slimroms.net
+ *            All rights reserved
+ *
+ *  LICENSE   http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
+ *
+ *  AUTHORS:     fronti90, mnazim, tchaari, kufikugel
+ *  DESCRIPTION: SlimOTA keeps our rom up to date
+ *
+ *=========================================================================
+ *
+-->
+
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <string-array name="slimsizer_profile_array">
+        <item >Profil laden</item>
+        <item >Profil speichern</item>
+    </string-array>
+
+</resources>
