@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ * Copyright (C) 2012 Slimroms
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *            http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+-->
+
+
+<resources>
+    <string name="app_name">SlimCenter</string>
+    <string name="menu_settings">Impostazioni</string>
+    <string name="device_title">Dispositivo</string>
+    <string name="device_name_title">Nome:</string>
+    <string name="codename_title">Codename:</string>
+    <string name="version_title">Versione:</string>
+    <string name="file_name_title">File:</string>
+    <string name="curVer">Versione corrente</string>
+    <string name="ok">OK</string>
+    <string name="title_update">Aggiorna</string>
+    <string name="device_info_title">Informazioni dispositivo</string>
+    <string name="up_to_date_title">Il vostro sistema è aggiornato</string>
+    <string name="no_data_title">Nessuna connessione dati disponibile</string>
+    <string name="error_reading_title">Non è possibile leggere le proprietà di SlimOTA</string>
+    <string name="update_file_title">Aggiorna:</string>
+    <string name="settings_title">Impostazioni di SlimOTA</string>
+    <string name="about_title">Informazioni</string>
+    <string name="update_interval_title">Intervallo di controllo automatico di aggiornamenti</string>
+    <string name="update_interval_summary">Imposta un intervallo di controllo automatico degli aggiornamenti</string>
+    <string name="update_interval_day">Ogni 24 ore</string>
+    <string name="update_interval_half_day">Ogni 12 ore</string>
+    <string name="update_interval_hour">Ogni ora</string>
+    <string name="update_interval_disable">Disattiva</string>
+    <string name="system_prop_error">Non è possibile leggere le proprietà di sistema</string>
+    <string name="bad_url">Impossibile raggiungere l\'area download.\nPer favore avvisa il gestore del tuo dispositivo slim!</string>
+    <string name="menu_update">Cerca gli aggiornamenti ora</string>
+    <string name="toast_text">Cercando aggiornamenti della ROM...</string>
+    <string name="toast_no_data_text">Nessuna connessione dati. Si prega di accendere</string>
+    <string name="short_cut_release_title">ROM correlati</string>
+    <string name="short_cut_changelog_title">Elenco modifiche</string>
+    <string name="short_cut_changelog_summary_update_available">Importante!!! Leggi il changelog e le istruzioni dell\'installazione con attenzione</string>
+    <string name="short_cut_download_summary_update_available">Nuovo aggiornamento della ROM SlimBean disponibile. Scaricalo qui!</string>
+    <string name="short_cut_changelog_summary">Visualizza il changelog e istruzioni per l\'installazione</string>
+    <string name="short_cut_additional_title">Aggiuntive</string>
+    <string name="short_cut_faq_title">FAQ</string>
+    <string name="short_cut_faq_summary">Visualizza FAQ della Slim</string>
+    <string name="short_cut_news_title">Notizie</string>
+    <string name="short_cut_news_summary">Ultime novità Slim</string>
+    <string name="short_cut_download_title">Scarica SlimBean</string>
+    <string name="short_cut_download_uptodate_summary">Scarica SlimBean ROM</string>
+    <string name="short_cut_download_gapps_title">Scarica gapps</string>
+    <string name="short_cut_download_gapps_summary">Scarica gli addon SlimBean</string>
+    <string name="changelog_url">http://otaslim.slimroms.net/changelog.htm</string>
+    <string name="faq_url">http://otaslim.slimroms.net/faq.htm</string>
+    <string name="news_url">http://otaslim.slimroms.net/news.htm</string>
+    <string name="gapps_url">http://otaslim.slimroms.net/gapps.htm</string>
+    <string name="xml_url">http://otaslim.slimroms.net/ota.xml</string>
+    <string name="notification_message">Disponibile aggiornamento per la ROM SlimBean</string>
+    <string name="about_home_url"><a href="http://www.slimroms.net">www.slimroms.net</a></string>
+    <string name="about_slim_ota">SlimOTA ti tiene sempre aggiornato\nsulla tua rom e sulle gapps</string>
+    <string name="about_copyright">\u00A9 copyright Slimroms 2013</string>
+    <string name="about_version">SlimOTA 1.0</string>
+    <string name="about_contact"><a href="http://otaslim.slimroms.net/contact.htm">Contattaci</a></string>
+    <string name="about_contact_text">Dicci cosa pensi\no facci sapere di bug o problemi</string>
+    <string name="about_license">Licenze open source</string>
+    <string name="about_license_text">SlimOTA app:</string>
+    <string name="about_license_url"><a href="http://otaslim.slimroms.net/license.htm">gpl(2)</a></string>
+    <string name="menu_slimsizer">SlimSizer</string>
+    <string name="listsystem">elenco</string>
+    <string name="sizer_title">SlimSizer</string>
+    <string name="caution">Attenzione!</string>
+    <string name="sizer_message_startup">Questo strumento consente di eliminare le applicazioni di sistema. Utilizzare con cautela ed eliminare solo applicazioni che sai essere sicuro rimuovere.</string>
+    <string name="cancel">Annulla</string>
+    <string name="sizer_message_delete">Sei sicuro di volere cancellare questa applicazione?</string>
+    <string name="btn_delete">Eliminare la applicazioni selezionate adesso!</string>
+    <string name="delete_success">Eliminate</string>
+    <string name="delete_fail">Impossibile eliminare</string>
+    <string name="btn_profile">Profilo</string>
+    <string name="sizer_message_sdnowrite">Impossibile scrivere su scheda SD.</string>
+    <string name="sizer_message_sdnoread">Impossibile leggere la scheda SD.</string>
+    <string name="sizer_message_filesuccess">Profilo creato.</string>
+    <string name="sizer_message_filefail">Impossibile creare il profilo.</string>
+    <string name="sizer_message_noselect">Niente selezionato.</string>
+</resources>
