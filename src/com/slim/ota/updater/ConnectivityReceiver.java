@@ -35,6 +35,7 @@ public class ConnectivityReceiver extends BroadcastReceiver {
     /* (non-Javadoc)
      * @see android.content.BroadcastReceiver#onReceive(android.content.Context, android.content.Intent)
      */
+    @SuppressWarnings("unused")
     @Override
     public void onReceive(Context context, Intent intent) {
         if (intent.getAction().equals(ConnectivityManager.CONNECTIVITY_ACTION)) {

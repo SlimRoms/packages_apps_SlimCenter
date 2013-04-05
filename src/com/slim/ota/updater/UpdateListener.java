@@ -27,8 +27,6 @@ import android.util.Log;
 
 import com.commonsware.cwac.wakeful.WakefulIntentService;
 import com.commonsware.cwac.wakeful.WakefulIntentService.AlarmListener;
-import com.slim.ota.settings.Settings;
-
 import java.util.Calendar;
 
 public class UpdateListener implements AlarmListener {

@@ -44,7 +44,6 @@ import android.net.NetworkInfo;
 
 import com.slim.center.SlimCenter;
 import com.slim.ota.R;
-import com.slim.ota.SlimOTA;
 
 public class UpdateChecker extends AsyncTask<Context, Integer, String> {
     private static final String TAG = "UpdateChecker";
