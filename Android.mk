@@ -9,4 +9,6 @@ LOCAL_PACKAGE_NAME := SlimCenter
 
 LOCAL_PROGUARD_FLAG_FILES := proguard.flags
 
+LOCAL_STATIC_JAVA_LIBRARIES := android-support-v4
+
 include $(BUILD_PACKAGE)

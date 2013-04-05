@@ -103,5 +103,6 @@
     <string name="sizer_message_filesuccess">Created profile.</string>
     <string name="sizer_message_filefail">Failed to create profile.</string>
     <string name="sizer_message_noselect">Nothing selected.</string>
+    <string name="ota_title">SlimOTA</string>
 
 </resources>

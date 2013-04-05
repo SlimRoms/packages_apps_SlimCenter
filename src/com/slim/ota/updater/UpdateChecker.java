@@ -120,7 +120,7 @@ public class UpdateChecker extends AsyncTask<Context, Integer, String> {
     protected String doInBackground(Context... arg) {
         mContext = arg[0];
         Message msg;
-        if (mContext != null && mContext.toString().contains("SlimOTA")) {
+        if (mContext != null && mContext.toString().contains("SlimCenter")) {
             msg = mHandler.obtainMessage(MSG_CREATE_DIALOG);
             mHandler.sendMessage(msg);
         }
@@ -200,7 +200,7 @@ public class UpdateChecker extends AsyncTask<Context, Integer, String> {
     protected void onPostExecute(String result) {
         super.onPostExecute(result);
         if (mNoLog == false) Log.d("\r\n"+TAG, "result= "+result+"\n context="+mContext.toString()+"\r\n");
-        if (mContext != null && mContext.toString().contains("SlimOTA")) {
+        if (mContext != null && mContext.toString().contains("SlimCenter")) {
             Message msg = mHandler.obtainMessage(MSG_CLOSE_DIALOG);
             mHandler.sendMessage(msg);
         } else if (result == null) {
@@ -234,7 +234,7 @@ public class UpdateChecker extends AsyncTask<Context, Integer, String> {
     }
 
     private void showInvalidLink() {
-        if (mContext != null && mContext.toString().contains("SlimOTA")) {
+        if (mContext != null && mContext.toString().contains("SlimCenter")) {
             Message msg = mHandler.obtainMessage(MSG_DISPLAY_MESSAGE, mContext.getString(R.string.bad_url));
             mHandler.sendMessage(msg);
         } else {

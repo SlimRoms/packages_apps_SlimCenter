@@ -22,7 +22,6 @@ import java.io.FileInputStream;
 import java.io.InputStreamReader;
 
 import android.app.AlarmManager;
-import android.app.Activity;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.content.Intent;
@@ -30,7 +29,10 @@ import android.content.SharedPreferences;
 import android.content.SharedPreferences.OnSharedPreferenceChangeListener;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -41,7 +43,7 @@ import com.slim.ota.updater.UpdateListener;
 import com.slim.ota.settings.Settings;
 import com.commonsware.cwac.wakeful.WakefulIntentService;
 
-public class SlimOTA extends Activity implements OnSharedPreferenceChangeListener{
+public class SlimOTA extends Fragment implements OnSharedPreferenceChangeListener {
 
     private static final int ID_DEVICE_NAME = R.id.deviceName;
     private static final int ID_DEVICE_CODE_NAME = R.id.deviceCodename;
@@ -66,28 +68,30 @@ public class SlimOTA extends Activity implements OnSharedPreferenceChangeListene
     private String mStrUpToDate;
 
     SharedPreferences prefs;
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.slim_ota, container, false);
+        return view;
+    }
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.slim_ota);
+    public void onActivityCreated(Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+        mDeviceOut = (TextView) getView().findViewById(ID_DEVICE_NAME);
+        mCodenameOut = (TextView) getView().findViewById(ID_DEVICE_CODE_NAME);
+        mCurVerOut = (TextView) getView().findViewById(ID_CURRENT_VERSION);
+        mCurFileOut = (TextView) getView().findViewById(ID_CURRENT_FILE);
+        mUpdateFile = (TextView) getView().findViewById(ID_UPDATE_FILE);
+        mStatusIcon = (ImageView) getView().findViewById(ID_STATUS_IMAGE);
+        final Button setButton = (Button) getView().findViewById(R.id.btn_setting);
+        final Button updateButton = (Button) getView().findViewById(R.id.btn_update);
 
-        mDeviceOut = (TextView) findViewById(ID_DEVICE_NAME);
-        mCodenameOut = (TextView) findViewById(ID_DEVICE_CODE_NAME);
-        mCurVerOut = (TextView) findViewById(ID_CURRENT_VERSION);
-        mCurFileOut = (TextView) findViewById(ID_CURRENT_FILE);
-        mUpdateFile = (TextView) findViewById(ID_UPDATE_FILE);
-        mStatusIcon = (ImageView) findViewById(ID_STATUS_IMAGE);
-        final Button setButton = (Button) findViewById(R.id.btn_setting);
-        final Button updateButton = (Button) findViewById(R.id.btn_update);
-
-        prefs = getSharedPreferences("UpdateChecker", 0);
+        prefs = this.getActivity().getSharedPreferences("UpdateChecker", 0);
         prefs.registerOnSharedPreferenceChangeListener(this);
 
-        if (UpdateChecker.connectivityAvailable(SlimOTA.this)) {
+        if (UpdateChecker.connectivityAvailable(getActivity())) {
            doTheUpdateCheck();
         } else {
-           Toast.makeText(SlimOTA.this, R.string.toast_no_data_text, Toast.LENGTH_LONG).show();
+           Toast.makeText(getView().getContext(), R.string.toast_no_data_text, Toast.LENGTH_LONG).show();
         }
 
         setDeviceInfoContainer();
@@ -97,20 +101,25 @@ public class SlimOTA extends Activity implements OnSharedPreferenceChangeListene
 
              setButton.setOnClickListener(new View.OnClickListener() {
                  public void onClick(View v) {
-                     Intent intent = new Intent(SlimOTA.this, Settings.class);
+                     Intent intent = new Intent(getActivity(), Settings.class);
                     startActivity(intent);
                     }
              });
 
              updateButton.setOnClickListener(new View.OnClickListener() {
                  public void onClick(View v) {
-                      if (UpdateChecker.connectivityAvailable(SlimOTA.this)) {
+                      if (UpdateChecker.connectivityAvailable(getActivity())) {
                          doTheUpdateCheck();
                      }
                      setDeviceInfoContainer();
                      addShortCutFragment();
                  }
              });
+    }
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
     }
 
     @Override
@@ -122,21 +131,21 @@ public class SlimOTA extends Activity implements OnSharedPreferenceChangeListene
     }
 
     @Override
-    protected void onPause() {
+    public void onPause() {
         super.onPause();
         if (prefs != null) prefs.unregisterOnSharedPreferenceChangeListener(this);
     }
 
     @Override
-    protected void onResume() {
+    public void onResume() {
         super.onResume();
-        prefs = getSharedPreferences("UpdateChecker", 0);
+        prefs = this.getActivity().getSharedPreferences("UpdateChecker", 0);
         prefs.registerOnSharedPreferenceChangeListener(this);
     }
 
     private void doTheUpdateCheck(){
         UpdateChecker otaChecker = new UpdateChecker();
-        otaChecker.execute(SlimOTA.this);
+        otaChecker.execute(getActivity());
     }
 
     private void setDeviceInfoContainer() {
@@ -159,7 +168,7 @@ public class SlimOTA extends Activity implements OnSharedPreferenceChangeListene
             }
             in.close();
         } catch (Exception e) {
-            Toast.makeText(getBaseContext(), getString(R.string.system_prop_error),
+            Toast.makeText(getView().getContext(), getString(R.string.system_prop_error),
                     Toast.LENGTH_LONG).show();
             e.printStackTrace();
         }
@@ -169,12 +178,12 @@ public class SlimOTA extends Activity implements OnSharedPreferenceChangeListene
         mCurVerOut.setText(getString(R.string.version_title) + " " + mStrCurVer);
         mCurFileOut.setText(getString(R.string.file_name_title) + " " + mStrCurFile);
 
-        SharedPreferences prefs = getSharedPreferences("UpdateChecker", 0);
+        SharedPreferences prefs = this.getActivity().getSharedPreferences("UpdateChecker", 0);
         String updateFile = prefs.getString("Filename", "");
 
         mUpdateFile.setTextColor(Color.RED);
 
-        if (!UpdateChecker.connectivityAvailable(SlimOTA.this)) {
+        if (!UpdateChecker.connectivityAvailable(getActivity())) {
             mStrUpToDate = getString(R.string.no_data_title);
             mStatusIcon.setImageResource(R.drawable.ic_no_data);
         } else if (updateFile.equals("")) {
@@ -193,7 +202,7 @@ public class SlimOTA extends Activity implements OnSharedPreferenceChangeListene
     }
 
     private void addShortCutFragment() {
-        FragmentManager fragmentManager = getFragmentManager();
+        FragmentManager fragmentManager = this.getActivity().getFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         ShortCutFragment shortCut = new ShortCutFragment();
         fragmentTransaction.replace(R.id.shortCutsFragment, shortCut);
@@ -201,14 +210,14 @@ public class SlimOTA extends Activity implements OnSharedPreferenceChangeListene
     }
 
     private void setInitialUpdateInterval() {
-        SharedPreferences prefs = getSharedPreferences(LAST_INTERVAL, 0);
+        SharedPreferences prefs = this.getActivity().getSharedPreferences(LAST_INTERVAL, 0);
         long value = prefs.getLong(LAST_INTERVAL,0);
         //set interval to 12h if user starts first time SlimOTA and it was not installed by system before
         //yes ask lazy tarak....he has this case ;)
         if (value == 0) {
             UpdateListener.interval = AlarmManager.INTERVAL_HALF_DAY;
             prefs.edit().putLong(LAST_INTERVAL, UpdateListener.interval).apply();
-            WakefulIntentService.scheduleAlarms(new UpdateListener(), this, false);
+            WakefulIntentService.scheduleAlarms(new UpdateListener(), getActivity(), false);
         }
     }
 }
