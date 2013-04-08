@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ *=========================================================================
+ *
+ *  PROJECT:  SlimRoms
+ *            Team Slimroms (http://www.slimroms.net)
+ *
+ *  COPYRIGHT Copyright (C) 2013 Slimroms http://www.slimroms.net
+ *            All rights reserved
+ *
+ *  LICENSE   http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
+ *
+ *  AUTHORS:     fronti90
+ *  DESCRIPTION: SlimCenter: manage your ROM
+ *
+ *=========================================================================
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:showDividers="beginning" >
+
+    <TextView
+        android:id="@+id/slim_website"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/slim_website_title"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:onClick="onClick"
+        android:clickable="true" />
+
+    <TextView
+        android:id="@+id/slim_website_sum"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/slim_website_summary"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:onClick="onClick"
+        android:clickable="true" />
+
+    <TextView
+        android:id="@+id/line2"
+        style="?android:attr/listSeparatorTextViewStyle"
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        android:gravity="center_horizontal" />
+
+    <TextView
+        android:id="@+id/slim_source"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/slim_source_title"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:onClick="onClick"
+        android:clickable="true" />
+
+    <TextView
+        android:id="@+id/slim_source_sum"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/slim_source_summary"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:onClick="onClick"
+        android:clickable="true" />
+
+    <TextView
+        android:id="@+id/line3"
+        style="?android:attr/listSeparatorTextViewStyle"
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        android:gravity="center_horizontal" />
+
+    <TextView
+        android:id="@+id/donate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/donate"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:onClick="onClick"
+        android:clickable="true" />
+
+    <TextView
+        android:id="@+id/donate_sum"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/donate_summary"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:onClick="onClick"
+        android:clickable="true" />
+
+    <TextView
+        android:id="@+id/line4"
+        style="?android:attr/listSeparatorTextViewStyle"
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        android:gravity="center_horizontal" />
+
+    <TextView
+        android:id="@+id/irc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/irc"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:onClick="onClick"
+        android:clickable="true" />
+
+    <TextView
+        android:id="@+id/irc_sum"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/irc_summary"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:onClick="onClick"
+        android:clickable="true" />
+
+    <TextView
+        android:id="@+id/line5"
+        style="?android:attr/listSeparatorTextViewStyle"
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        android:gravity="center_horizontal" />
+
+</LinearLayout>

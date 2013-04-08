@@ -105,4 +105,17 @@
     <string name="sizer_message_noselect">Nothing selected.</string>
     <string name="ota_title">SlimOTA</string>
 
+    <!-- About -->
+    <string name="aboutslim_title">About Slim</string>
+    <string name="devs">Developer</string>
+    <string name="slim_website_title">Slim Website</string>
+    <string name="slim_source_title">Slim Source</string>
+    <string name="slim_website_summary">www.slimroms.net\nFind all latest Slim news here</string>
+    <string name="slim_source_summary">SlimRoms are fully open source.\nSource at github.com/SlimRoms</string>
+    <string name="donate">Donate</string>
+    <string name="donate_summary">Donate to Team SlimRoms</string>
+    <string name="irc">SlimIRC</string>
+    <string name="irc_summary">Join us on our IRC!</string>
+    <string name="no_irc">SlimIRC App not found.</string>
+
 </resources>

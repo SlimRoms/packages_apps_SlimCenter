@@ -15,6 +15,7 @@
  */
 package com.slim.center;
 
+import java.util.List;
 import java.util.Locale;
 
 import com.slim.ota.R;
@@ -23,6 +24,9 @@ import com.slim.sizer.SlimSizer;
 
 import android.app.ActionBar;
 import android.app.FragmentTransaction;
+import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.content.pm.ResolveInfo;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.os.Bundle;
@@ -102,7 +106,7 @@ ActionBar.TabListener{
         @Override
         public int getCount() {
             // Show 2 total pages.
-            return 2;
+            return 3;
         }
 
         @Override
@@ -113,6 +117,8 @@ ActionBar.TabListener{
                 return getString(R.string.ota_title).toUpperCase(l);
             case 1:
                 return getString(R.string.sizer_title).toUpperCase(l);
+            case 2:
+                return getString(R.string.aboutslim_title).toUpperCase(l);
             }
             return null;
         }
@@ -123,6 +129,8 @@ ActionBar.TabListener{
                 return new SlimOTA();
             case 1:
                 return new SlimSizer();
+            case 2:
+                return new AboutSlim();
             }
             return null;
         }

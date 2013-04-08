@@ -48,8 +48,9 @@ public class SlimSizer extends Fragment {
     private final int STARTUP_DIALOG = 1;
     private final int DELETE_DIALOG = 2;
     private final int DELETE_MULTIPLE_DIALOG = 3;
-
+     ArrayAdapter<String> adapter;
     private ArrayList<String> mSysApp;
+    private boolean startup =true;
 
     Process superUser;
     DataOutputStream ds;
@@ -57,6 +58,16 @@ public class SlimSizer extends Fragment {
         View view = inflater.inflate(R.layout.slim_sizer, container, false);
         return view;
     }
+
+    @Override
+    public void setUserVisibleHint(boolean isVisibleToUser) {
+        super.setUserVisibleHint(isVisibleToUser);
+        if (isVisibleToUser && adapter!=null && startup==true) {
+            showDialog(STARTUP_DIALOG, null, adapter);
+            startup=false;
+        }
+    }
+
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
@@ -94,7 +105,7 @@ public class SlimSizer extends Fragment {
         Collections.sort(mSysApp);
 
         // populate listview via arrayadapter
-        final ArrayAdapter<String> adapter = new ArrayAdapter<String>(getActivity(),
+        adapter = new ArrayAdapter<String>(getActivity(),
                 android.R.layout.simple_list_item_multiple_choice, mSysApp);
 
         // startup dialog

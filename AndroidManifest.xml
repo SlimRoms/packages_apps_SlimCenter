@@ -49,19 +49,18 @@
         </activity>
         <activity
             android:name="com.slim.ota.SlimOTA"
-            android:label="@string/sizer_title"
+            android:label="@string/ota_title"
             android:parentActivityName="com.slim.center.SlimCenter" >
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.myfirstapp.MainActivity" />
         </activity>
         <activity
             android:name="com.slim.sizer.SlimSizer"
             android:label="@string/sizer_title"
             android:parentActivityName="com.slim.center.SlimCenter" >
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.myfirstapp.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.slim.center.AboutSlim"
+            android:label="@string/aboutslim_title"
+            android:parentActivityName="com.slim.center.SlimCenter" >
         </activity>
 
         <service android:name="com.slim.ota.updater.UpdateService" />
