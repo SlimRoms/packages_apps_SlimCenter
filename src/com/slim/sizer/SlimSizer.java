@@ -26,13 +26,15 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.Scanner;
 
-import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.os.Environment;
+import android.support.v4.app.Fragment;
 import android.util.SparseBooleanArray;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemLongClickListener;
 import android.widget.ArrayAdapter;
@@ -42,7 +44,7 @@ import android.widget.Toast;
 
 import com.slim.ota.R;
 
-public class SlimSizer extends Activity {
+public class SlimSizer extends Fragment {
     private final int STARTUP_DIALOG = 1;
     private final int DELETE_DIALOG = 2;
     private final int DELETE_MULTIPLE_DIALOG = 3;
@@ -51,13 +53,15 @@ public class SlimSizer extends Activity {
 
     Process superUser;
     DataOutputStream ds;
-
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.slim_sizer, container, false);
+        return view;
+    }
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.slim_sizer);
-        final Button delButton = (Button) findViewById(R.id.btn_delete);
-        final Button profileButton = (Button) findViewById(R.id.btn_profile);
+    public void onActivityCreated(Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+        final Button delButton = (Button) getView().findViewById(R.id.btn_delete);
+        final Button profileButton = (Button) getView().findViewById(R.id.btn_profile);
 
         // create arraylist of apps not to be removed
         final ArrayList<String> safetyList = new ArrayList<String>();
@@ -90,13 +94,13 @@ public class SlimSizer extends Activity {
         Collections.sort(mSysApp);
 
         // populate listview via arrayadapter
-        final ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
+        final ArrayAdapter<String> adapter = new ArrayAdapter<String>(getActivity(),
                 android.R.layout.simple_list_item_multiple_choice, mSysApp);
 
         // startup dialog
-        showDialog(STARTUP_DIALOG, null, adapter);
+        //showDialog(STARTUP_DIALOG, null, adapter);
 
-        final ListView lv = (ListView) findViewById(R.string.listsystem);
+        final ListView lv = (ListView) getView().findViewById(R.string.listsystem);
         lv.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE);
         lv.setAdapter(adapter);
 
@@ -140,11 +144,15 @@ public class SlimSizer extends Activity {
             }
         });
     }
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+    }
 
     private void showDialog(int id, final String item,
             final ArrayAdapter<String> adapter) {
         // startup dialog
-        final AlertDialog.Builder alert = new AlertDialog.Builder(this);
+        final AlertDialog.Builder alert = new AlertDialog.Builder(getActivity());
 
         if (id == STARTUP_DIALOG) {
             // create warning dialog
@@ -200,7 +208,7 @@ public class SlimSizer extends Activity {
                                 public void onClick(DialogInterface dialog,
                                         int id) {
                                     String itemMulti = null;
-                                    final ListView lv = (ListView) findViewById(R.string.listsystem);
+                                    final ListView lv = (ListView) getView().findViewById(R.string.listsystem);
                                     int len = lv.getCount();
                                     SparseBooleanArray checked = lv.getCheckedItemPositions();
                                     for (int i = len - 1; i > 0; i--) {
@@ -234,7 +242,7 @@ public class SlimSizer extends Activity {
     // profile select dialog
     private void selectDialog(final ArrayList<String> sysAppProfile,
             final ArrayAdapter<String> adapter) {
-        AlertDialog.Builder select = new AlertDialog.Builder(this);
+        AlertDialog.Builder select = new AlertDialog.Builder(getActivity());
         select.setItems(R.array.slimsizer_profile_array,
                 new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int which) {
@@ -332,7 +340,7 @@ public class SlimSizer extends Activity {
 
     public void toast(String text) {
         // easy toasts for all!
-        Toast toast = Toast.makeText(getApplicationContext(), text,
+        Toast toast = Toast.makeText(getView().getContext(), text,
                 Toast.LENGTH_SHORT);
         toast.show();
     }
