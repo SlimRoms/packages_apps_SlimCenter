@@ -6,7 +6,7 @@
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- *      http://www.apache.org/licenses/LICENSE-2.0
+ *            http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -16,7 +16,6 @@
 -->
 
 <resources>
-    <!-- SlimOTA main strings -->
     <string name="app_name">SlimCenter</string>
     <string name="menu_settings">Einstellungen</string>
     <string name="device_title">Gerät</string>
@@ -32,9 +31,7 @@
     <string name="no_data_title">Keine Datenverbindung vorhanden</string>
     <string name="error_reading_title">Eigenschaften von SlimOTA können nicht gelesen werden</string>
     <string name="update_file_title">Aktualisierung:</string>
-
-    <!-- SlimOTA settings -->
-    <string name="settings_title">SlimOTA Einstellungen</string>
+    <string name="settings_title">SlimOTA-Einstellungen</string>
     <string name="about_title">Über</string>
     <string name="update_interval_title">Interval für automatische Aktualisierungen</string>
     <string name="update_interval_summary">Wähle ein Interval für die automatischen Aktualisierungen</string>
@@ -42,17 +39,13 @@
     <string name="update_interval_half_day">Alle 12 Stunden</string>
     <string name="update_interval_hour">Jede Stunde</string>
     <string name="update_interval_disable">Deaktiviert</string>
-
-    <!-- SlimOTA error messages -->
     <string name="system_prop_error">Systemeigeschaften können nicht gelesen werden</string>
     <string name="bad_url">Fehler beim Aufrufen der Download URL.\nBitte informiere die Entwickler von SlimROM!</string>
     <string name="menu_update">Suche nach Aktualisierungen</string>
     <string name="toast_text">Suche ROM Aktualisierungen...</string>
     <string name="toast_no_data_text">Keine Datenverbindung. Bitte einschalten!</string>
-
-    <!-- SlimOTA shortcut fragment -->
     <string name="short_cut_release_title">ROM abhängig</string>
-    <string name="short_cut_changelog_title">Changelog</string>
+    <string name="short_cut_changelog_title">Änderungsprotokoll</string>
     <string name="short_cut_changelog_summary_update_available">Wichtig!!! Lese sorgfältig die Installationsanweisungen und Changelogs und durch.</string>
     <string name="short_cut_download_summary_update_available">Neue SlimBean ROM Aktualisierung verfügbar. Hier downloaden!</string>
     <string name="short_cut_changelog_summary">Zeige Installationsanweisungen und Changelogs </string>
@@ -65,17 +58,12 @@
     <string name="short_cut_download_uptodate_summary">SlimBean ROM downloaden</string>
     <string name="short_cut_download_gapps_title">Gapps downloaden</string>
     <string name="short_cut_download_gapps_summary">SlimBean Addon Paket downloaden</string>
-
     <string name="changelog_url">http://otaslim.slimroms.net/changelog.htm</string>
     <string name="faq_url">http://otaslim.slimroms.net/faq.htm</string>
     <string name="news_url">http://otaslim.slimroms.net/news.htm</string>
     <string name="gapps_url">http://otaslim.slimroms.net/gapps.htm</string>
-
-    <!-- SlimOTA update checker -->
     <string name="xml_url">http://otaslim.slimroms.net/ota.xml</string>
     <string name="notification_message">SlimBean ROM Aktualisierung verfügbar</string>
-
-    <!-- SlimOTA About -->
     <string name="about_home_url"><a href="http://www.slimroms.net">www.slimroms.net</a></string>
     <string name="about_slim_ota">SlimOTA hält Deine ROM und Gapps\nimmer auf dem neusten Stand</string>
     <string name="about_copyright">\u00A9 Copyright Slimroms 2013</string>
@@ -85,10 +73,7 @@
     <string name="about_license">Open Source Lizenzen</string>
     <string name="about_license_text">SlimOTA App:</string>
     <string name="about_license_url"><a href="http://otaslim.slimroms.net/license.htm">gpl(2)</a></string>
-
     <string name="menu_slimsizer">SlimSizer</string>
-
-    <!-- SlimSizer  -->
     <string name="listsystem">Liste</string>
     <string name="sizer_title">SlimSizer</string>
     <string name="caution">Vorsicht!</string>
@@ -104,5 +89,4 @@
     <string name="sizer_message_filesuccess">Profil erstellt.</string>
     <string name="sizer_message_filefail">Erstellen von Profil fehlgeschlagen.</string>
     <string name="sizer_message_noselect">Nichts ausgewählt.</string>
-
 </resources>
