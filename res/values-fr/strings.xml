@@ -6,7 +6,7 @@
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- *      http://www.apache.org/licenses/LICENSE-2.0
+ *            http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -34,22 +34,22 @@
     <string name="settings_title">Paramètres de SlimOTA</string>
     <string name="about_title">A propos </string>
     <string name="update_interval_title">Intervalle de vérification de mise à jour automatique</string>
-    <string name="update_interval_summary">Set automatic update check interval</string>
+    <string name="update_interval_summary">Fréquence des recherche de mise à jour</string>
     <string name="update_interval_day">Toutes les 24 heures</string>
     <string name="update_interval_half_day">Toutes les 12 heures</string>
     <string name="update_interval_hour">Toutes les heures</string>
     <string name="update_interval_disable">Désactiver</string>
     <string name="system_prop_error">Impossible de lire les propriétés systeme</string>
-    <string name="bad_url">Unable to get to download area.\nPlease inform your slim device maintainer!</string>
+    <string name="bad_url">Impossible d’accéder à la zone de téléchargement.\n Veuillez informer le responsable de votre appareil slim, !</string>
     <string name="menu_update">Rechercher des mises à jour maintenant</string>
     <string name="toast_text">Vérification des mises à jour de ROM...</string>
     <string name="toast_no_data_text">Aucune connexion de données. Activé s\'il vous plaît</string>
-    <string name="short_cut_release_title">ROM related</string>
+    <string name="short_cut_release_title">ROM associé</string>
     <string name="short_cut_changelog_title">Changelog</string>
     <string name="short_cut_changelog_summary_update_available">Important!!! Lire le changelog et installer les instructions soigneusement</string>
     <string name="short_cut_download_summary_update_available">Nouvelle version de la ROM SlimBean disponible. Télécharger ici !</string>
-    <string name="short_cut_changelog_summary">Show changelogs and install instructions</string>
-    <string name="short_cut_additional_title">Additional</string>
+    <string name="short_cut_changelog_summary">Montrer les changelogs et instructions d\'installation</string>
+    <string name="short_cut_additional_title">Supplémentaires</string>
     <string name="short_cut_faq_title">FAQ</string>
     <string name="short_cut_faq_summary">Voir la FAQ Slim</string>
     <string name="short_cut_news_title">Actualités</string>
