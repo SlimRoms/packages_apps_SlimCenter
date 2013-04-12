@@ -20,18 +20,25 @@ import java.util.Locale;
 
 import com.slim.ota.R;
 import com.slim.ota.SlimOTA;
+import com.slim.ota.settings.About;
 import com.slim.sizer.SlimSizer;
 
 import android.app.ActionBar;
 import android.app.FragmentTransaction;
 import android.content.Intent;
+<<<<<<< HEAD
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
+=======
+>>>>>>> 0c8eb62... add actionbar
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.ViewPager;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 
 public class SlimCenter extends FragmentActivity implements
 ActionBar.TabListener{
@@ -45,6 +52,7 @@ ActionBar.TabListener{
         // Set up the action bar.
         final ActionBar actionBar = getActionBar();
         actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
+        actionBar.setDisplayHomeAsUpEnabled(true);
 
         // Create the adapter that will return a fragment for each of the three
         // primary sections of the app.
@@ -133,6 +141,31 @@ ActionBar.TabListener{
                 return new AboutSlim();
             }
             return null;
+        }
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.slim_center, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                // app icon in action bar clicked; go home
+                Intent intent = new Intent(android.provider.Settings.ACTION_SETTINGS);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(intent);
+                return true;
+            case R.id.ab_about:
+                Intent intentAbout = new Intent(this, About.class);
+                startActivity(intentAbout);
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
         }
     }
 }

@@ -17,7 +17,6 @@
 package com.slim.ota.settings;
 
 import android.app.AlarmManager;
-import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.ListPreference;
@@ -36,13 +35,9 @@ public class Settings extends PreferenceActivity implements
     private static final String TAG = "SlimOTASettings";
 
     private static final String KEY_UPDATE_INTERVAL = "update_interval";
-    private static final String KEY_ABOUT = "about";
-
     private static final String LAST_INTERVAL = "lastInterval";
 
     private ListPreference mUpdateInterval;
-    private Preference mAbout;
-
     @SuppressWarnings("deprecation")
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -55,21 +50,9 @@ public class Settings extends PreferenceActivity implements
         mUpdateInterval = (ListPreference) prefs.findPreference(KEY_UPDATE_INTERVAL);
         mUpdateInterval.setValueIndex(getUpdateInterval());
         mUpdateInterval.setSummary(mUpdateInterval.getEntry());
-        mUpdateInterval.setOnPreferenceChangeListener(this);
-
-        mAbout = (Preference) prefs.findPreference(KEY_ABOUT);
+        mUpdateInterval.setOnPreferenceChangeListener(this);     
+        
      }
-
-    @SuppressWarnings("deprecation")
-    @Override
-    public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
-        if (preference == mAbout) {
-            Intent intent = new Intent(this, About.class);
-            startActivity(intent);
-            return true;
-        }
-        return super.onPreferenceTreeClick(preferenceScreen, preference);
-    }
 
     public boolean onPreferenceChange(Preference preference, Object objValue) {
         if (preference == mUpdateInterval) {

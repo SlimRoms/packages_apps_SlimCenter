@@ -28,10 +28,4 @@
         android:summary="@string/update_interval_summary"
         android:entries="@array/entries_update_interval"
         android:entryValues="@array/values_update_interval" />
-
-    <PreferenceScreen
-        android:key="about"
-        android:fragment="com.slim.ota.settings.About"
-        android:title="@string/about_title" />
-
 </PreferenceScreen>

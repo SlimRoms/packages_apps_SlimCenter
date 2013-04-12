@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/ab_about"
+        android:icon="@drawable/action_about"
+        android:orderInCategory="102"
+        android:title="@string/about_title"
+        android:showAsAction="always">
+    </item>
+
+</menu>
