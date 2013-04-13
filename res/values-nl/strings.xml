@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <string name="app_name">SlimCenter</string>
+    <string name="menu_settings">Instellingen</string>
+    <string name="device_title">Toestel</string>
+    <string name="device_name_title">Naam:</string>
+    <string name="codename_title">Codenaam:</string>
+    <string name="version_title">Versie:</string>
+    <string name="file_name_title">Bestand:</string>
+    <string name="curVer">Huidige versie</string>
+    <string name="title_update">Bijwerken</string>
+    <string name="device_info_title">Apparaatgegevens</string>
+    <string name="up_to_date_title">Uw systeem is up to date</string>
+    <string name="no_data_title">Geen dataverbinding beschikbaar</string>
+    <string name="error_reading_title">Kan SlimOTA gegevens niet lezen</string>
+    <string name="update_file_title">Bijwerken:</string>
+    <string name="settings_title">SlimOTA instellingen</string>
+    <string name="about_title">Over</string>
+    <string name="update_interval_title">Automatische update controle-interval</string>
+    <string name="update_interval_summary">Stel automatische update controle interval in</string>
+    <string name="update_interval_day">Elke 24 uur</string>
+    <string name="update_interval_half_day">Elke 12 uur</string>
+    <string name="update_interval_hour">Elk uur</string>
+    <string name="update_interval_disable">Uitschakelen</string>
+    <string name="system_prop_error">Kan systeem eigenschappen niet lezen</string>
+    <string name="short_cut_changelog_title">Changelog</string>
+    <string name="short_cut_changelog_summary_update_available">Belangrijk! Lees het changelog en de installatieinstructies aandachtig</string>
+    <string name="short_cut_download_summary_update_available">Er is een nieuwe versie van SlimBean. Download hier!</string>
+    <string name="short_cut_changelog_summary">Laat changelogs en installatieinstructies zien</string>
+    <string name="short_cut_additional_title">Extra</string>
+    <string name="short_cut_faq_title">FAQ</string>
+    <string name="short_cut_faq_summary">Open Slim FAQ</string>
+    <string name="short_cut_news_title">Nieuws</string>
+    <string name="short_cut_news_summary">Lees het laatste Slim-nieuws</string>
+    <string name="short_cut_download_title">Download SlimBean</string>
+    <string name="short_cut_download_uptodate_summary">Download SlimBean ROM</string>
+    <string name="short_cut_download_gapps_title">Download gapps</string>
+    <string name="short_cut_download_gapps_summary">SlimBean addon-paketten downloaden</string>
+    <string name="notification_message">SlimBean ROM update beschikbaar</string>
+    <string name="about_slim_ota">SlimOTA houdt u altijd op de hoogte\nvan uw ROM en gapps</string>
+</resources>
