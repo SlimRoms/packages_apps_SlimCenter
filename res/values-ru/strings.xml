@@ -58,10 +58,11 @@
     <string name="short_cut_download_gapps_title">Скачать Google Apps</string>
     <string name="short_cut_download_gapps_summary">Скачать дополнения к прошивке SlimBean</string>
     <string name="notification_message">Доступно обновление прошивки SlimBean</string>
-    <string name="about_slim_ota">SlimOTA ищет последние обновления\nдля прошивки и Google Apps</string>
+    <string name="about_slim_ota">Slim-Центр позволяет легко изменять\n свою прошивку!</string>
+	<string name="about_version">Slim-Центр 1.1</string>
     <string name="about_contact_text">Расскажите нам свои впечатления\nили дайте знать о баге или проблеме</string>
     <string name="about_license">Открытые лицензии</string>
-	<string name="about_license_text">SlimOTA:</string>
+	<string name="about_license_text">Slim-Центр:</string>
     <string name="listsystem">список</string>
     <string name="caution">Внимание!</string>
     <string name="sizer_message_startup">Эта программа разрешает удалять системные приложения. Используйте с осторожностью и удаляйте только то, что можно удалить без последствий.</string>
