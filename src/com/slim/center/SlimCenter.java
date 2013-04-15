@@ -26,11 +26,8 @@ import com.slim.sizer.SlimSizer;
 import android.app.ActionBar;
 import android.app.FragmentTransaction;
 import android.content.Intent;
-<<<<<<< HEAD
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
-=======
->>>>>>> 0c8eb62... add actionbar
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.os.Bundle;
