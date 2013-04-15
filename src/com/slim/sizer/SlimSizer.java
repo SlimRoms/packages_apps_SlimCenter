@@ -51,6 +51,7 @@ public class SlimSizer extends Fragment {
      ArrayAdapter<String> adapter;
     private ArrayList<String> mSysApp;
     private boolean startup =true;
+    private boolean su=false;
 
     Process superUser;
     DataOutputStream ds;
@@ -176,10 +177,13 @@ public class SlimSizer extends Fragment {
                                         int id) {
                                     // action for ok
                                     try {
+                                        if (su==false){
                                         superUser = Runtime.getRuntime().exec("su");
                                         ds = new DataOutputStream(superUser.getOutputStream());
                                         ds.writeBytes("mount -o remount,rw /system" + "\n");
                                         ds.flush();
+                                        su=true;
+                                        }
                                     } catch (IOException e) {
                                         // TODO Auto-generated catch block
                                         e.printStackTrace();

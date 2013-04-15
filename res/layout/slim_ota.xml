@@ -137,6 +137,13 @@
             android:layout_height="wrap_content" >
         </GridLayout>
 
+        <TextView
+            android:id="@+id/line3"
+            style="?android:attr/listSeparatorTextViewStyle"
+            android:layout_width="match_parent"
+            android:layout_height="16dp"
+            android:gravity="center_horizontal" />
+
     </LinearLayout>
 
     <RelativeLayout
@@ -150,7 +157,7 @@
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
             android:background="@android:color/transparent"
-            android:drawableLeft="@drawable/action_settings" />
+            android:drawableRight="@drawable/action_settings" />
 
         <Button
             android:id="@+id/btn_update"

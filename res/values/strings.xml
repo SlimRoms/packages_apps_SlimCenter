@@ -77,13 +77,13 @@
 
     <!-- SlimOTA About -->
     <string name="about_home_url"><a href="http://www.slimroms.net">www.slimroms.net</a></string>
-    <string name="about_slim_ota">SlimOTA keeps you always up to date\non your rom and gapps</string>
+    <string name="about_slim_ota">SlimCenter allows you to easily manage\n your ROM!</string>
     <string name="about_copyright">\u00A9 Copyright Slimroms 2013</string>
-    <string name="about_version">SlimOTA 1.0</string>
+    <string name="about_version">SlimCenter 1.1</string>
     <string name="about_contact"><a href="http://otaslim.slimroms.net/contact.htm">Contact us</a></string>
     <string name="about_contact_text">Tell us what you think\nor let us know about a bug or problem</string>
     <string name="about_license">Open source licenses</string>
-    <string name="about_license_text">SlimOTA app:</string>
+    <string name="about_license_text">SlimCenter app:</string>
     <string name="about_license_url"><a href="http://otaslim.slimroms.net/license.htm">gpl(2)</a></string>
     <string name="menu_slimsizer">SlimSizer</string>
 

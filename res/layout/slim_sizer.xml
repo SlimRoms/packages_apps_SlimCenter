@@ -46,7 +46,6 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:background="@android:color/transparent"
-        android:drawableLeft="@drawable/content_save"
-        android:visibility="invisible" />
+        android:drawableRight="@drawable/content_save" />
 
 </RelativeLayout>
