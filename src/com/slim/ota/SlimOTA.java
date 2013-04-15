@@ -33,7 +33,6 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -82,8 +81,8 @@ public class SlimOTA extends Fragment implements OnSharedPreferenceChangeListene
         mCurFileOut = (TextView) getView().findViewById(ID_CURRENT_FILE);
         mUpdateFile = (TextView) getView().findViewById(ID_UPDATE_FILE);
         mStatusIcon = (ImageView) getView().findViewById(ID_STATUS_IMAGE);
-        final Button setButton = (Button) getView().findViewById(R.id.btn_setting);
-        final Button updateButton = (Button) getView().findViewById(R.id.btn_update);
+        final ImageView setButton = (ImageView) getView().findViewById(R.id.btn_setting);
+        final ImageView updateButton = (ImageView) getView().findViewById(R.id.btn_update);
 
         prefs = this.getActivity().getSharedPreferences("UpdateChecker", 0);
         prefs.registerOnSharedPreferenceChangeListener(this);
@@ -99,22 +98,22 @@ public class SlimOTA extends Fragment implements OnSharedPreferenceChangeListene
 
         setInitialUpdateInterval();
 
-             setButton.setOnClickListener(new View.OnClickListener() {
-                 public void onClick(View v) {
-                     Intent intent = new Intent(getActivity(), Settings.class);
-                    startActivity(intent);
-                    }
-             });
+        setButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), Settings.class);
+               startActivity(intent);
+               }
+        });
 
-             updateButton.setOnClickListener(new View.OnClickListener() {
-                 public void onClick(View v) {
-                      if (UpdateChecker.connectivityAvailable(getActivity())) {
-                         doTheUpdateCheck();
-                     }
-                     setDeviceInfoContainer();
-                     addShortCutFragment();
-                 }
-             });
+        updateButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                 if (UpdateChecker.connectivityAvailable(getActivity())) {
+                    doTheUpdateCheck();
+                }
+                setDeviceInfoContainer();
+                addShortCutFragment();
+            }
+        });
     }
 
     @Override

@@ -15,110 +15,226 @@
  *
  *=========================================================================
 -->
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:showDividers="beginning" >
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
 
-    <TextView
-        android:id="@+id/slim_website"
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/slim_website_title"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:onClick="onClick"
-        android:clickable="true" />
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="3dp"
+        android:showDividers="beginning" >
 
-    <TextView
-        android:id="@+id/slim_website_sum"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/slim_website_summary"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:onClick="onClick"
-        android:clickable="true" />
+        <TextView
+            android:id="@+id/center_sum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp"
+            android:text="@string/center_summary"
+            style="@style/slimMedium" />
 
-    <TextView
-        android:id="@+id/line2"
-        style="?android:attr/listSeparatorTextViewStyle"
-        android:layout_width="match_parent"
-        android:layout_height="8dp"
-        android:gravity="center_horizontal" />
+        <TextView
+            android:id="@+id/line6"
+            style="?android:attr/listSeparatorTextViewStyle"
+            android:layout_width="match_parent"
+            android:layout_height="8dp"
+            android:gravity="center_horizontal" />
 
-    <TextView
-        android:id="@+id/slim_source"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/slim_source_title"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:onClick="onClick"
-        android:clickable="true" />
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/slim_website"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="?android:attr/selectableItemBackground"
+            android:clickable="true" >
 
-    <TextView
-        android:id="@+id/slim_source_sum"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/slim_source_summary"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:onClick="onClick"
-        android:clickable="true" />
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
 
-    <TextView
-        android:id="@+id/line3"
-        style="?android:attr/listSeparatorTextViewStyle"
-        android:layout_width="match_parent"
-        android:layout_height="8dp"
-        android:gravity="center_horizontal" />
+                <ImageView
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_website" />
 
-    <TextView
-        android:id="@+id/donate"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/donate"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:onClick="onClick"
-        android:clickable="true" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="4dp"
+                    android:paddingLeft="5dp"
+                    android:text="@string/slim_website_title"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
 
-    <TextView
-        android:id="@+id/donate_sum"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/donate_summary"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:onClick="onClick"
-        android:clickable="true" />
+                </LinearLayout>
 
-    <TextView
-        android:id="@+id/line4"
-        style="?android:attr/listSeparatorTextViewStyle"
-        android:layout_width="match_parent"
-        android:layout_height="8dp"
-        android:gravity="center_horizontal" />
+            <TextView
+                android:id="@+id/slim_website_sum"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:text="@string/slim_website_summary"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
 
-    <TextView
-        android:id="@+id/irc"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/irc"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:onClick="onClick"
-        android:clickable="true" />
+        </LinearLayout>
 
-    <TextView
-        android:id="@+id/irc_sum"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/irc_summary"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:onClick="onClick"
-        android:clickable="true" />
+        <TextView
+            android:id="@+id/line2"
+            style="?android:attr/listSeparatorTextViewStyle"
+            android:layout_width="match_parent"
+            android:layout_height="8dp"
+            android:gravity="center_horizontal" />
 
-    <TextView
-        android:id="@+id/line5"
-        style="?android:attr/listSeparatorTextViewStyle"
-        android:layout_width="match_parent"
-        android:layout_height="8dp"
-        android:gravity="center_horizontal" />
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/slim_irc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="?android:attr/selectableItemBackground"
+            android:clickable="true" >
 
-</LinearLayout>
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_irc" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="4dp"
+                    android:paddingLeft="5dp"
+                    android:text="@string/slim_irc_title"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                </LinearLayout>
+
+            <TextView
+                android:id="@+id/slim_website_sum"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:text="@string/slim_irc_summary"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/line3"
+            style="?android:attr/listSeparatorTextViewStyle"
+            android:layout_width="match_parent"
+            android:layout_height="8dp"
+            android:gravity="center_horizontal" />
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/slim_donate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="?android:attr/selectableItemBackground"
+            android:clickable="true" >
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_donate" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="4dp"
+                    android:paddingLeft="5dp"
+                    android:text="@string/slim_donate_title"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                </LinearLayout>
+
+            <TextView
+                android:id="@+id/slim_website_sum"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:text="@string/slim_donate_summary"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/line4"
+            style="?android:attr/listSeparatorTextViewStyle"
+            android:layout_width="match_parent"
+            android:layout_height="8dp"
+            android:gravity="center_horizontal" />
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/slim_source"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="?android:attr/selectableItemBackground"
+            android:clickable="true" >
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_github" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="4dp"
+                    android:paddingLeft="5dp"
+                    android:text="@string/slim_source_title"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                </LinearLayout>
+
+            <TextView
+                android:id="@+id/slim_website_sum"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:text="@string/slim_source_summary"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/line5"
+            style="?android:attr/listSeparatorTextViewStyle"
+            android:layout_width="match_parent"
+            android:layout_height="8dp"
+            android:gravity="center_horizontal" />
+
+    </LinearLayout>
+
+</ScrollView>

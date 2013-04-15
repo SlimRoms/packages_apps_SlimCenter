@@ -15,7 +15,6 @@
  */
 package com.slim.center;
 
-import java.util.List;
 import java.util.Locale;
 
 import com.slim.ota.R;
@@ -26,8 +25,6 @@ import com.slim.sizer.SlimSizer;
 import android.app.ActionBar;
 import android.app.FragmentTransaction;
 import android.content.Intent;
-import android.content.pm.PackageManager;
-import android.content.pm.ResolveInfo;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.os.Bundle;
@@ -110,7 +107,7 @@ ActionBar.TabListener{
 
         @Override
         public int getCount() {
-            // Show 2 total pages.
+            // Show 3 total pages.
             return 3;
         }
 
@@ -119,11 +116,11 @@ ActionBar.TabListener{
             Locale l = Locale.getDefault();
             switch (position) {
             case 0:
-                return getString(R.string.ota_title).toUpperCase(l);
+                return getString(R.string.aboutslim_title).toUpperCase(l);                
             case 1:
-                return getString(R.string.sizer_title).toUpperCase(l);
+                return getString(R.string.ota_title).toUpperCase(l);                
             case 2:
-                return getString(R.string.aboutslim_title).toUpperCase(l);
+                return getString(R.string.sizer_title).toUpperCase(l);
             }
             return null;
         }
@@ -131,11 +128,11 @@ ActionBar.TabListener{
         public android.support.v4.app.Fragment getItem(int page) {
             switch (page) {
             case 0:
-                return new SlimOTA();
+                return new AboutSlim();                
             case 1:
-                return new SlimSizer();
+                return new SlimOTA();                
             case 2:
-                return new AboutSlim();
+                return new SlimSizer();
             }
             return null;
         }
@@ -150,18 +147,18 @@ ActionBar.TabListener{
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case android.R.id.home:
+        int resId = item.getItemId();
+        if (resId == android.R.id.home) {
                 // app icon in action bar clicked; go home
                 Intent intent = new Intent(android.provider.Settings.ACTION_SETTINGS);
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(intent);
                 return true;
-            case R.id.ab_about:
+        } else if (resId == R.id.ab_about) {
                 Intent intentAbout = new Intent(this, About.class);
                 startActivity(intentAbout);
                 return true;
-            default:
+        } else {
                 return super.onOptionsItemSelected(item);
         }
     }

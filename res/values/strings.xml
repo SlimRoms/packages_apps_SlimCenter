@@ -106,16 +106,17 @@
     <string name="ota_title">SlimOTA</string>
 
     <!-- About -->
-    <string name="aboutslim_title">About Slim</string>
+    <string name="aboutslim_title">SlimRoms</string>
     <string name="devs">Developer</string>
     <string name="slim_website_title">Slim Website</string>
-    <string name="slim_source_title">Slim Source</string>
     <string name="slim_website_summary">www.slimroms.net\nFind all latest Slim news here</string>
+    <string name="slim_irc_title">SlimIRC</string>
+    <string name="slim_irc_summary">Join our IRC channel!\nChat with the Slim Team and other users</string>
+    <string name="slim_donate_title">Donate</string>
+    <string name="slim_donate_summary">Donate to Team SlimRoms</string>
+    <string name="slim_source_title">Slim Source</string>
     <string name="slim_source_summary">SlimRoms are fully open source.\nSource at github.com/SlimRoms</string>
-    <string name="donate">Donate</string>
-    <string name="donate_summary">Donate to Team SlimRoms</string>
-    <string name="irc">SlimIRC</string>
-    <string name="irc_summary">Join us on our IRC!</string>
     <string name="no_irc">SlimIRC App not found.</string>
+    <string name="center_summary"><b>SlimCenter</b> provides tools &amp; information to help make your experience with SlimRoms even better. Upgrade automatically to the newest version of our ROM with <b>SlimOTA</b> and remove unwanted system apps with <b>SlimSizer</b></string>
 
 </resources>

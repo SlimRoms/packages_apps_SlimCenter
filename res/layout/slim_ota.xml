@@ -147,26 +147,31 @@
     </LinearLayout>
 
     <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp" >
 
-        <Button
+        <ImageView
             android:id="@+id/btn_setting"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:src="@drawable/action_settings"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
-            android:background="@android:color/transparent"
-            android:drawableRight="@drawable/action_settings" />
+            android:padding="6dp"
+            android:clickable="true"
+            android:background="?android:attr/selectableItemBackground" />
 
-        <Button
+        <ImageView
             android:id="@+id/btn_update"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:src="@drawable/navigation_refresh"
             android:layout_alignParentRight="true"
             android:layout_alignParentTop="true"
-            android:background="@android:color/transparent"
-            android:drawableLeft="@drawable/navigation_refresh" />
+            android:padding="6dp"
+            android:clickable="true"
+            android:background="?android:attr/selectableItemBackground" />
 
     </RelativeLayout>
 

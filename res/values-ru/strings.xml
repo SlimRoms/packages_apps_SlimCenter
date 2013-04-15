@@ -59,10 +59,10 @@
     <string name="short_cut_download_gapps_summary">Скачать дополнения к прошивке SlimBean</string>
     <string name="notification_message">Доступно обновление прошивки SlimBean</string>
     <string name="about_slim_ota">Slim-Центр позволяет легко изменять\n свою прошивку!</string>
-	<string name="about_version">Slim-Центр 1.1</string>
+    <string name="about_version">Slim-Центр 1.1</string>
     <string name="about_contact_text">Расскажите нам свои впечатления\nили дайте знать о баге или проблеме</string>
     <string name="about_license">Открытые лицензии</string>
-	<string name="about_license_text">Slim-Центр:</string>
+    <string name="about_license_text">Slim-Центр:</string>
     <string name="listsystem">список</string>
     <string name="caution">Внимание!</string>
     <string name="sizer_message_startup">Эта программа разрешает удалять системные приложения. Используйте с осторожностью и удаляйте только то, что можно удалить без последствий.</string>
@@ -77,18 +77,18 @@
     <string name="sizer_message_filesuccess">Профиль создан.</string>
     <string name="sizer_message_filefail">Невозможно создать профиль.</string>
     <string name="sizer_message_noselect">Ничего не выбрано.</string>
-	<string name="ota_title">SlimOTA</string>
-	
-	<!-- About -->
+    <string name="ota_title">SlimOTA</string>
+
+    <!-- About -->
     <string name="aboutslim_title">Про Slim</string>
     <string name="devs">Разработчик</string>
     <string name="slim_website_title">Страница Slim</string>
     <string name="slim_source_title">Исходники Slim</string>
     <string name="slim_website_summary">www.slimroms.net\nВсе последние новости про Slim здесь</string>
     <string name="slim_source_summary">Slim полностью открыт.\nИсходники на github.com/SlimRoms</string>
-	<string name="donate">Пожертвования</string>
-	<string name="donate_summary">Пожертвовать команде SlimRoms</string>
-	<string name="irc">SlimIRC</string>
-	<string name="irc_summary">Заходите в нашу IRC!</string>
-	<string name="no_irc">Приложение SlimIRC не найдено.</string>
+    <string name="slim_donate_title">Пожертвования</string>
+    <string name="slim_donate_summary">Пожертвовать команде SlimRoms</string>
+    <string name="slim_irc_title">SlimIRC</string>
+    <string name="slim_irc_summary">Заходите в нашу IRC!</string>
+    <string name="no_irc">Приложение SlimIRC не найдено.</string>
 </resources>

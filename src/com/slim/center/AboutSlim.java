@@ -28,11 +28,15 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 public class AboutSlim extends Fragment{
 
+    private LinearLayout website;
+    private LinearLayout source;
+    private LinearLayout donate;
+    private LinearLayout irc;
     private static Intent IRC_INTENT = new Intent(Intent.ACTION_VIEW, Uri.parse("ccircslim:1"));
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -40,75 +44,42 @@ public class AboutSlim extends Fragment{
         return view;
     }
 
+    private final View.OnClickListener mActionLayouts = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            if (v == website) {
+                launchUrl("http://slimroms.net/");
+            } else if (v == source) {
+                launchUrl("http://github.com/SlimRoms");
+            } else if (v == donate) {
+                launchUrl("http://www.slimroms.net/index.php/donations");
+            } else if (v == irc) {
+                if (isCallable(IRC_INTENT)){
+                    startActivity(IRC_INTENT);
+                } else {
+                    toast(getResources().getString(R.string.no_irc));
+                }
+            }
+        }
+    };
+
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        //set TextViews
-        TextView website = (TextView) getView().findViewById(R.id.slim_website);
-        TextView websiteSum = (TextView) getView().findViewById(R.id.slim_website_sum);
-        TextView source = (TextView) getView().findViewById(R.id.slim_source);
-        TextView sourceSum = (TextView) getView().findViewById(R.id.slim_source_sum);
-        TextView donate = (TextView) getView().findViewById(R.id.donate);
-        TextView donateSum = (TextView) getView().findViewById(R.id.donate_sum);
-        TextView irc = (TextView) getView().findViewById(R.id.irc);
-        TextView ircSum = (TextView) getView().findViewById(R.id.irc_sum);
-        //set onClickListener on every TextView
-        website.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                launchUrl("http://slimroms.net/");
-            }
-        });
-        websiteSum.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                launchUrl("http://slimroms.net/");
-            }
-        });
-        source.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                launchUrl("http://github.com/SlimRoms");
-            }
-        });
-        sourceSum.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                launchUrl("http://github.com/SlimRoms");
-            }
-        });
-        donate.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                launchUrl("http://www.slimroms.net/index.php/donations");
-            }
-        });
-        donateSum.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                launchUrl("http://www.slimroms.net/index.php/donations");
-            }
-        });
-        irc.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (isCallable(IRC_INTENT)){
-                    startActivity(IRC_INTENT);
-                } else {
-                    toast(getResources().getString(R.string.no_irc));
-                }
-            }
-        });
-        ircSum.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (isCallable(IRC_INTENT)){
-                    startActivity(IRC_INTENT);
-                } else {
-                    toast(getResources().getString(R.string.no_irc));
-                }
-            }
-        });
+
+        //set LinearLayouts and onClickListeners
+
+        website = (LinearLayout) getView().findViewById(R.id.slim_website);
+        website.setOnClickListener(mActionLayouts);
+
+        source = (LinearLayout) getView().findViewById(R.id.slim_source);
+        source.setOnClickListener(mActionLayouts);
+
+        donate = (LinearLayout) getView().findViewById(R.id.slim_donate);
+        donate.setOnClickListener(mActionLayouts);
+
+        irc = (LinearLayout) getView().findViewById(R.id.slim_irc);
+        irc.setOnClickListener(mActionLayouts);
     }
 
     private void launchUrl(String url) {

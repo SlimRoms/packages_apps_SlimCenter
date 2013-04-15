@@ -30,4 +30,7 @@
     <style name="SlimOTA" parent="SlimOTABaseTheme">
          <!-- All customizations that are NOT specific to a particular API-level can go here. -->
     </style>
+    <style name="slimMedium" parent="@android:style/TextAppearance.Medium">
+        <item name="android:textStyle">normal</item>
+    </style>
  </resources>
