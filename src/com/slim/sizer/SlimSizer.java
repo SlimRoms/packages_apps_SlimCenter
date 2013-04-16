@@ -38,7 +38,7 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemLongClickListener;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -72,8 +72,10 @@ public class SlimSizer extends Fragment {
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        final Button delButton = (Button) getView().findViewById(R.id.btn_delete);
-        final Button profileButton = (Button) getView().findViewById(R.id.btn_profile);
+        final ImageView delButton = (ImageView) getView().findViewById(R.id.btn_delete);
+        final ImageView profileButton = (ImageView) getView().findViewById(R.id.btn_profile);
+
+        if (delButton == null) { return; }
 
         // create arraylist of apps not to be removed
         final ArrayList<String> safetyList = new ArrayList<String>();

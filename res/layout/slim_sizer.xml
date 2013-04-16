@@ -25,27 +25,39 @@
         android:id="@string/listsystem"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/btn_delete"
+        android:layout_above="@+id/btn_layout"
         android:layout_alignParentRight="true"
         android:layout_alignParentTop="true" />
 
-    <Button
-        android:id="@+id/btn_delete"
-        android:layout_width="wrap_content"
+    <RelativeLayout
+        android:id="@+id/btn_layout"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:background="@android:color/transparent"
-        android:drawableLeft="@drawable/content_discard" />
+        android:padding="5dp" >
 
-    <Button
-        android:id="@+id/btn_profile"
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:background="@android:color/transparent"
-        android:drawableRight="@drawable/content_save" />
+        <ImageView
+            android:id="@+id/btn_profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/content_save"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:padding="6dp"
+            android:clickable="true"
+            android:background="?android:attr/selectableItemBackground" />
+
+        <ImageView
+            android:id="@+id/btn_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/content_discard"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:padding="6dp"
+            android:clickable="true"
+            android:background="?android:attr/selectableItemBackground" />
+
+    </RelativeLayout>
 
 </RelativeLayout>

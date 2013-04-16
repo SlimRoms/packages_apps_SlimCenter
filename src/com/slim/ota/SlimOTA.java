@@ -203,8 +203,8 @@ public class SlimOTA extends Fragment implements OnSharedPreferenceChangeListene
     private void addShortCutFragment() {
         FragmentManager fragmentManager = this.getActivity().getFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        ShortCutFragment shortCut = new ShortCutFragment();
-        fragmentTransaction.replace(R.id.shortCutsFragment, shortCut);
+        SlimLinks slimLinks = new SlimLinks();
+        fragmentTransaction.replace(R.id.linksFragment, slimLinks);
         fragmentTransaction.commit();
     }
 
