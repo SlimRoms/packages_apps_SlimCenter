@@ -68,6 +68,8 @@ public class SlimLinks extends Fragment {
                 if (mStrFileURLNew != null
                         && mStrFileURLNew != "") {
                     launchUrl(mStrFileURLNew);
+                } else {
+                    launchUrl(getString(R.string.download_url));
                 }
             } else if (v == mDownloadGapps) {
                 launchUrl(getString(R.string.gapps_url));
