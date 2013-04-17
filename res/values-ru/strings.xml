@@ -80,7 +80,7 @@
     <string name="ota_title">SlimOTA</string>
 
     <!-- About -->
-    <string name="aboutslim_title">Про Slim</string>
+    <string name="aboutslim_title">SlimRoms</string>
     <string name="devs">Разработчик</string>
     <string name="slim_website_title">Страница Slim</string>
     <string name="slim_source_title">Исходники Slim</string>
@@ -89,6 +89,8 @@
     <string name="slim_donate_title">Пожертвования</string>
     <string name="slim_donate_summary">Пожертвовать команде SlimRoms</string>
     <string name="slim_irc_title">SlimIRC</string>
-    <string name="slim_irc_summary">Заходите в нашу IRC!</string>
+    <string name="slim_irc_summary">Заходите в нашу IRC!\nОбщайтесь с командой Slim и другими пользователями</string>
     <string name="no_irc">Приложение SlimIRC не найдено.</string>
+    <string name="center_summary"><b>Slim-Центр</b> включает утилиты и данные, чтобы сделать работу с прошивкой SlimRoms еще лучше. В числе возможностей: автоматическое обновление до последней версии ROM с помощью <b>SlimOTA</b> и удаление ненужных системных приложений через <b>SlimSizer</b></string>
+
 </resources>
