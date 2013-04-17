@@ -65,7 +65,10 @@ public class SlimLinks extends Fragment {
             if (v == mChangelog) {
                 launchUrl(getString(R.string.changelog_url));
             } else if (v == mDownload) {
-                launchUrl(mStrFileURLNew);
+                if (mStrFileURLNew != null
+                        && mStrFileURLNew != "") {
+                    launchUrl(mStrFileURLNew);
+                }
             } else if (v == mDownloadGapps) {
                 launchUrl(getString(R.string.gapps_url));
             } else if (v == mFAQ) {
