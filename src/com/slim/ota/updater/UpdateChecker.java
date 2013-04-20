@@ -106,7 +106,7 @@ public class UpdateChecker extends AsyncTask<Context, Integer, String> {
                 String[] line = strLine.split("=");
                 if (line[0].equalsIgnoreCase("ro.product.device")) {
                     strDevice = line[1].trim();
-                } else if (line[0].equalsIgnoreCase("ro.modversion")) {
+                } else if (line[0].equalsIgnoreCase("slim.ota.version")) {
                     slimCurVer = line[1].trim();
                 }
             }
@@ -160,8 +160,14 @@ public class UpdateChecker extends AsyncTask<Context, Integer, String> {
              } else if(eventType == XmlPullParser.TEXT) {
                  if (tagMatchesDevice && inFileName) {
                     String tempFileName = xpp.getText().trim();
-                    putDataInprefs(mContext, "Filename",tempFileName);
-                    if (tempFileName.compareToIgnoreCase(slimCurVer)>0) newFileName = tempFileName;
+                    String versionOnServer = "";
+                    try {
+                        versionOnServer = tempFileName.split("\\-")[2];
+                        putDataInprefs(mContext, "Filename",versionOnServer);
+                        if (versionOnServer.compareToIgnoreCase(slimCurVer)>0) newFileName = tempFileName;
+                    } catch (Exception invalidFileName) {
+                        Log.e(TAG, "File Name from server is invalid : "+tempFileName);
+                    }
                  }else if (tagMatchesDevice && inDownloadURL) {
                     String tempDownloadURL = xpp.getText().trim();
                     putDataInprefs(mContext, "DownloadUrl",tempDownloadURL);

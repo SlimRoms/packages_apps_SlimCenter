@@ -188,7 +188,7 @@ public class SlimOTA extends Fragment implements OnSharedPreferenceChangeListene
         } else if (updateFile.equals("")) {
             mStrUpToDate = getString(R.string.error_reading_title);
             mStatusIcon.setImageResource(R.drawable.ic_no_data);
-        } else if (updateFile.compareToIgnoreCase(mStrCurFile)<=0) {
+        } else if (updateFile.compareToIgnoreCase(mStrCurVer)<=0) {
             mUpdateFile.setTextColor(Color.GREEN);
             mStrUpToDate = getString(R.string.up_to_date_title);
             mStatusIcon.setImageResource(R.drawable.ic_uptodate);
