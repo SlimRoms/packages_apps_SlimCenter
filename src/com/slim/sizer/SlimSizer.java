@@ -178,22 +178,22 @@ public class SlimSizer extends Fragment {
                                 public void onClick(DialogInterface dialog,
                                         int id) {
                                     // action for ok
-                                    try {
-                                        if (su==false){
-                                        superUser = Runtime.getRuntime().exec("su");
-                                        ds = new DataOutputStream(superUser.getOutputStream());
-                                        ds.writeBytes("mount -o remount,rw /system" + "\n");
-                                        ds.flush();
-                                        su=true;
-                                        }
-                                    } catch (IOException e) {
-                                        // TODO Auto-generated catch block
-                                        e.printStackTrace();
-                                    }
                                     dialog.cancel();
                                 }
                             });
-            // delete dialog
+                            try {
+                                if (!su){
+                                    superUser = Runtime.getRuntime().exec("su");
+                                    ds = new DataOutputStream(superUser.getOutputStream());
+                                    ds.writeBytes("mount -o remount,rw /system" + "\n");
+                                    ds.flush();
+                                    su = true;
+                                }
+                            } catch (IOException e) {
+                                // TODO Auto-generated catch block
+                                e.printStackTrace();
+                            }
+        // delete dialog
         } else if (id == DELETE_DIALOG) {
             alert.setMessage(R.string.sizer_message_delete)
                     .setPositiveButton(R.string.ok,
