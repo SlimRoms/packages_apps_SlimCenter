@@ -1,19 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--
- * Copyright (C) 2012 Slimroms
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *                                                http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
--->
 
 <resources>
     <string name="app_name">SlimCenter</string>
@@ -58,21 +43,14 @@
     <string name="short_cut_download_uptodate_summary">Pobierz ROM SlimBean</string>
     <string name="short_cut_download_gapps_title">Pobierz Gapps</string>
     <string name="short_cut_download_gapps_summary">Pobierz paczki z dodatkami do SlimBean</string>
-    <string name="changelog_url">http://otaslim.slimroms.net/changelog.htm</string>
-    <string name="faq_url">http://otaslim.slimroms.net/faq.htm</string>
-    <string name="news_url">http://otaslim.slimroms.net/news.htm</string>
-    <string name="gapps_url">http://otaslim.slimroms.net/gapps.htm</string>
-    <string name="xml_url">http://otaslim.slimroms.net/ota.xml</string>
+    <string name="download_url">http://otaslim.slimroms.net/download.htm</string>
     <string name="notification_message">Dostępna aktualizacja ROMU SlimBean</string>
-    <string name="about_home_url"><a href="http://www.slimroms.net">www.slimroms.net</a></string>
     <string name="about_slim_ota">SlimOTA pilnuje by twój ROM i gappsy\nbyły na bieżąco</string>
     <string name="about_copyright">\u00A9 prawa autorskie Slimroms 2013</string>
     <string name="about_version">SlimOTA 1.0</string>
-    <string name="about_contact"><a href="http://otaslim.slimroms.net/contact.htm">Contact us</a></string>
     <string name="about_contact_text">Powiedz nam co myślisz\nlub też daj znać o błędach i problemach</string>
     <string name="about_license">Licencja otwartego źródła</string>
     <string name="about_license_text">SlimOTA app:</string>
-    <string name="about_license_url"><a href="http://otaslim.slimroms.net/license.htm">gpl(2)</a></string>
     <string name="menu_slimsizer">SlimSizer</string>
     <string name="listsystem">Lista</string>
     <string name="sizer_title">SlimSizer</string>
@@ -89,4 +67,17 @@
     <string name="sizer_message_filesuccess">Profil utworzony.</string>
     <string name="sizer_message_filefail">Nie można utworzyć profilu.</string>
     <string name="sizer_message_noselect">Nic nie wybrano.</string>
+    <string name="ota_title">SlimOTA</string>
+    <string name="aboutslim_title">SlimRoms</string>
+    <string name="devs">Programista</string>
+    <string name="slim_website_title">Strona projektu Slim</string>
+    <string name="slim_website_summary">www.slimroms.net\nZnajdź najnowsze informacje o projekcie tutaj</string>
+    <string name="slim_irc_title">SlimIRC</string>
+    <string name="slim_irc_summary">Dołącz do naszego kanału IRCl!\nRozmawiaj z zespołem Slim i innymi użytkownikami</string>
+    <string name="slim_donate_title">Wesprzyj</string>
+    <string name="slim_donate_summary">Dotacje dla ekipy SlimRoms</string>
+    <string name="slim_source_title">Źródło SLIM</string>
+    <string name="slim_source_summary">Romy SLIM są w pełni otwartym źródłem.\nŹródło: github.com/SlimRoms</string>
+    <string name="no_irc">Nie znaleziono aplikacji SlimIRC.</string>
+    <string name="center_summary"><b>SlimCenter</b> dostarcza narzędzia i informacje, które pomogą ulepszyć twoje doświadczenia z Romem. Aktualizuj automatycznie do najnowszej wersji przez <b>SlimOTA</b> i usuwaj niepotrzebne aplikacje systemowe z <b>SlimSizer</b></string>
 </resources>
