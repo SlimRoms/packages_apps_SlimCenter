@@ -1,19 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--
- * Copyright (C) 2012 Slimroms
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *      http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
--->
 
 <resources>
     <string name="app_name">SlimCenter</string>
@@ -58,6 +43,7 @@
     <string name="short_cut_download_uptodate_summary">Stáhnout SlimBean ROM</string>
     <string name="short_cut_download_gapps_title">Stáhnout gapps</string>
     <string name="short_cut_download_gapps_summary">Stáhnout doplňující balíčky SlimBean</string>
+    <string name="download_url">http://otaslim.slimroms.net/download.htm</string>
     <string name="changelog_url">http://otaslim.slimroms.net/changelog.htm</string>
     <string name="faq_url">http://otaslim.slimroms.net/faq.htm</string>
     <string name="news_url">http://otaslim.slimroms.net/news.htm</string>
@@ -65,19 +51,19 @@
     <string name="xml_url">http://otaslim.slimroms.net/ota.xml</string>
     <string name="notification_message">Aktualizace SlimBean ROM je k dispozici</string>
     <string name="about_home_url"><a href="http://www.slimroms.net">www.slimroms.net</a></string>
-    <string name="about_slim_ota">SlimOTA udrží vaši ROM a gapps\nvždy aktualizované</string>
+    <string name="about_slim_ota">SlimCenter umožní snadno spravovat\nvaši ROM!</string>
     <string name="about_copyright">\u00A9 Copyright Slimroms 2013</string>
-    <string name="about_version">SlimOTA 1.0</string>
+    <string name="about_version">SlimCenter 1.1</string>
     <string name="about_contact"><a href="http://otaslim.slimroms.net/contact.htm">Kontaktujte nás</a></string>
     <string name="about_contact_text">Řekněte nám, co si myslíte\nnebo nám dejte vědět o chybě nebo problému</string>
     <string name="about_license">Licence open source</string>
-    <string name="about_license_text">Aplikace SlimOTA:</string>
+    <string name="about_license_text">Aplikace SlimCenter:</string>
     <string name="about_license_url"><a href="http://otaslim.slimroms.net/license.htm">gpl(2)</a></string>
     <string name="menu_slimsizer">SlimSizer</string>
     <string name="listsystem">seznam</string>
     <string name="sizer_title">SlimSizer</string>
     <string name="caution">Pozor!</string>
-    <string name="sizer_message_startup">Tento nástroj umožňuje odstranit systémové aplikace. Používejte jej s opatrností a odstraňujte pouze aplikace, které můžou být bezpečně smazány.</string>
+    <string name="sizer_message_startup">Tento nástroj umožňuje odstranit systémové aplikace. Používejte jej s opatrností a odstraňujte pouze aplikace, které můžou být bezpečně odebrány.</string>
     <string name="cancel">Zrušit</string>
     <string name="sizer_message_delete">Opravdu chcete smazat tuto aplikaci?</string>
     <string name="btn_delete">Smazat vybrané aplikace</string>
@@ -89,4 +75,16 @@
     <string name="sizer_message_filesuccess">Profil vytvořen.</string>
     <string name="sizer_message_filefail">Nepodařilo se vytvořit profil.</string>
     <string name="sizer_message_noselect">Nic není vybráno.</string>
+    <string name="aboutslim_title">SlimRoms</string>
+    <string name="devs">Vývojář</string>
+    <string name="slim_website_title">Slim webstránka</string>
+    <string name="slim_website_summary">www.slimroms.net\nZde najdete poslední Slim novinky</string>
+    <string name="slim_irc_title">SlimIRC</string>
+    <string name="slim_irc_summary">Připojte se na náš IRC kanál!\nChatujte se Slim týmem i ostatními uživateli</string>
+    <string name="slim_donate_title">Přispět</string>
+    <string name="slim_donate_summary">Přispějte týmu SlimRoms</string>
+    <string name="slim_source_title">Slim Zdroj</string>
+    <string name="slim_source_summary">SlimRoms jsou zcela open source.\nZdroje najdete na github.com/SlimRoms</string>
+    <string name="no_irc">SlimIRC aplikace nenalezena.</string>
+    <string name="center_summary"><b>SlimCenter</b> poskytuje nástroje a informace, které pomohou učinit vaše zkušenosti se SlimRoms ještě lepší. Automaticky aktualizujte na nejnovější verzi naší ROM pomocí <b>SlimOTA</b> a odstraňte nežádoucí systémové aplikace <b>SlimSizerem</b></string>
 </resources>
