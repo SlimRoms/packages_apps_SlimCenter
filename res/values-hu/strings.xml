@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <string name="app_name">SlimCenter</string>
+    <string name="menu_settings">Beállítások</string>
+    <string name="device_title">Eszköz</string>
+    <string name="device_name_title">Név:</string>
+    <string name="codename_title">Kódnév:</string>
+    <string name="version_title">Verzió:</string>
+    <string name="file_name_title">Fájl:</string>
+    <string name="curVer">Jelenlegi verzió</string>
+    <string name="title_update">Frissítés</string>
+    <string name="device_info_title">Eszköz információ</string>
+    <string name="up_to_date_title">A rendszer naprakész</string>
+    <string name="no_data_title">Nincs elérhető adatkapcsolat</string>
+    <string name="update_file_title">Frissítés:</string>
+    <string name="settings_title">SlimOTA beállítások</string>
+    <string name="about_title">Névjegy</string>
+    <string name="update_interval_day">24 óránként</string>
+    <string name="update_interval_half_day">12 óránként</string>
+    <string name="update_interval_hour">Óránként</string>
+    <string name="update_interval_disable">Letiltás</string>
+    <string name="menu_update">Frissítések keresése most</string>
+    <string name="toast_text">ROM frissítések keresése...</string>
+    <string name="toast_no_data_text">Az adatkapcsolat nem elérhető, kérem kapcsolja be</string>
+    <string name="short_cut_changelog_title">Változtatások</string>
+    <string name="short_cut_changelog_summary_update_available">Fontos!!! Figyelmesen olvassa el a változtatásokat és a telepítési útmutatót</string>
+    <string name="short_cut_download_summary_update_available">Új SlimBean ROM érhető el. Letöltés itt!</string>
+    <string name="short_cut_changelog_summary">Változtatások és telepítési útmutató megtekintése</string>
+    <string name="short_cut_additional_title">Továbbiak</string>
+    <string name="short_cut_faq_title">GYIK</string>
+    <string name="short_cut_news_title">Hírek</string>
+    <string name="short_cut_news_summary">Legújabb Slim hírek</string>
+    <string name="short_cut_download_title">SlimBean letöltése</string>
+    <string name="short_cut_download_uptodate_summary">SlimBean ROM letöltése</string>
+    <string name="short_cut_download_gapps_title">Google Apps letöltése</string>
+    <string name="short_cut_download_gapps_summary">SlimBean kiegészítő csomagok letöltése</string>
+    <string name="notification_message">Elérhető SlimBean ROM frissítés</string>
+    <string name="about_license">Nyílt forráskódú licenszek</string>
+    <string name="listsystem">lista</string>
+    <string name="caution">Vigyázat!</string>
+    <string name="sizer_message_startup">Ezzel az eszközzel törölheti a rendszer szintű programokat. Kérjük, óvatosan használja és csak olyan applikációkat töröljön, amelyek biztonsággal eltávolíthatók.</string>
+    <string name="cancel">Mégsem</string>
+    <string name="sizer_message_delete">Biztosan törölni akarja ezt az applikációt?</string>
+    <string name="btn_delete">Kijelölt applikációk törlése most!</string>
+    <string name="delete_success">Törölve</string>
+    <string name="delete_fail">Törlés sikertelen</string>
+    <string name="btn_profile">Profil</string>
+    <string name="sizer_message_filesuccess">Profil létrehozva.</string>
+    <string name="sizer_message_filefail">A profil létrehozása nem sikerült.</string>
+    <string name="sizer_message_noselect">Semmi sincs kiválasztva.</string>
+</resources>
