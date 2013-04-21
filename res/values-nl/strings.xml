@@ -24,6 +24,11 @@
     <string name="update_interval_hour">Elk uur</string>
     <string name="update_interval_disable">Uitschakelen</string>
     <string name="system_prop_error">Kan systeem eigenschappen niet lezen</string>
+    <string name="bad_url">Niet in staat om downloads te vinden.\nBreng uw Slim apparaat ontwikkelaar hiervan op de hoogte!</string>
+    <string name="menu_update">Controleer nu op updates</string>
+    <string name="toast_text">Zoeken naar ROM updates...</string>
+    <string name="toast_no_data_text">Geen internet verbinding. Zet a.u.b. aan.</string>
+    <string name="short_cut_release_title">ROM gerelateerd</string>
     <string name="short_cut_changelog_title">Changelog</string>
     <string name="short_cut_changelog_summary_update_available">Belangrijk! Lees het changelog en de installatieinstructies aandachtig</string>
     <string name="short_cut_download_summary_update_available">Er is een nieuwe versie van SlimBean. Download hier!</string>
@@ -39,4 +44,20 @@
     <string name="short_cut_download_gapps_summary">SlimBean addon-paketten downloaden</string>
     <string name="notification_message">SlimBean ROM update beschikbaar</string>
     <string name="about_slim_ota">SlimOTA houdt u altijd op de hoogte\nvan uw ROM en gapps</string>
+    <string name="about_contact_text">Vertel ons wat u denkt\nof meld een bug of probleem</string>
+    <string name="about_license">Open-sourcelicenties</string>
+    <string name="listsystem">Lijst</string>
+    <string name="caution">Let op!</string>
+    <string name="sizer_message_startup">Deze tool stelt u in staat om systeem applicaties te verwijderen. Wees voorzichtig en verwijder alleen apps welke veilig zijn om te verwijderen.</string>
+    <string name="cancel">Annuleren</string>
+    <string name="sizer_message_delete">Weet u zeker dat u deze app wilt verwijderen ?</string>
+    <string name="btn_delete">Verwijder geselecteerde apps</string>
+    <string name="delete_success">Verwijderd</string>
+    <string name="delete_fail">Verwijderen onmogelijk</string>
+    <string name="btn_profile">Profiel</string>
+    <string name="sizer_message_sdnowrite">Schrijven SD kaart onmogelijk</string>
+    <string name="sizer_message_sdnoread">Lezen SD Kaart onmogelijk</string>
+    <string name="sizer_message_filesuccess">Profiel maken</string>
+    <string name="sizer_message_filefail">Aanmaken van profiel mislukt.</string>
+    <string name="sizer_message_noselect">Niets geselecteerd.</string>
 </resources>
