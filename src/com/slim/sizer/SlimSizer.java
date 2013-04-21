@@ -63,10 +63,7 @@ public class SlimSizer extends Fragment {
     @Override
     public void setUserVisibleHint(boolean isVisibleToUser) {
         super.setUserVisibleHint(isVisibleToUser);
-        if (isVisibleToUser && adapter!=null && startup==true) {
-            showDialog(STARTUP_DIALOG, null, adapter);
-            startup=false;
-        }
+        showSuperuserRequest();
     }
 
     @Override
@@ -158,9 +155,23 @@ public class SlimSizer extends Fragment {
             }
         });
     }
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        showSuperuserRequest();
+    }
+
+    private void showSuperuserRequest() {
+        if (this.getUserVisibleHint() && adapter != null && startup) {
+            showDialog(STARTUP_DIALOG, null, adapter);
+            startup = false;
+        }
     }
 
     private void showDialog(int id, final String item,
