@@ -1,19 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--
- * Copyright (C) 2012 Slimroms
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *            http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
--->
 
 <resources>
     <string name="app_name">SlimCenter</string>
@@ -58,6 +43,7 @@
     <string name="short_cut_download_uptodate_summary">SlimBean ROM downloaden</string>
     <string name="short_cut_download_gapps_title">Gapps downloaden</string>
     <string name="short_cut_download_gapps_summary">SlimBean Addon Paket downloaden</string>
+    <string name="download_url">http://otaslim.slimroms.net/download.htm</string>
     <string name="changelog_url">http://otaslim.slimroms.net/changelog.htm</string>
     <string name="faq_url">http://otaslim.slimroms.net/faq.htm</string>
     <string name="news_url">http://otaslim.slimroms.net/news.htm</string>
@@ -89,4 +75,16 @@
     <string name="sizer_message_filesuccess">Profil erstellt.</string>
     <string name="sizer_message_filefail">Erstellen von Profil fehlgeschlagen.</string>
     <string name="sizer_message_noselect">Nichts ausgewählt.</string>
+    <string name="aboutslim_title">SlimRoms</string>
+    <string name="devs">Entwickler</string>
+    <string name="slim_website_title">Slim Webseite</string>
+    <string name="slim_website_summary">www.slimroms.net\nHier findest du alle Nachrichten zu Slim</string>
+    <string name="slim_irc_title">SlimIRC</string>
+    <string name="slim_irc_summary">Komm in unseren IRC-Channell!\nChatte mit dem Slim Team und anderen Nutzern</string>
+    <string name="slim_donate_title">Spenden</string>
+    <string name="slim_donate_summary">Spende an Team SlimRoms</string>
+    <string name="slim_source_title">Slim Quellcode</string>
+    <string name="slim_source_summary">SlimRoms sind vollständig open source.\nQuellcode bei github.com/SlimRoms</string>
+    <string name="no_irc">SlimIRC App nicht gefunden.</string>
+    <string name="center_summary"><b>SlimCenter</b> bietet Tools &amp; Informationen, die dabei helfen, die Erfahrung mit SlimRoms sogar noch besser zu machen. Aktualisiere automatisch auf die neueste Version unserer ROM mit <b>SlimOTA</b> und entferne nicht benötigte System-Apps mit <b>SlimSizer</b></string>
 </resources>
