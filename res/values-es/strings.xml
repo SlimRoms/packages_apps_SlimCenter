@@ -42,10 +42,13 @@
     <string name="short_cut_download_uptodate_summary">Descargar SlimBean ROM</string>
     <string name="short_cut_download_gapps_title">Descargar gapps</string>
     <string name="short_cut_download_gapps_summary">Descargar paquetes de adicionales de SlimBean</string>
+    <string name="download_url">http://otaslim.slimroms.net/download.htm</string>
     <string name="notification_message">Actualización de la ROM de SlimBean disponible</string>
     <string name="about_slim_ota">SlimOTA te mantiene siempre actualizada\n tu rom y gapps</string>
+    <string name="about_version">SlimCenter 1.1</string>
     <string name="about_contact_text">Díganos lo que piensa\no infórmenos sobre cualquier error o problema</string>
     <string name="about_license">Licencias de código abierto</string>
+    <string name="about_license_text">SlimCenter app:</string>
     <string name="listsystem">lista</string>
     <string name="caution">¡Atención!</string>
     <string name="sizer_message_startup">Esta herramienta permite eliminar aplicaciones de sistema. Utilice con precaución y elimine solamente aplicaciones sabiendo que son seguras para eliminarse.</string>
@@ -60,4 +63,17 @@
     <string name="sizer_message_filesuccess">Perfil creado.</string>
     <string name="sizer_message_filefail">Error al crear el perfil.</string>
     <string name="sizer_message_noselect">Nada seleccionado.</string>
+    <string name="ota_title">SlimOTA</string>
+    <string name="aboutslim_title">SlimRoms</string>
+    <string name="devs">Desarrollador</string>
+    <string name="slim_website_title">Sitio web de Slim</string>
+    <string name="slim_website_summary">www.slimroms.net\nEncuentra las últimas noticias sobre Slim aquí</string>
+    <string name="slim_irc_title">SlimIRC</string>
+    <string name="slim_irc_summary">¡Entra en nuestro canal de IRC!\nChatea con el equipo de Slim y con otros usuarios</string>
+    <string name="slim_donate_title">Donar</string>
+    <string name="slim_donate_summary">Dona al equipo de SlimRoms</string>
+    <string name="slim_source_title">Código fuente de Slim</string>
+    <string name="slim_source_summary">SlimRoms es completamente de código abierto.\nCódigo fuente en github.com/SlimRoms</string>
+    <string name="no_irc">SlimIRC App no encontrada.</string>
+    <string name="center_summary"><b>SlimCenter</b> proporciona herramientas e información para ayudarte a mejorar tu experiencia con SlimRoms. Puedes actualizar automáticamente a la versión más reciente de nuestra ROM con <b>SlimOTA</b> y eliminar aplicaciones no deseadas del sistema con <b>SlimSizer</b></string>
 </resources>
