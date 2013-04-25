@@ -363,7 +363,7 @@ public class SlimSizer extends Fragment {
         toast.show();
     }
 
-    private short sdAvailable() {
+    public short sdAvailable() {
         // check if sdcard is available
         // taken from developer.android.com
         short mExternalStorageAvailable = 0;

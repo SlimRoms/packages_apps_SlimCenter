@@ -47,7 +47,7 @@
     <string name="system_prop_error">Cannot read system properties</string>
     <string name="bad_url">Unable to get to download area.\nPlease inform your slim device maintainer!</string>
     <string name="menu_update">Look for Updates now</string>
-    <string name="toast_text">Looking for ROM updates...</string>
+    <string name="toast_text">Looking for ROM updates, please wait.</string>
     <string name="toast_no_data_text">No data connection. Please turn on</string>
 
     <!-- SlimOTA shortcut fragment -->
@@ -99,7 +99,7 @@
     <string name="sizer_message_delete_multi">Are you sure you want to delete selected apps?</string>
     <string name="btn_delete">Delete selected APPs now!</string>
     <string name="delete_progress_title">Deleting</string>
-    <string name="delete_progress">Selected files are being deleted...</string>
+    <string name="delete_progress">Selected files are being deleted, please wait.</string>
     <string name="delete_success">Deleted</string>
     <string name="delete_fail">Unable to delete</string>
     <string name="btn_profile">Profile</string>
@@ -123,5 +123,9 @@
     <string name="slim_source_summary">SlimRoms are fully open source.\nSource at github.com/SlimRoms</string>
     <string name="no_irc">SlimIRC App not found.</string>
     <string name="center_summary"><b>SlimCenter</b> provides tools &amp; information to help make your experience with SlimRoms even better. Upgrade automatically to the newest version of our ROM with <b>SlimOTA</b> and remove unwanted system apps with <b>SlimSizer</b></string>
+    <string name="slim_bugreport">Bugreport</string>
+    <string name="slim_bugreport_summary">Create a complete Bugreport.</string>
+    <string name="report_infosuccess">Created Systemreport, provide it to Team SlimRoms by attaching it to your Bugreport! You can find the Zip file on your SD-Card in a directory called \"Slim\".</string>
+    <string name="report_infofail">Failed to create Bugreport, please try again.</string>
 
 </resources>
