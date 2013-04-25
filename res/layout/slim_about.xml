@@ -19,7 +19,7 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent" >
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
@@ -43,7 +43,7 @@
             android:layout_height="8dp"
             android:gravity="center_horizontal" />
 
-        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        <LinearLayout
             android:id="@+id/slim_website"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -51,7 +51,7 @@
             android:background="?android:attr/selectableItemBackground"
             android:clickable="true" >
 
-            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal" >
@@ -85,13 +85,61 @@
         </LinearLayout>
 
         <TextView
+            android:id="@+id/line7"
+            style="?android:attr/listSeparatorTextViewStyle"
+            android:layout_width="match_parent"
+            android:layout_height="8dp"
+            android:gravity="center_horizontal" />
+
+        <LinearLayout
+            android:id="@+id/slim_bugreport"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="?android:attr/selectableItemBackground"
+            android:clickable="true" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_website" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="4dp"
+                    android:paddingLeft="5dp"
+                    android:text="@string/slim_bugreport"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                </LinearLayout>
+
+            <TextView
+                android:id="@+id/slim_bugreport_sum"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:text="@string/slim_bugreport_summary"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        </LinearLayout>
+
+        <TextView
             android:id="@+id/line2"
             style="?android:attr/listSeparatorTextViewStyle"
             android:layout_width="match_parent"
             android:layout_height="8dp"
             android:gravity="center_horizontal" />
 
-        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        <LinearLayout
             android:id="@+id/slim_irc"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -99,7 +147,7 @@
             android:background="?android:attr/selectableItemBackground"
             android:clickable="true" >
 
-            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal" >
@@ -139,7 +187,7 @@
             android:layout_height="8dp"
             android:gravity="center_horizontal" />
 
-        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        <LinearLayout
             android:id="@+id/slim_donate"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -147,7 +195,7 @@
             android:background="?android:attr/selectableItemBackground"
             android:clickable="true" >
 
-            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal" >
@@ -187,7 +235,7 @@
             android:layout_height="8dp"
             android:gravity="center_horizontal" />
 
-        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        <LinearLayout
             android:id="@+id/slim_source"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -195,7 +243,7 @@
             android:background="?android:attr/selectableItemBackground"
             android:clickable="true" >
 
-            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal" >
