@@ -27,7 +27,9 @@ import java.util.Collections;
 import java.util.Scanner;
 
 import android.app.AlertDialog;
+import android.app.ProgressDialog;
 import android.content.DialogInterface;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Environment;
 import android.support.v4.app.Fragment;
@@ -48,13 +50,13 @@ public class SlimSizer extends Fragment {
     private final int STARTUP_DIALOG = 1;
     private final int DELETE_DIALOG = 2;
     private final int DELETE_MULTIPLE_DIALOG = 3;
-     ArrayAdapter<String> adapter;
+    protected ArrayAdapter<String> adapter;
     private ArrayList<String> mSysApp;
-    private boolean startup =true;
-    private boolean su=false;
+    private boolean startup = true;
+    public final String systemPath = "/system/app/";
+    protected Process superUser;
+    protected DataOutputStream dos;
 
-    Process superUser;
-    DataOutputStream ds;
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.slim_sizer, container, false);
         return view;
@@ -89,13 +91,13 @@ public class SlimSizer extends Fragment {
         safetyList.add("Phone.apk");
         safetyList.add("Settings.apk");
         safetyList.add("SettingsProvider.apk");
+        safetyList.add("SlimCenter.apk");
         safetyList.add("Superuser.apk");
         safetyList.add("SystemUI.apk");
         safetyList.add("TelephonyProvider.apk");
 
         // create arraylist from /system/app content
-        final String path = "/system/app";
-        File system = new File(path);
+        File system = new File(systemPath);
         String[] sysappArray = system.list();
         mSysApp = new ArrayList<String>(
                 Arrays.asList(sysappArray));
@@ -130,9 +132,8 @@ public class SlimSizer extends Fragment {
             public void onClick(View v) {
                 // check which items are selected
                 String item = null;
-                int len = lv.getCount();
                 SparseBooleanArray checked = lv.getCheckedItemPositions();
-                for (int i = len - 1; i > 0; i--) {
+                for (int i = lv.getCount() - 1; i > 0; i--) {
                     if (checked.get(i)) {
                         item = mSysApp.get(i);
                     }
@@ -192,18 +193,6 @@ public class SlimSizer extends Fragment {
                                     dialog.cancel();
                                 }
                             });
-                            try {
-                                if (!su){
-                                    superUser = Runtime.getRuntime().exec("su");
-                                    ds = new DataOutputStream(superUser.getOutputStream());
-                                    ds.writeBytes("mount -o remount,rw /system" + "\n");
-                                    ds.flush();
-                                    su = true;
-                                }
-                            } catch (IOException e) {
-                                // TODO Auto-generated catch block
-                                e.printStackTrace();
-                            }
         // delete dialog
         } else if (id == DELETE_DIALOG) {
             alert.setMessage(R.string.sizer_message_delete)
@@ -213,12 +202,10 @@ public class SlimSizer extends Fragment {
                                         int id) {
                                     // action for ok
                                     // call delete
-                                    boolean successDel = delete(item);
-                                    if (successDel == true) {
-                                        // remove list entry
-                                        adapter.remove(item);
-                                        adapter.notifyDataSetChanged();
-                                    }
+                                    new SlimSizer.SlimDeleter().execute(item);
+                                    // remove list entry
+                                    adapter.remove(item);
+                                    adapter.notifyDataSetChanged();
                                 }
                             })
                     .setNegativeButton(R.string.cancel,
@@ -235,23 +222,20 @@ public class SlimSizer extends Fragment {
                             new DialogInterface.OnClickListener() {
                                 public void onClick(DialogInterface dialog,
                                         int id) {
-                                    String itemMulti = null;
                                     final ListView lv = (ListView) getView().findViewById(R.string.listsystem);
-                                    int len = lv.getCount();
+                                    ArrayList<String> itemsList = new ArrayList<String>();
                                     SparseBooleanArray checked = lv.getCheckedItemPositions();
-                                    for (int i = len - 1; i > 0; i--) {
+                                    for (int i = lv.getCount() - 1; i > 0; i--) {
                                         if (checked.get(i)) {
-                                            itemMulti = mSysApp.get(i);
-                                            // call delete
-                                            boolean successDel = delete(itemMulti);
-                                            if (successDel == true) {
-                                                // remove list entry
-                                                lv.setItemChecked(i, false);
-                                                adapter.remove(itemMulti);
-                                                adapter.notifyDataSetChanged();
-                                            }
+                                            String appName = mSysApp.get(i);
+                                            itemsList.add(appName);
+                                            // remove list entry
+                                            lv.setItemChecked(i, false);
+                                            adapter.remove(appName);
                                         }
                                     }
+                                    adapter.notifyDataSetChanged();
+                                    new SlimSizer.SlimDeleter().execute(itemsList.toArray(new String[itemsList.size()]));
                                 }
                             })
                     .setNegativeButton(R.string.cancel,
@@ -299,17 +283,15 @@ public class SlimSizer extends Fragment {
                                         }
                                     }
                                     // delete all entries in deleteList
-                                    int len = deleteList.size();
-                                    for (int i = len - 1; i > 0; i--) {
+                                    ArrayList<String> itemsList = new ArrayList<String>();
+                                    for (int i = deleteList.size() - 1; i > 0; i--) {
                                         String item = deleteList.get(i);
-                                        // call delete
-                                        boolean successDel = delete(item);
-                                        if (successDel == true) {
-                                            // remove list entry
-                                            adapter.remove(item);
-                                            adapter.notifyDataSetChanged();
-                                        }
+                                        itemsList.add(item);
+                                        // remove list entry
+                                        adapter.remove(item);
                                     }
+                                    adapter.notifyDataSetChanged();
+                                    new SlimSizer.SlimDeleter().execute(itemsList.toArray(new String[itemsList.size()]));
                                 } catch (FileNotFoundException e) {
                                     // TODO Auto-generated catch block
                                     e.printStackTrace();
@@ -393,41 +375,60 @@ public class SlimSizer extends Fragment {
         return mExternalStorageAvailable;
     }
 
-    private boolean delete(String appname) {
-        String item = appname;
-        final String path = "/system/app";
-        File app = new File(path + "/" + item);
-
-        try {
-            ds.writeBytes("rm -rf " + app + "\n");
-            ds.flush();
-            Thread.sleep(1500);
-        } catch (IOException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        } catch (InterruptedException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        }
-
-        // check if app was deleted
-        if (app.exists() == true) {
-            toast(getResources().getString(R.string.delete_fail) + " " + item);
-            return false;
-        } else {
-            toast(getResources().getString(R.string.delete_success) + " " + item);
-            return true;
-        }
-
-    }
-
     // mount /system as ro on close
     protected void onStop(Bundle savedInstanceState) throws IOException {
         try {
-            ds.writeBytes("mount -o remount,ro /system" + "\n");
-            ds.close();
+            dos.writeBytes("\n" + "mount -o remount,ro /system" + "\n");
+            dos.writeBytes("\n" + "exit" + "\n");
+            dos.flush();
+            dos.close();
         } catch (Exception e) {
             e.printStackTrace();
+        }
+    }
+
+    public class SlimDeleter extends AsyncTask<String, String, Void> {
+
+        private ProgressDialog progress;
+
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+            if (dos == null) {
+                try {
+                    superUser = new ProcessBuilder("su", "-c", "/system/xbin/ash").start();
+                    dos = new DataOutputStream(superUser.getOutputStream());
+                    dos.writeBytes("\n" + "mount -o remount,rw /system" + "\n");
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+            progress = new ProgressDialog(getView().getContext());
+            progress.setTitle(getString(R.string.delete_progress_title));
+            progress.setMessage(getString(R.string.delete_progress));
+            progress.show();
+        }
+
+        protected Void doInBackground(String... params) {
+            for (String appName : params) {
+                try {
+                    dos.writeBytes("\n" + "rm -rf '" + systemPath + appName + "'\n");
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+            return null;
+        }
+
+        @Override
+        protected void onPostExecute(Void param) {
+            super.onPreExecute();
+            try {
+                dos.flush();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            progress.dismiss();
         }
     }
 }
