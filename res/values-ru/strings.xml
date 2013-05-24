@@ -61,7 +61,7 @@
     <string name="about_slim_ota">Slim-Центр позволяет легко изменять\n свою прошивку!</string>
     <string name="about_version">Slim-Центр 1.1</string>
     <string name="about_contact"><a href="http://otaslim.slimroms.net/contact.htm">Связаться с нами</a></string>
-	<string name="about_contact_text">Расскажите нам свои впечатления\nили дайте знать о баге или проблеме</string>
+    <string name="about_contact_text">Расскажите нам свои впечатления\nили дайте знать о баге или проблеме</string>
     <string name="about_license">Открытые лицензии</string>
     <string name="about_license_text">Slim-Центр:</string>
     <string name="listsystem">список</string>
@@ -70,6 +70,8 @@
     <string name="cancel">Отмена</string>
     <string name="sizer_message_delete">Вы точно хотите удалить это приложение?</string>
     <string name="btn_delete">Удалить выделенные приложения!</string>
+    <string name="delete_progress_title">Удаление</string>
+    <string name="delete_progress">Выбранные файлы удаляются...</string>
     <string name="delete_success">Удалено</string>
     <string name="delete_fail">Невозможно удалить</string>
     <string name="btn_profile">Профиль</string>
