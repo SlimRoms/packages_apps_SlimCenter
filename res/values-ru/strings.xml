@@ -68,7 +68,7 @@
     <string name="caution">Внимание!</string>
     <string name="sizer_message_startup">Эта программа разрешает удалять системные приложения. Используйте с осторожностью и удаляйте только то, что можно удалить без последствий.</string>
     <string name="cancel">Отмена</string>
-    <string name="sizer_message_delete">Вы точно хотите удалить это приложение?</string>
+    <string name="sizer_message_delete">Вы точно хотите удалить это/эти приложение(-ия)?</string>
     <string name="btn_delete">Удалить выделенные приложения!</string>
     <string name="delete_progress_title">Удаление</string>
     <string name="delete_progress">Выбранные файлы удаляются...</string>
