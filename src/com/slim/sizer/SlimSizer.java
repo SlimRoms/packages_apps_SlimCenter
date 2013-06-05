@@ -111,7 +111,7 @@ public class SlimSizer extends Fragment {
                 android.R.layout.simple_list_item_multiple_choice, mSysApp);
 
         // startup dialog
-        //showDialog(STARTUP_DIALOG, null, adapter);
+        //showDialog(STARTUP_DIALOG, null, adapter, 0);
 
         final ListView lv = (ListView) getView().findViewById(R.string.listsystem);
         lv.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE);
@@ -123,7 +123,7 @@ public class SlimSizer extends Fragment {
                     final int arg2, long arg3) {
                 // create deletion dialog
                 String item = lv.getAdapter().getItem(arg2).toString();
-                showDialog(DELETE_DIALOG, item, adapter);
+                showDialog(DELETE_DIALOG, item, adapter, 0);
                 return false;
             }
         });
@@ -132,10 +132,12 @@ public class SlimSizer extends Fragment {
             public void onClick(View v) {
                 // check which items are selected
                 String item = null;
+                int itemCounter = 0;
                 SparseBooleanArray checked = lv.getCheckedItemPositions();
                 for (int i = lv.getCount() - 1; i > 0; i--) {
                     if (checked.get(i)) {
                         item = mSysApp.get(i);
+                        itemCounter++;
                     }
                 }
                 if (item == null) {
@@ -143,7 +145,7 @@ public class SlimSizer extends Fragment {
                             R.string.sizer_message_noselect));
                     return;
                 } else {
-                    showDialog(DELETE_MULTIPLE_DIALOG, item, adapter);
+                    showDialog(DELETE_MULTIPLE_DIALOG, item, adapter, itemCounter);
                 }
             }
         });
@@ -170,13 +172,13 @@ public class SlimSizer extends Fragment {
 
     private void showSuperuserRequest() {
         if (this.getUserVisibleHint() && adapter != null && startup) {
-            showDialog(STARTUP_DIALOG, null, adapter);
+            showDialog(STARTUP_DIALOG, null, adapter, 0);
             startup = false;
         }
     }
 
     private void showDialog(int id, final String item,
-            final ArrayAdapter<String> adapter) {
+            final ArrayAdapter<String> adapter, int itemCounter) {
         // startup dialog
         final AlertDialog.Builder alert = new AlertDialog.Builder(getActivity());
 
@@ -217,7 +219,13 @@ public class SlimSizer extends Fragment {
                                 }
                             });
         } else if (id == DELETE_MULTIPLE_DIALOG) {
-            alert.setMessage(R.string.sizer_message_delete)
+            String message;
+            if (itemCounter == 1) {
+                message = getResources().getString(R.string.sizer_message_delete_multi_one);
+            } else {
+                message = getResources().getString(R.string.sizer_message_delete_multi);
+            }
+            alert.setMessage(message)
                     .setPositiveButton(R.string.ok,
                             new DialogInterface.OnClickListener() {
                                 public void onClick(DialogInterface dialog,
