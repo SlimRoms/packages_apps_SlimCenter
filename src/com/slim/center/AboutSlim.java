@@ -176,8 +176,8 @@ public class AboutSlim extends Fragment{
         SlimSizer sizer=new SlimSizer();
         short state = sizer.sdAvailable();
         //initialize logfiles
-        File extdir = Environment.getExternalStorageDirectory();
-        path = new File(extdir.getAbsolutePath().replace("emulated/0", "emulated/legacy") + "/Slim/Bugreport");
+        path = new File(Environment
+                .getExternalStorageDirectory() + "/Slim/Bugreport");
         File savefile = new File(path + "/system.log");
         File logcat = new File(path + "/logcat.log");
         File last_kmsg = new File(path + "/last_kmsg.log");
@@ -244,7 +244,6 @@ public class AboutSlim extends Fragment{
                     R.string.sizer_message_sdnowrite));
         }
     }
-
     //get kernel information
     private static String getFormattedKernelVersion() {
         try {
@@ -258,7 +257,6 @@ public class AboutSlim extends Fragment{
             return "Unavailable";
         }
     }
-
     public static String formatKernelVersion(String rawKernelVersion) {
 
         final String PROC_VERSION_REGEX =
@@ -316,9 +314,11 @@ public class AboutSlim extends Fragment{
 
     private void getLogs(String command) {
         try {
-            Process process = Runtime.getRuntime().exec("su");
+            Process process = new ProcessBuilder().command("su")
+                    .redirectErrorStream(true).start();
             DataOutputStream os = new DataOutputStream(process.getOutputStream());
             os.writeBytes(command);
+            os.flush();
             os.writeBytes("exit\n");
             os.flush();
             os.close();
@@ -326,7 +326,6 @@ public class AboutSlim extends Fragment{
             e.printStackTrace();
         }
     }
-
     private void dialog (boolean success){
         final AlertDialog.Builder alert = new AlertDialog.Builder(getActivity());
         if (success==true){
