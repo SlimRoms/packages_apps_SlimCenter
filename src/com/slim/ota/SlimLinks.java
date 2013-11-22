@@ -70,7 +70,12 @@ public class SlimLinks extends Fragment {
                     launchUrl(getString(R.string.download_url));
                 }
             } else if (v == mDownloadGapps) {
-                launchUrl(getString(R.string.gapps_url));
+                if (mStrCurFile != null
+                    && mStrCurFile.contains("4.4")) {
+                    launchUrl(getString(R.string.gapps_url_kitkat));
+                } else {
+                    launchUrl(getString(R.string.gapps_url));
+                }
             } else if (v == mFAQ) {
                 launchUrl(getString(R.string.faq_url));
             } else if (v == mNews) {
