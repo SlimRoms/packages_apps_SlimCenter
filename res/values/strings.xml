@@ -32,6 +32,10 @@
     <string name="no_data_title">No data connection available</string>
     <string name="error_reading_title">Cannot read SlimOTA properties</string>
     <string name="update_file_title">Update:</string>
+    <string name="ota_title">SlimOTA</string>
+    <string name="reboot">All done! Reboot your device now.</string>
+    <string name="reboot_ok">Reboot now</string>
+    <string name="reboot_cancel">Don\'t reboot</string>
 
     <!-- SlimOTA settings -->
     <string name="settings_title">SlimOTA Settings</string>
@@ -110,7 +114,6 @@
     <string name="sizer_message_filesuccess">Created profile.</string>
     <string name="sizer_message_filefail">Failed to create profile.</string>
     <string name="sizer_message_noselect">Nothing selected.</string>
-    <string name="ota_title">SlimOTA</string>
 
     <!-- About -->
     <string name="aboutslim_title">SlimRoms</string>
@@ -124,7 +127,7 @@
     <string name="slim_source_title">Slim Source</string>
     <string name="slim_source_summary">SlimRoms are fully open source.\nSource at github.com/SlimRoms</string>
     <string name="no_irc">SlimIRC App not found.</string>
-    <string name="center_summary"><b>SlimCenter</b> provides tools &amp; information to help make your experience with SlimRoms even better. Upgrade automatically to the newest version of our ROM with <b>SlimOTA</b> and remove unwanted system apps with <b>SlimSizer</b></string>
+    <string name="center_summary"><b>SlimCenter</b> provides tools &amp; information to help make your experience with SlimRoms even better. Upgrade automatically to the newest version of our ROM with <b>SlimOTA</b> and remove unwanted system apps with <b>SlimSizer</b>.</string>
     <string name="slim_bugreport">Bugreport</string>
     <string name="slim_bugreport_summary">Create a complete Bugreport.</string>
     <string name="report_infosuccess">Created Systemreport, provide it to Team SlimRoms by attaching it to your Bugreport! You can find the Zip file on your SD-Card in a directory called \"Slim\".</string>

@@ -50,6 +50,7 @@ public class SlimSizer extends Fragment {
     private final int STARTUP_DIALOG = 1;
     private final int DELETE_DIALOG = 2;
     private final int DELETE_MULTIPLE_DIALOG = 3;
+    private final int REBOOT_DIALOG = 4;
     protected ArrayAdapter<String> adapter;
     private ArrayList<String> mSysApp;
     private boolean startup = true;
@@ -109,9 +110,6 @@ public class SlimSizer extends Fragment {
         // populate listview via arrayadapter
         adapter = new ArrayAdapter<String>(getActivity(),
                 android.R.layout.simple_list_item_multiple_choice, mSysApp);
-
-        // startup dialog
-        //showDialog(STARTUP_DIALOG, null, adapter, 0);
 
         final ListView lv = (ListView) getView().findViewById(R.string.listsystem);
         lv.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE);
@@ -254,6 +252,34 @@ public class SlimSizer extends Fragment {
                                     dialog.cancel();
                                 }
                             });
+        } else if (id == REBOOT_DIALOG) {
+        // create warning dialog
+        alert.setMessage(R.string.reboot)
+                .setTitle(R.string.caution)
+                .setCancelable(true)
+                .setPositiveButton(R.string.reboot_ok,
+                        new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog,
+                                    int id) {
+                                // action for ok
+                                try {
+                                    dos.writeBytes("reboot");
+                                    dos.flush();
+                                    dos.close();
+                                } catch (IOException e) {
+                                    // TODO Auto-generated catch block
+                                    e.printStackTrace();
+                                }
+                            }
+                })
+                .setNegativeButton(R.string.reboot_cancel,
+                        new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog,
+                                    int id) {
+                                // action for cancel
+                                dialog.cancel();
+                            }
+                        });
         }
         // show warning dialog
         alert.show();
@@ -301,7 +327,6 @@ public class SlimSizer extends Fragment {
                                     adapter.notifyDataSetChanged();
                                     new SlimSizer.SlimDeleter().execute(itemsList.toArray(new String[itemsList.size()]));
                                 } catch (FileNotFoundException e) {
-                                    // TODO Auto-generated catch block
                                     e.printStackTrace();
                                 }
                             } else {
@@ -343,7 +368,6 @@ public class SlimSizer extends Fragment {
                                                         R.string.sizer_message_filefail));
                                     }
                                 } catch (IOException e) {
-                                    // TODO Auto-generated catch block
                                     e.printStackTrace();
                                 }
                             } else {
@@ -437,6 +461,7 @@ public class SlimSizer extends Fragment {
                 e.printStackTrace();
             }
             progress.dismiss();
+            showDialog(REBOOT_DIALOG, null, adapter, 0);
         }
     }
 }
