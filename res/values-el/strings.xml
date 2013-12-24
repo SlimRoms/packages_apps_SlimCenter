@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ * Copyright (C) 2012 Slimroms
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+-->
+
+<resources>
+    <!-- SlimOTA main strings -->
+    <string name="app_name">SlimCenter</string>
+    <string name="menu_settings">Ρυθμίσεις</string>
+    <string name="device_title">Συσκευή</string>
+    <string name="device_name_title">Name:</string>
+    <string name="codename_title">Codename:</string>
+    <string name="version_title">Έκδοση:</string>
+    <string name="file_name_title">Αρχείο:</string>
+    <string name="curVer">Τρέχουσα έκδοση</string>
+    <string name="ok">OK</string>
+    <string name="title_update">Ενημέρωση</string>
+    <string name="device_info_title">Πληροφορίες Συσκευής</string>
+    <string name="up_to_date_title">Η συσκευή σας είναι ενημερωμένη</string>
+    <string name="no_data_title">Μη διαθεσιμη σύνδεση δεδομένων</string>
+    <string name="error_reading_title">Σφάλμα ανάγνωσης ρυθμίσεων SlimOTA</string>
+    <string name="update_file_title">Ενημέρωση:</string>
+
+    <!-- SlimOTA settings -->
+    <string name="settings_title">Ρυθμίσεις SlimOTA</string>
+    <string name="about_title">Σχετικά</string>
+    <string name="update_interval_title">Περίοδος αυτόματου ελέγχου ενημερώσεων</string>
+    <string name="update_interval_summary">Ρύθμιση περιόδου αυτόματου ελέγχου ενημερώσεων</string>
+    <string name="update_interval_day">Κάθε 24 ώρες</string>
+    <string name="update_interval_half_day">Κάθε 12 ώρες</string>
+    <string name="update_interval_hour">Κάθε ώρα</string>
+    <string name="update_interval_disable">Απενεργοποίηση</string>
+
+    <!-- SlimOTA error messages -->
+    <string name="system_prop_error">Σφάλμα ανάγνωσης ρυθμισεων συστήματος</string>
+    <string name="bad_url">Αδυναμία πρόσβασης στην τοποθεσία λήψης.\nΠαρακαλώ ενημερώστε τον Slim Maintainer της συσκευής σας!</string>
+    <string name="menu_update">Έλεγχος για ενημερώσεις τώρα</string>
+    <string name="toast_text">Αναζήτηση ενημέρωσης ROM, παρακαλώ περιμένετε.</string>
+    <string name="toast_no_data_text">Καμία σύνδεση δεδομένων. Παρακαλω ενεργοποιήστε</string>
+
+    <!-- SlimOTA shortcut fragment -->
+    <string name="short_cut_release_title">Σχετικά με τη ROM</string>
+    <string name="short_cut_changelog_title">Αρχείο αλλαγών</string>
+    <string name="short_cut_changelog_summary_update_available">Σημαντικό!!! Διαβάστε το αρχείο αλλαγών και τις οδηγίες εγκατάστασης με προσοχή</string>
+    <string name="short_cut_download_summary_update_available">Νέα ενημέρωση SlimKat ROM διαθέσιμη. Κατεβάστε εδώ!</string>
+    <string name="short_cut_changelog_summary">Προβολή αρχείου αλλαγών και οδηγιών εγκατάστασης</string>
+    <string name="short_cut_additional_title">Έξτρα</string>
+    <string name="short_cut_faq_title">FAQ</string>
+    <string name="short_cut_faq_summary">Προβολή Slim FAQ</string>
+    <string name="short_cut_news_title">Νέα</string>
+    <string name="short_cut_news_summary">Διαβάστε τα τελευταία νέα της Slim</string>
+    <string name="short_cut_download_title">Λήψη SlimKat</string>
+    <string name="short_cut_download_uptodate_summary">Κατεβάστε τη SlimKat ROM</string>
+    <string name="short_cut_download_gapps_title">Λήψη gapps</string>
+    <string name="short_cut_download_gapps_summary">Λήψη SlimKat addon packages</string>
+
+    <!-- SlimOTA update checker -->
+    <string name="notification_message">Διαθέσιμη ενημέρωση SlimKat ROM</string>
+
+    <!-- SlimOTA About -->
+    <string name="about_slim_ota">Το SlimCenter επιτρέπει την εύκολη διαχείρηση\n ROM σας!</string>
+    <string name="about_copyright">\u00A9 Copyright Slimroms 2013</string>
+    <string name="about_version">SlimCenter 1.1</string>
+    <string name="about_contact"><a href="http://otaslim.slimroms.net/contact.htm">Επικοινωνήστε μαζί μας</a></string>
+    <string name="about_contact_text">Πείτε μας τι σκέφτεστε\nενημερώστε μας σχετικα με κάποιο πρόβλημα ή σφάλμα </string>
+    <string name="about_license">Άδειες ανοιχτού κώδικα</string>
+    <string name="about_license_text">Εφαρμογή SlimCenter:</string>
+    <string name="menu_slimsizer">SlimSizer</string>
+
+    <!-- SlimSizer  -->
+    <string name="listsystem">λίστα</string>
+    <string name="sizer_title">SlimSizer</string>
+    <string name="caution">Προσοχή!</string>
+    <string name="sizer_message_startup">Αυτο το εργαλείο σας επιτρέπει τη διαγραφή εφαρμογών συστήματος. Χρησιμοποιήστε το με προσοχή και διαγράψτε μονο εφαρμογές που γνωρίζεται οτι είναι ασφαλής η διαγραφή τους.</string>
+    <string name="cancel">Ακύρωση</string>
+    <string name="sizer_message_delete">Είστε σίγουροι οτι θέλετε να διαγράψετε αυτή την εφαρμογή?</string>
+    <string name="sizer_message_delete_multi_one">Είστε σίγουροι οτι θέλετε να διαγράψετε την επιλεγμένη εφαρμογή?</string>
+    <string name="sizer_message_delete_multi">Είστε σίγουροι οτι θέλετε να διαγράψετε τις επιλεγμένες εφαρμογές?</string>
+    <string name="btn_delete">Διαγραφή επιλεγμένων εφαρμογών τώρα!</string>
+    <string name="delete_progress_title">Διαγραφή</string>
+    <string name="delete_progress">Τα επιλεγμένα αρχεία διαγράφονται, παρακαλώ περιμένετε</string>
+    <string name="delete_success">Διαγράφηκαν</string>
+    <string name="delete_fail">Αδυναμία διαγραφής</string>
+    <string name="btn_profile">Προφίλ</string>
+    <string name="sizer_message_sdnowrite">Αδυναμία εγγραφής στην κάρτα SD.</string>
+    <string name="sizer_message_sdnoread">Αδυναμία ανάγνωσης της κάρτας SD.</string>
+    <string name="sizer_message_filesuccess">Το προφίλ δημιουργήθηκε.</string>
+    <string name="sizer_message_filefail">Αδυναμία δημιουργίας προφιλ.</string>
+    <string name="sizer_message_noselect">Κενή επιλογή.</string>
+    <string name="ota_title">SlimOTA</string>
+
+    <!-- About -->
+    <string name="aboutslim_title">SlimRoms</string>
+    <string name="devs">Προγραμματιστής</string>
+    <string name="slim_website_title">Ιστότοπος Slim</string>
+    <string name="slim_website_summary">www.slimroms.net\nΒρείτε όλα τα τελευταία νέα της Slim εδώ</string>
+    <string name="slim_irc_title">SlimIRC</string>
+    <string name="slim_irc_summary">Ελάτε στο κανάλι IRC μας!\nΣυνομιλήστε με την ομάδα της Slim και άλλους χρήστες</string>
+    <string name="slim_donate_title">Δωρεά</string>
+    <string name="slim_donate_summary">Δωρίστε στην Ομάδα SlimRoms</string>
+    <string name="slim_source_title">Κώδικας Slim</string>
+    <string name="slim_source_summary">Οι SlimRoms ειναι πλήρως ανοιχτού κώδικα.\nΠηγαίος κώδικας στο github.com/SlimRoms</string>
+    <string name="no_irc">Η εφαρμογή SlimIRC δέν βρέθηκε.</string>
+    <string name="center_summary">Το <b>SlimCenter</b> παρέχει εργαλεία &amp; πληροφορίες για να βελτιώσει την εμπειρία σας με τις SlimRoms. Ενημερώστε αυτόματα στην τελευταία έκδοση της ROM μας με το <b>SlimOTA</b> και αφαιρέστε ανεπιθύμητες εφαρμογές συστήματος με το <b>SlimSizer</b></string>
+    <string name="slim_bugreport">Αναφορά Σφάλματος</string>
+    <string name="slim_bugreport_summary">Δημιουργήστε πλήρη αναφορά σφάλματος.</string>
+    <string name="report_infosuccess">Αναφορά συστήματος δημιουργήθηκε. Μοιραστείτε το με την Ομάδα SlimRoms επισυνάπτωντας τοστην Αναφορά Σφάλματος σας! Μπορείτε να βρείτε το αρχέιο Zip στην κάρτα SD σας στον φάκελο με το όνομα \"Slim\".</string>
+    <string name="report_infofail">Σφάλμα δημιουργίας Αναφοράς Σφάλματος, παρακαλώ προσπαθήστε ξανά.</string>
+
+</resources>
