@@ -32,6 +32,10 @@
     <string name="no_data_title">İnternet bağlantısı yok</string>
     <string name="error_reading_title">SlimOTA özellikleri okunamadı</string>
     <string name="update_file_title">Güncelleme:</string>
+    <string name="ota_title">SlimOTA</string>
+    <string name="reboot">İşlem tamam! Cihazınızı yeniden başlatın.</string>
+    <string name="reboot_ok">Şimdi Başlatın</string>
+    <string name="reboot_cancel">Sonra Başlatın</string>
 
     <!-- SlimOTA settings -->
     <string name="settings_title">SlimOTA Ayarları</string>
@@ -40,7 +44,7 @@
     <string name="update_interval_summary">Otomatik Güncelleme kontrol aralığı belirleyin</string>
     <string name="update_interval_day">24 St\'te bir</string>
     <string name="update_interval_half_day">12 St\'te bir</string>
-    <string name="update_interval_hour">Saatlik</string>
+    <string name="update_interval_hour">Saat\'te bir</string>
     <string name="update_interval_disable">Kapat</string>
 
     <!-- SlimOTA error messages -->
@@ -85,7 +89,7 @@
     <string name="about_version">SlimCenter 1.1</string>
     <string name="about_contact"><a href="http://otaslim.slimroms.net/contact.htm">İletişim</a></string>
     <string name="about_contact_text">Bize düşündüklerinizi ve\veya hataları bildirin</string>
-    <string name="about_license">Open source licenses</string>
+    <string name="about_license">Açık Kaynak Lisansları</string>
     <string name="about_license_text">SlimCenter app:</string>
     <string name="about_license_url"><a href="http://otaslim.slimroms.net/license.htm">gpl(2)</a></string>
     <string name="menu_slimsizer">SlimSizer</string>
@@ -110,7 +114,6 @@
     <string name="sizer_message_filesuccess">Profil oluşturuldu.</string>
     <string name="sizer_message_filefail">Profil oluşturulamadı.</string>
     <string name="sizer_message_noselect">Hiçbirşey seçilmedi.</string>
-    <string name="ota_title">SlimOTA</string>
 
     <!-- About -->
     <string name="aboutslim_title">SlimRoms</string>
@@ -124,10 +127,10 @@
     <string name="slim_source_title">Slim Kaynakları</string>
     <string name="slim_source_summary">SlimRoms tamamen açık kaynak kodlu bir yazılımdır.\ngithub.com/SlimRoms\'da kaynak</string>
     <string name="no_irc">SlimIRC uygulaması bulunamadı.</string>
-    <string name="center_summary"><b>SlimCenter</b>SlimRoms deneyiminizi kolayştıracak bilgi &amp; araçlar sağlamaktadır. <b>SlimOTA</b> kullanarak ROM\'unuzu otomatik olarak en son versiyona güncelleyin veya <b>SlimSizer</b> kullanarak kullanmadığınız sistem uygulamalarını sorunsuz kaldırın.</string>
+    <string name="center_summary"><b>SlimCenter</b>SlimRoms deneyiminizi kolayştıracak bilgi &amp; araçlar sağlamaktadır. <b>SlimOTA</b> kullanarak ROM\'unuzu otomatik olarak en son versiyona güncelleyin veya <b>SlimSizer</b> ile kullanmadığınız sistem uygulamalarını sorunsuz kaldırın.</string>
     <string name="slim_bugreport">Hata bildirme</string>
     <string name="slim_bugreport_summary">Tam hata raporu oluşturun.</string>
-    <string name="report_infosuccess">Slim Team\'e iletilmek üzere hata raporu oluşturmak içindir! Oluşturulan hata raporunu belleğinizde, zip dosyası halinde \"Slim\" isimli klasörde bulabilirsiniz.</string>
+    <string name="report_infosuccess">Oluşturulan hata raporunu Slim Team\'e buradan iletebilirsinz! Bu raporu, zip dosyası halinde \"Slim\" klasöründe bulabilirsiniz.</string>
     <string name="report_infofail">Hata raporu oluşturulamadı, lütfen tekrar deneyiniz.</string>
 
 </resources>
