@@ -6,7 +6,7 @@
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- *            http://www.apache.org/licenses/LICENSE-2.0
+ *      http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -16,77 +16,121 @@
 -->
 
 <resources>
+    <!-- SlimOTA main strings -->
     <string name="app_name">SlimCenter</string>
-    <string name="menu_settings">Configuration</string>
+    <string name="menu_settings">Paramètres</string>
     <string name="device_title">Appareil</string>
     <string name="device_name_title">Nom :</string>
     <string name="codename_title">Nom de code :</string>
-    <string name="version_title">Version:</string>
+    <string name="version_title">Version :</string>
     <string name="file_name_title">Fichier :</string>
     <string name="curVer">Version actuelle</string>
-    <string name="ok">Ok</string>
+    <string name="ok">OK</string>
     <string name="title_update">Mise à jour</string>
     <string name="device_info_title">Informations sur l\'appareil</string>
     <string name="up_to_date_title">Votre système est à jour</string>
     <string name="no_data_title">Aucune connexion de données disponible</string>
     <string name="error_reading_title">Ne peut pas lire les propriétés de SlimOTA</string>
-    <string name="update_file_title">Mise à jour:</string>
+    <string name="update_file_title">Mise à jour :</string>
+    <string name="ota_title">SlimOTA</string>
+    <string name="reboot">Terminé ! Redémarrez votre appareil.</string>
+    <string name="reboot_ok">Redémarrer maintenant</string>
+    <string name="reboot_cancel">Ne pas Redémarrer</string>
+
+    <!-- SlimOTA settings -->
     <string name="settings_title">Paramètres de SlimOTA</string>
-    <string name="about_title">A propos </string>
-    <string name="update_interval_title">Intervalle de vérification de mise à jour automatique</string>
-    <string name="update_interval_summary">Fréquence des recherche de mise à jour</string>
+    <string name="about_title">À propos</string>
+    <string name="update_interval_title">Intervalle de vérification automatique de mise à jour</string>
+    <string name="update_interval_summary">Fréquence de recherche de mise à jour</string>
     <string name="update_interval_day">Toutes les 24 heures</string>
     <string name="update_interval_half_day">Toutes les 12 heures</string>
     <string name="update_interval_hour">Toutes les heures</string>
     <string name="update_interval_disable">Désactiver</string>
+
+    <!-- SlimOTA error messages -->
     <string name="system_prop_error">Impossible de lire les propriétés systeme</string>
-    <string name="bad_url">Impossible d’accéder à la zone de téléchargement.\n Veuillez informer le responsable de votre appareil slim, !</string>
+    <string name="bad_url">Impossible d’accéder à la zone de téléchargement.\nVeuillez informer le responsable de votre appareil slim !</string>
     <string name="menu_update">Rechercher des mises à jour maintenant</string>
-    <string name="toast_text">Vérification des mises à jour de ROM...</string>
+    <string name="toast_text">Vérification des mises à jour de la ROM, s\'il vous plaît patienter.</string>
     <string name="toast_no_data_text">Aucune connexion de données. Activé s\'il vous plaît</string>
+
+    <!-- SlimOTA shortcut fragment -->
     <string name="short_cut_release_title">ROM associé</string>
-    <string name="short_cut_changelog_title">Changelog</string>
-    <string name="short_cut_changelog_summary_update_available">Important!!! Lire le changelog et installer les instructions soigneusement</string>
-    <string name="short_cut_download_summary_update_available">Nouvelle version de la ROM SlimBean disponible. Télécharger ici !</string>
-    <string name="short_cut_changelog_summary">Montrer les changelogs et instructions d\'installation</string>
+    <string name="short_cut_changelog_title">Journal des modifications</string>
+    <string name="short_cut_changelog_summary_update_available">Important !!! Lire le journal des modifications et installer les instructions soigneusement</string>
+    <string name="short_cut_download_summary_update_available">Nouvelle version de la ROM SlimKat disponible. Télécharger ici !</string>
+    <string name="short_cut_changelog_summary">Afficher les journaux des modifications et les instructions d\'installation</string>
     <string name="short_cut_additional_title">Supplémentaires</string>
     <string name="short_cut_faq_title">FAQ</string>
-    <string name="short_cut_faq_summary">Voir la FAQ Slim</string>
+    <string name="short_cut_faq_summary">Afficher la FAQ Slim</string>
     <string name="short_cut_news_title">Actualités</string>
     <string name="short_cut_news_summary">Découvrez les dernières actualités de Slim</string>
-    <string name="short_cut_download_title">Télécharger SlimBean</string>
-    <string name="short_cut_download_uptodate_summary">Télécharger SlimBean ROM</string>
-    <string name="short_cut_download_gapps_title">Télécharger gapps</string>
-    <string name="short_cut_download_gapps_summary">Télécharger les paquets addon SlimBean</string>
+    <string name="short_cut_download_title">Télécharger SlimKat</string>
+    <string name="short_cut_download_uptodate_summary">Télécharger la ROM SlimKat</string>
+    <string name="short_cut_download_gapps_title">Télécharger les gapps</string>
+    <string name="short_cut_download_gapps_summary">Télécharger les paquets SlimKat d\'ajout</string>
+
+    <string name="download_url">http://otaslim.slimroms.net/download.htm</string>
     <string name="changelog_url">http://otaslim.slimroms.net/changelog.htm</string>
     <string name="faq_url">http://otaslim.slimroms.net/faq.htm</string>
-    <string name="news_url">http://otaslim.slimroms.net/news.htm</string>
+    <string name="news_url">http://otaslim.slimroms.netews.htm</string>
     <string name="gapps_url">http://otaslim.slimroms.net/gapps.htm</string>
+    <string name="gapps_url_kitkat">http://otaslim.slimroms.net/gapps_kitkat.htm</string>
+
+    <!-- SlimOTA update checker -->
     <string name="xml_url">http://otaslim.slimroms.net/ota.xml</string>
-    <string name="notification_message">Mise à jour de SlimBean ROM disponible </string>
+    <string name="xml_url_kitkat">http://otaslim.slimroms.net/ota_kitkat.xml</string>
+    <string name="notification_message">Mise à jour de SlimKat ROM disponible</string>
+
+    <!-- SlimOTA About -->
     <string name="about_home_url"><a href="http://www.slimroms.net">www.slimroms.net</a></string>
-    <string name="about_slim_ota">SlimOTA vous permet de maintenir à jour\n votre rom et les gapps</string>
-    <string name="about_copyright">\u00A9 copyright Slimroms 2013</string>
-    <string name="about_version">SlimOTA 1.0</string>
-    <string name="about_contact"><a href="http://otaslim.slimroms.net/contact.htm"> Contactez-nous</a></string>
-    <string name="about_contact_text">Dites-nous ce que vous pensez\n ou faite nous remonter un bogue ou un problème</string>
+    <string name="about_slim_ota">SlimCenter vous permet de maintenir à jour\nvotre ROM</string>
+    <string name="about_copyright">\u00a9 Copyright Slimroms 2013</string>
+    <string name="about_version">SlimCenter 1.1</string>
+    <string name="about_contact"><a href="http://otaslim.slimroms.net/contact.htm">Contactez-nous</a></string>
+    <string name="about_contact_text">Dites-nous ce que vous pensez\nou faite nous remonter un bogue ou un problème</string>
     <string name="about_license">Licences Open Source</string>
-    <string name="about_license_text">SlimOTA app :</string>
-    <string name="about_license_url"><a href="http://otaslim.slimroms.net/license.htm"> GPL(2)</a></string>
+    <string name="about_license_text">SlimCenter app :</string>
+    <string name="about_license_url"><a href="http://otaslim.slimroms.net/license.htm">GPL(2)</a></string>
     <string name="menu_slimsizer">SlimSizer</string>
+
+    <!-- SlimSizer  -->
     <string name="listsystem">liste</string>
     <string name="sizer_title">SlimSizer</string>
-    <string name="caution">Attention!</string>
+    <string name="caution">Attention !</string>
     <string name="sizer_message_startup">Cet outil permet de supprimer des applications système. Utiliser avec prudence et supprimer uniquement les applications que vous savez sûrs d\'être enlevé.</string>
     <string name="cancel">Annuler</string>
     <string name="sizer_message_delete">Êtes-vous sûr de vouloir supprimer cette application ?</string>
+    <string name="sizer_message_delete_multi_one">Êtes-vous sûr de vouloir supprimer l\'application sélectionnée ?</string>
+    <string name="sizer_message_delete_multi">Êtes-vous sûr de vouloir supprimer les applications sélectionnées ?</string>
     <string name="btn_delete">Supprimez les applications sélectionnées maintenant !</string>
+    <string name="delete_progress_title">En cours de suppression</string>
+    <string name="delete_progress">Les fichiers sélectionnés sont supprimés, patientez s\'il vous plaît.</string>
     <string name="delete_success">Supprimée</string>
-    <string name="delete_fail">Impossible de supprimer</string>
+    <string name="delete_fail">Impossible à supprimer</string>
     <string name="btn_profile">Profil</string>
     <string name="sizer_message_sdnowrite">Impossible d\'écrire sur la carte SD.</string>
     <string name="sizer_message_sdnoread">Impossible de lire la carte SD.</string>
     <string name="sizer_message_filesuccess">Profil créé.</string>
     <string name="sizer_message_filefail">Impossible de créer le profil.</string>
     <string name="sizer_message_noselect">Rien n\'est sélectionné.</string>
+
+    <!-- About -->
+    <string name="aboutslim_title">SlimRoms</string>
+    <string name="devs">Développeur</string>
+    <string name="slim_website_title">Site web Slim</string>
+    <string name="slim_website_summary">www.slimroms.net\nTrouver les dernières nouvelles de Slim ici</string>
+    <string name="slim_irc_title">SlimIRC</string>
+    <string name="slim_irc_summary">Rejoignez notre canal IRC !\nChat avec l\'équipe Slim et d\'autres utilisateurs</string>
+    <string name="slim_donate_title">Faire un don</string>
+    <string name="slim_donate_summary">Faire un don à l\'équipe SlimRoms</string>
+    <string name="slim_source_title">Slim Source</string>
+    <string name="slim_source_summary">Les SlimRoms sont entièrement open source.\nSource sur github.com/SlimRoms</string>
+    <string name="no_irc">SlimIRC App introuvable.</string>
+    <string name="center_summary"><b>SlimCenter</b> fournit des outils et des informations pour aider à rendre votre expérience avec SlimRoms encore meilleure. Mettez automatiquement à jour vers la dernière version de notre ROM avec SlimOTA et supprimez des applications système non désirées avec SlimSizer</string>
+    <string name="slim_bugreport">Rapport de bug</string>
+    <string name="slim_bugreport_summary">Créer un rapport de bug complet.</string>
+    <string name="report_infosuccess">Crée rapport système, Veuillez le fournir à l\'équipe SlimRoms en l\'attachant à votre rapport de bug ! Vous pouvez trouver le fichier Zip sur votre carte SD dans un répertoire appelé \"Slim\".</string>
+    <string name="report_infofail">Impossible de créer Rapport de bug, s\'il vous plaît essayer à nouveau.</string>
+
 </resources>

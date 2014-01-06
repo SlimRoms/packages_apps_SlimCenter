@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ *=========================================================================
+ *
+ *  PROJECT:  SlimRoms
+ *            Team Slimroms (http://www.slimroms.net)
+ *
+ *  COPYRIGHT Copyright (C) 2013 Slimroms http://www.slimroms.net
+ *            All rights reserved
+ *
+ *  LICENSE   http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
+ *
+ *  AUTHORS:     fronti90, mnazim, tchaari, kufikugel
+ *  DESCRIPTION: SlimOTA keeps our rom up to date
+ *
+ *=========================================================================
+ *
+-->
+
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <string-array name="entries_update_interval">
+        <item>@string/update_interval_day</item>
+        <item>@string/update_interval_half_day</item>
+        <item>@string/update_interval_hour</item>
+        <item>@string/update_interval_disable</item>
+    </string-array>
+
+    <string-array name="values_update_interval" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
+    <string-array name="slimsizer_profile_array">
+        <item >Charger le profil</item>
+        <item >Sauvegarder le profil</item>
+    </string-array>
+
+</resources>
