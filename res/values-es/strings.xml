@@ -16,6 +16,9 @@
     <string name="error_reading_title">No se pueden leer las propiedades de SlimOTA</string>
     <string name="update_file_title">Actualizar:</string>
     <string name="settings_title">Configuración de SlimOTA</string>
+    <string name="reboot">Hecho! Reiniar ahora.</string>
+    <string name="reboot_ok">Reiniciar ahora</string>
+    <string name="reboot_cancel">No reiniciar</string>
     <string name="about_title">Acerca de</string>
     <string name="update_interval_title">Intervalo de comprobación de actualización automática</string>
     <string name="update_interval_summary">Establecer intervalo de comprobaciones de actualización automática</string>
