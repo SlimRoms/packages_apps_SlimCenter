@@ -56,8 +56,12 @@
     <string name="caution">¡Atención!</string>
     <string name="sizer_message_startup">Esta herramienta permite eliminar aplicaciones de sistema. Utilice con precaución y elimine solamente aplicaciones sabiendo que son seguras para eliminarse.</string>
     <string name="cancel">Cancelar</string>
-    <string name="sizer_message_delete">¿Está seguro que desea eliminar esta aplicación?</string>
+    <string name="sizer_message_delete">¿Eliminar esta aplicación?</string>
+    <string name="sizer_message_delete_multi_one">¿Eliminar la aplicación seleccionada?</string>
+    <string name="sizer_message_delete_multi">¿Eliminar las aplicaciones seleccionadas?</string>
     <string name="btn_delete">¡Eliminar las aplicaciones seleccionadas ahora!</string>
+    <string name="delete_progress_title">Eliminando</string>
+    <string name="delete_progress">Eliminando aplicaciones selecciondas, por favor espere.</string>
     <string name="delete_success">Eliminada</string>
     <string name="delete_fail">No se puede eliminar</string>
     <string name="btn_profile">Perfil</string>
@@ -79,4 +83,8 @@
     <string name="slim_source_summary">SlimRoms es completamente de código abierto.\nCódigo fuente en github.com/SlimRoms</string>
     <string name="no_irc">SlimIRC App no encontrada.</string>
     <string name="center_summary"><b>SlimCenter</b> proporciona herramientas e información para ayudarte a mejorar tu experiencia con SlimRoms. Puedes actualizar automáticamente a la versión más reciente de nuestra ROM con <b>SlimOTA</b> y eliminar aplicaciones no deseadas del sistema con <b>SlimSizer</b></string>
+    <string name="slim_bugreport">Bugreport</string>
+    <string name="slim_bugreport_summary">Crear un reporte de Bug completo.</string>
+    <string name="report_infosuccess">¡Volcado del sistema creado, envíalo adjunto en el reporte al equipo de SlimRoms!. El fichero zip está localizando en el directorio \"Slim\" en la SD-Card.</string>
+    <string name="report_infofail">Error al crear volcado de sistema, reintentar por favor.</string>
 </resources>
