@@ -44,7 +44,7 @@
     <string name="short_cut_news_summary">Lesen Sie aktuelle Neuigkeiten über Slim</string>
     <string name="short_cut_download_title">SlimKat herunterladen</string>
     <string name="short_cut_download_uptodate_summary">SlimKat ROM herunterladen</string>
-    <string name="short_cut_download_gapps_title">Gapps downloaden</string>
+    <string name="short_cut_download_gapps_title">Gapps herunterladen</string>
     <string name="short_cut_download_gapps_summary">SlimKat Addon-Paket herunterladen</string>
     <string name="notification_message">SlimKat ROM-Aktualisierung verfügbar</string>
     <string name="about_slim_ota">SlimOTA hält Ihre ROM und Gapps\nimmer auf dem neusten Stand</string>
@@ -82,7 +82,7 @@
     <string name="slim_irc_title">SlimIRC</string>
     <string name="slim_irc_summary">Kommen Sie in unseren IRC-Channell!\nChatten Sie mit dem Slim Team und anderen Nutzern</string>
     <string name="slim_donate_title">Spenden</string>
-    <string name="slim_donate_summary">Spende an Team SlimRoms</string>
+    <string name="slim_donate_summary">Spende an SlimRoms</string>
     <string name="slim_source_title">Slim Quellcode</string>
     <string name="slim_source_summary">SlimRoms sind vollständig Open Source.\nQuellcode bei github.com/SlimRoms</string>
     <string name="no_irc">SlimIRC App nicht gefunden.</string>
