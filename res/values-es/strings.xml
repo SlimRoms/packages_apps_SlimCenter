@@ -41,12 +41,12 @@
     <string name="short_cut_faq_summary">Mostrar preguntas más frecuentes de Slim</string>
     <string name="short_cut_news_title">Noticias</string>
     <string name="short_cut_news_summary">Leer sobre las últimas novedades Slim</string>
-    <string name="short_cut_download_title">Descargar SlimBean</string>
-    <string name="short_cut_download_uptodate_summary">Descargar SlimBean ROM</string>
+    <string name="short_cut_download_title">Descargar SlimKat</string>
+    <string name="short_cut_download_uptodate_summary">Descargar SlimKat ROM</string>
     <string name="short_cut_download_gapps_title">Descargar gapps</string>
-    <string name="short_cut_download_gapps_summary">Descargar paquetes de adicionales de SlimBean</string>
+    <string name="short_cut_download_gapps_summary">Descargar paquetes de adicionales de SlimKat</string>
     <string name="download_url">http://otaslim.slimroms.net/download.htm</string>
-    <string name="notification_message">Actualización de la ROM de SlimBean disponible</string>
+    <string name="notification_message">Actualización de la ROM de SlimKat disponible</string>
     <string name="about_slim_ota">SlimOTA te mantiene siempre actualizada\n tu rom y gapps</string>
     <string name="about_version">SlimCenter 1.1</string>
     <string name="about_contact_text">Díganos lo que piensa\no infórmenos sobre cualquier error o problema</string>
