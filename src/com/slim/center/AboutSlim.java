@@ -51,6 +51,8 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
+import com.android.internal.util.slim.BuildInfo;
+
 public class AboutSlim extends Fragment{
 
     private LinearLayout website;
@@ -91,7 +93,11 @@ public class AboutSlim extends Fragment{
                 if (isCallable(IRC_INTENT)){
                     startActivity(IRC_INTENT);
                 } else {
-                    toast(getResources().getString(R.string.no_irc));
+                    if (BuildInfo.getSlimBuildType().equals("UNOFFICIAL")) {
+                        ircDialog();
+                    } else {
+                        toast(getResources().getString(R.string.no_irc));
+                    }
                 }
             } else if (v == report) {
                 bugreport();
@@ -351,5 +357,18 @@ public class AboutSlim extends Fragment{
                             });
         }
         alert.show();
+    }
+
+    private void ircDialog() {
+        AlertDialog.Builder dialog = new AlertDialog.Builder(getActivity());
+        dialog.setMessage(R.string.no_irc_unofficial)
+              .setPositiveButton(R.string.ok,
+                            new DialogInterface.OnClickListener() {
+                                public void onClick(DialogInterface dialog,
+                                        int id) {
+                                    // action for ok
+                                    dialog.cancel();
+                                }
+                            }).show();
     }
 }

@@ -127,6 +127,7 @@
     <string name="slim_source_title">Slim Source</string>
     <string name="slim_source_summary">SlimRoms are fully open source.\nSource at github.com/SlimRoms</string>
     <string name="no_irc">SlimIRC App not found.</string>
+    <string name="no_irc_unofficial">SlimIRC is not available on unofficial builds.</string>
     <string name="center_summary"><b>SlimCenter</b> provides tools &amp; information to help make your experience with SlimRoms even better. Upgrade automatically to the newest version of our ROM with <b>SlimOTA</b> and remove unwanted system apps with <b>SlimSizer</b>.</string>
     <string name="slim_bugreport">Bugreport</string>
     <string name="slim_bugreport_summary">Create a complete Bugreport.</string>
