@@ -96,6 +96,7 @@
     <string name="slim_irc_title">SlimIRC</string>
     <string name="slim_irc_summary">Заходите в нашу IRC!\nОбщайтесь с командой Slim и другими пользователями</string>
     <string name="no_irc">Приложение SlimIRC не найдено.</string>
+    <string name="no_irc_unofficial">SlimIRC отсутствует в неофициальных сборках.</string>
     <string name="center_summary"><b>Slim-Центр</b> включает утилиты и данные, чтобы сделать работу с прошивкой SlimRoms еще лучше. В числе возможностей: автоматическое обновление до последней версии ROM с помощью <b>SlimOTA</b> и удаление ненужных системных приложений через <b>SlimSizer</b>.</string>
     <string name="slim_bugreport">Сообщить об ошибке</string>
     <string name="slim_bugreport_summary">Создать отчет об ошибке.</string>
