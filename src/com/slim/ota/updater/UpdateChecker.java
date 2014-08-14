@@ -104,7 +104,7 @@ public class UpdateChecker extends AsyncTask<Context, Integer, String> {
             String strLine;
             while ((strLine = br.readLine()) != null) {
                 String[] line = strLine.split("=");
-                if (line[0].equalsIgnoreCase("ro.product.device")) {
+                if (line[0].equalsIgnoreCase("ro.slim.device")) {
                     strDevice = line[1].trim();
                 } else if (line[0].equalsIgnoreCase("slim.ota.version")) {
                     slimCurVer = line[1].trim();
