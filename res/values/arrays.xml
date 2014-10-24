@@ -1,25 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
- *=========================================================================
+ * Copyright (C) 2014 SlimRoms
  *
- *  PROJECT:  SlimRoms
- *            Team Slimroms (http://www.slimroms.net)
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
  *
- *  COPYRIGHT Copyright (C) 2013 Slimroms http://www.slimroms.net
- *            All rights reserved
+ *      http://www.apache.org/licenses/LICENSE-2.0
  *
- *  LICENSE   http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
- *
- *  AUTHORS:     fronti90, mnazim, tchaari, kufikugel
- *  DESCRIPTION: SlimOTA keeps our rom up to date
- *
- *=========================================================================
- *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
 -->
 
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
-    <string-array name="entries_update_interval">
+    <string-array name="entries_update_interval" translatable="false">
         <item>@string/update_interval_day</item>
         <item>@string/update_interval_half_day</item>
         <item>@string/update_interval_hour</item>
@@ -33,9 +31,9 @@
         <item>3</item>
     </string-array>
 
-    <string-array name="slimsizer_profile_array">
-        <item >Load Profile</item>
-        <item >Save Profile</item>
+    <string-array name="slimsizer_profile_array" translatable="false">
+        <item>>@string/sizer_profile_load</item>
+        <item>>@string/sizer_profile_save</item>
     </string-array>
 
 </resources>
