@@ -32,6 +32,9 @@
   <string name="error_reading_title">Nie można odczytać właściwości SlimOTA</string>
   <string name="update_file_title">Aktualizacja:</string>
   <string name="ota_title">SlimOTA</string>
+  <string name="reboot">Wszystko gotowe! Uruchom teraz ponownie urządzenie.</string>
+  <string name="reboot_ok">Uruchom ponownie teraz</string>
+  <string name="reboot_cancel">Nie uruchamiaj ponownie</string>
   <string name="settings_title">Ustawienia SlimOTA</string>
   <string name="about_title">Na temat</string>
   <string name="update_interval_title">Częstotliwość sprawdzania automatycznej aktualizacji</string>
@@ -61,6 +64,7 @@
   <string name="short_cut_download_gapps_summary">Pobierz paczki z dodatkami do SlimKat</string>
   <string name="notification_message">Dostępna aktualizacja ROMU SlimKat</string>
   <string name="about_slim_ota">SlimOTA pilnuje by twój ROM i gappsy\nbyły na bieżąco</string>
+  <string name="about_contact"><a href="http://otaslim.slimroms.net/contact.htm">Skontaktuj się z nami</a></string>
   <string name="about_contact_text">Powiedz nam co myślisz\nlub też daj znać o błędach i problemach</string>
   <string name="about_license">Licencja otwartego źródła</string>
   <string name="about_license_text">SlimOTA app:</string>
@@ -71,7 +75,11 @@
   <string name="sizer_message_startup">Narzędzie to pozwala na usuwanie aplikacji systemu. \nUżywaj ostrożnie, usuwaj jedynie aplikacje o których wiesz że są bezpieczne.</string>
   <string name="cancel">Anuluj</string>
   <string name="sizer_message_delete">Czy na pewno chcesz usunąć tą aplikację?</string>
+  <string name="sizer_message_delete_multi_one">Czy na pewno chcesz usunąć zaznaczoną aplikację?</string>
+  <string name="sizer_message_delete_multi">Czy na pewno chcesz usunąć zaznaczone aplikacje?</string>
   <string name="btn_delete">Usuń wybrane aplikacje!</string>
+  <string name="delete_progress_title">Usuwanie</string>
+  <string name="delete_progress">Wybrane pliki są usuwane, proszę czekać.</string>
   <string name="delete_success">Usunięto</string>
   <string name="delete_fail">Nie można usunąć</string>
   <string name="btn_profile">Profil</string>
@@ -80,6 +88,8 @@
   <string name="sizer_message_filesuccess">Profil utworzony.</string>
   <string name="sizer_message_filefail">Nie można utworzyć profilu.</string>
   <string name="sizer_message_noselect">Nic nie wybrano.</string>
+  <string name="sizer_profile_load">Załaduj profil</string>
+  <string name="sizer_profile_save">Zapisz profil</string>
   <string name="aboutslim_title">SlimRoms</string>
   <string name="devs">Programista</string>
   <string name="slim_website_title">Strona projektu Slim</string>
@@ -91,5 +101,10 @@
   <string name="slim_source_title">Źródło SLIM</string>
   <string name="slim_source_summary">Romy SLIM są w pełni otwartym źródłem.\nŹródło: github.com/SlimRoms</string>
   <string name="no_irc">Nie znaleziono aplikacji SlimIRC.</string>
+  <string name="no_irc_unofficial">SlimIRC nie jest dostępny na nieoficjalnych wersjach.</string>
   <string name="center_summary"><b>SlimCenter</b> dostarcza narzędzia i informacje, które pomogą ulepszyć twoje doświadczenia z Romem. Aktualizuj automatycznie do najnowszej wersji przez <b>SlimOTA</b> i usuwaj niepotrzebne aplikacje systemowe z <b>SlimSizer</b></string>
+  <string name="slim_bugreport">Raport o błędzie</string>
+  <string name="slim_bugreport_summary">Utwórz kompletny raport o błędzie.</string>
+  <string name="report_infosuccess">System utworzył  raport, dostarcz go zespołowi SlimRoms poprzez dołączenie go do raportu o błędzie! Możesz znaleźć plik zip na karcie SD w katalogu o nazwie \"Slim\".</string>
+  <string name="report_infofail">Nie udało się utworzyć raportu błędu, spróbuj ponownie.</string>
 </resources>

@@ -32,6 +32,8 @@
   <string name="error_reading_title">Σφάλμα ανάγνωσης ρυθμίσεων SlimOTA</string>
   <string name="update_file_title">Ενημέρωση:</string>
   <string name="ota_title">SlimOTA</string>
+  <string name="reboot">Όλα έγιναν! Επανεκκινήστε τη συσκευή σας τώρα.</string>
+  <string name="reboot_ok">Επανεκκίνηση τώρα</string>
   <string name="settings_title">Ρυθμίσεις SlimOTA</string>
   <string name="about_title">Σχετικά</string>
   <string name="update_interval_title">Περίοδος αυτόματου ελέγχου ενημερώσεων</string>
@@ -85,6 +87,7 @@
   <string name="sizer_message_filesuccess">Το προφίλ δημιουργήθηκε.</string>
   <string name="sizer_message_filefail">Αδυναμία δημιουργίας προφιλ.</string>
   <string name="sizer_message_noselect">Κενή επιλογή.</string>
+  <string name="sizer_profile_save">Αποθήκευση προφίλ</string>
   <string name="aboutslim_title">SlimRoms</string>
   <string name="devs">Προγραμματιστής</string>
   <string name="slim_website_title">Ιστότοπος Slim</string>

@@ -38,12 +38,12 @@
   <string name="settings_title">SlimOTA-Einstellungen</string>
   <string name="about_title">Über</string>
   <string name="update_interval_title">Interval für automatische Aktualisierungen</string>
-  <string name="update_interval_summary">Wählen Sie einen Interval für die automatischen Aktualisierungen</string>
+  <string name="update_interval_summary">Wählen Sie ein Interval für die automatische Prüfung auf Aktualisierungen</string>
   <string name="update_interval_day">Alle 24 Stunden</string>
   <string name="update_interval_half_day">Alle 12 Stunden</string>
   <string name="update_interval_hour">Jede Stunde</string>
   <string name="update_interval_disable">Deaktiviert</string>
-  <string name="system_prop_error">Systemeigeschaften können nicht gelesen werden</string>
+  <string name="system_prop_error">Systemeigenschaften können nicht gelesen werden</string>
   <string name="bad_url">Fehler beim Aufrufen der Download URL.\nBitte informieren Sie die Entwickler von SlimROM!</string>
   <string name="menu_update">Suche nach Aktualisierungen</string>
   <string name="toast_text">Suche ROM-Aktualisierungen...</string>
@@ -57,7 +57,7 @@
   <string name="short_cut_faq_title">FAQ</string>
   <string name="short_cut_faq_summary">Zeige Slim FAQ</string>
   <string name="short_cut_news_title">Neuigkeiten</string>
-  <string name="short_cut_news_summary">Lesen Sie aktuelle Neuigkeiten über Slim</string>
+  <string name="short_cut_news_summary">Lesen Sie aktuelle Nachrichten über Slim</string>
   <string name="short_cut_download_title">SlimKat herunterladen</string>
   <string name="short_cut_download_uptodate_summary">SlimKat ROM herunterladen</string>
   <string name="short_cut_download_gapps_title">Gapps herunterladen</string>
@@ -65,7 +65,7 @@
   <string name="notification_message">SlimKat ROM-Aktualisierung verfügbar</string>
   <string name="about_slim_ota">SlimOTA hält Ihre ROM und Gapps\nimmer auf dem neusten Stand</string>
   <string name="about_contact"><a href="http://otaslim.slimroms.net/contact.htm">Kontaktieren Sie uns</a></string>
-  <string name="about_contact_text">Teilen Sie uns mit, was Sie denken\noder geben Sie uns über aufgetretene Probleme und Bugs bescheid</string>
+  <string name="about_contact_text">Sagen Sie uns, was Sie denken\noder teilen Sie uns Probleme und Bugs mit</string>
   <string name="about_license">Open Source Lizenzen</string>
   <string name="about_license_text">SlimOTA App:</string>
   <string name="menu_slimsizer">SlimSizer</string>
@@ -95,7 +95,7 @@
   <string name="slim_website_title">Slim Webseite</string>
   <string name="slim_website_summary">www.slimroms.net\nHier finden Sie alle Nachrichten zu Slim</string>
   <string name="slim_irc_title">SlimIRC</string>
-  <string name="slim_irc_summary">Kommen Sie in unseren IRC-Channell!\nChatten Sie mit dem Slim Team und anderen Nutzern</string>
+  <string name="slim_irc_summary">Treten Sie unserem IRC-Channel bei!\nChatten Sie mit dem Slim Team und anderen Anwendern</string>
   <string name="slim_donate_title">Spenden</string>
   <string name="slim_donate_summary">Spende an SlimRoms</string>
   <string name="slim_source_title">Slim Quellcode</string>
