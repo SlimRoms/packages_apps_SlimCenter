@@ -34,6 +34,7 @@
   <string name="ota_title">SlimOTA</string>
   <string name="reboot">Όλα έγιναν! Επανεκκινήστε τη συσκευή σας τώρα.</string>
   <string name="reboot_ok">Επανεκκίνηση τώρα</string>
+  <string name="reboot_cancel">Μη επανεκκίνηση</string>
   <string name="settings_title">Ρυθμίσεις SlimOTA</string>
   <string name="about_title">Σχετικά</string>
   <string name="update_interval_title">Περίοδος αυτόματου ελέγχου ενημερώσεων</string>
@@ -87,6 +88,7 @@
   <string name="sizer_message_filesuccess">Το προφίλ δημιουργήθηκε.</string>
   <string name="sizer_message_filefail">Αδυναμία δημιουργίας προφιλ.</string>
   <string name="sizer_message_noselect">Κενή επιλογή.</string>
+  <string name="sizer_profile_load">Φόρτωση προφίλ</string>
   <string name="sizer_profile_save">Αποθήκευση προφίλ</string>
   <string name="aboutslim_title">SlimRoms</string>
   <string name="devs">Προγραμματιστής</string>
@@ -99,6 +101,7 @@
   <string name="slim_source_title">Κώδικας Slim</string>
   <string name="slim_source_summary">Οι SlimRoms ειναι πλήρως ανοιχτού κώδικα.\nΠηγαίος κώδικας στο github.com/SlimRoms</string>
   <string name="no_irc">Η εφαρμογή SlimIRC δέν βρέθηκε.</string>
+  <string name="no_irc_unofficial">SlimIRC δεν είναι διαθέσιμη σε ανεπίσημες κατασκευές.</string>
   <string name="center_summary">Το <b>SlimCenter</b> παρέχει εργαλεία &amp; πληροφορίες για να βελτιώσει την εμπειρία σας με τις SlimRoms. Ενημερώστε αυτόματα στην τελευταία έκδοση της ROM μας με το <b>SlimOTA</b> και αφαιρέστε ανεπιθύμητες εφαρμογές συστήματος με το <b>SlimSizer</b></string>
   <string name="slim_bugreport">Αναφορά Σφάλματος</string>
   <string name="slim_bugreport_summary">Δημιουργήστε πλήρη αναφορά σφάλματος.</string>

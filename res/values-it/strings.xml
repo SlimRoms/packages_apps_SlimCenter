@@ -88,6 +88,8 @@
   <string name="sizer_message_filesuccess">Profilo creato.</string>
   <string name="sizer_message_filefail">Creazione profilo non riuscita.</string>
   <string name="sizer_message_noselect">Nessuna selezione.</string>
+  <string name="sizer_profile_load">Carica profilo</string>
+  <string name="sizer_profile_save">Salva profilo</string>
   <string name="aboutslim_title">SlimRoms</string>
   <string name="devs">Sviluppatori</string>
   <string name="slim_website_title">Sito web Slim</string>
