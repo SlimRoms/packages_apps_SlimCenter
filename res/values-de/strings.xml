@@ -76,7 +76,7 @@
   <string name="cancel">Abbrechen</string>
   <string name="sizer_message_delete">Sind Sie sicher, dass Sie diese App entfernen möchten?</string>
   <string name="sizer_message_delete_multi_one">Sind Sie sicher, dass Sie die ausgewählte App entfernen möchten?</string>
-  <string name="sizer_message_delete_multi">Sind Sie sicher, dass Sie ausgewählte Apps entfernen möchten?</string>
+  <string name="sizer_message_delete_multi">Sind Sie sicher, dass Sie die ausgewählten Apps löschen möchten?</string>
   <string name="btn_delete">Ausgewählte Apps werden nun gelöscht!</string>
   <string name="delete_progress_title">Löschen</string>
   <string name="delete_progress">Ausgewählte Apps werden gelöscht. Bitte warten.</string>

@@ -31,6 +31,10 @@
   <string name="no_data_title">Datové připojení není k dispozici</string>
   <string name="error_reading_title">Nelze přečíst vlastnosti SlimOTA</string>
   <string name="update_file_title">Aktualizace:</string>
+  <string name="ota_title">SlimOTA</string>
+  <string name="reboot">Vše je hotovo! Nyní restartujte zařízení.</string>
+  <string name="reboot_ok">Restartovat nyní</string>
+  <string name="reboot_cancel">Restartovat později</string>
   <string name="settings_title">Nastavení SlimOTA</string>
   <string name="about_title">O aplikaci</string>
   <string name="update_interval_title">Interval automatické kontroly aktualizací</string>
@@ -71,7 +75,11 @@
   <string name="sizer_message_startup">Tento nástroj umožňuje odstranit systémové aplikace. Používejte jej s opatrností a odstraňujte pouze aplikace, které můžou být bezpečně odebrány.</string>
   <string name="cancel">Zrušit</string>
   <string name="sizer_message_delete">Opravdu chcete smazat tuto aplikaci?</string>
+  <string name="sizer_message_delete_multi_one">Jste si jisti, že chcete odstranit vybranou aplikaci?</string>
+  <string name="sizer_message_delete_multi">Jste si jisti, že chcete odstranit vybrané aplikace?</string>
   <string name="btn_delete">Smazat vybrané aplikace</string>
+  <string name="delete_progress_title">Odstraňování</string>
+  <string name="delete_progress">Vybrané soubory jsou odstraňovány, počkejte prosím.</string>
   <string name="delete_success">Smazáno</string>
   <string name="delete_fail">Nelze smazat</string>
   <string name="btn_profile">Profil</string>
@@ -80,6 +88,8 @@
   <string name="sizer_message_filesuccess">Profil vytvořen.</string>
   <string name="sizer_message_filefail">Nepodařilo se vytvořit profil.</string>
   <string name="sizer_message_noselect">Nic není vybráno.</string>
+  <string name="sizer_profile_load">Načíst profil</string>
+  <string name="sizer_profile_save">Uložit profil</string>
   <string name="aboutslim_title">SlimRoms</string>
   <string name="devs">Vývojář</string>
   <string name="slim_website_title">Slim webstránka</string>
@@ -91,5 +101,10 @@
   <string name="slim_source_title">Slim Zdroj</string>
   <string name="slim_source_summary">SlimRoms jsou zcela open source.\nZdroje najdete na github.com/SlimRoms</string>
   <string name="no_irc">SlimIRC aplikace nenalezena.</string>
+  <string name="no_irc_unofficial">SlimIRC není k dispozici na neoficiálních sestaveních.</string>
   <string name="center_summary"><b>SlimCenter</b> poskytuje nástroje a informace, které pomohou učinit vaše zkušenosti se SlimRoms ještě lepší. Automaticky aktualizujte na nejnovější verzi naší ROM pomocí <b>SlimOTA</b> a odstraňte nežádoucí systémové aplikace <b>SlimSizerem</b></string>
+  <string name="slim_bugreport">Hlášení chyb</string>
+  <string name="slim_bugreport_summary">Vytvořit kompletní hlášení o chybách.</string>
+  <string name="report_infosuccess">Systémové hlášení vytvořeno, poskytněte ho týmu SlimRoms připojením k hlášení o chybách! Tento ZIP soubor můžete nalézk na SD kartě ve složce \"Slim\".</string>
+  <string name="report_infofail">Nepodařilo se vytvořit hlášení o chybách, opakujte akci.</string>
 </resources>
