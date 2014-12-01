@@ -24,12 +24,14 @@
   <string name="version_title">Verzió:</string>
   <string name="file_name_title">Fájl:</string>
   <string name="curVer">Jelenlegi verzió</string>
+  <string name="ok">Ok</string>
   <string name="title_update">Frissítés</string>
   <string name="device_info_title">Eszköz információ</string>
   <string name="up_to_date_title">A rendszer naprakész</string>
   <string name="no_data_title">Nincs elérhető adatkapcsolat</string>
   <string name="error_reading_title">Nem olvasható a SlimOTA tulajdonság</string>
   <string name="update_file_title">Frissítés:</string>
+  <string name="ota_title">SlimOTA</string>
   <string name="reboot">Minden kész! Indítsd újra a készüléket.</string>
   <string name="reboot_ok">Újra indítás most</string>
   <string name="reboot_cancel">Ne induljon újra</string>
@@ -68,6 +70,7 @@
   <string name="about_license_text">SlimCenter alklamazás:</string>
   <string name="menu_slimsizer">SlimSizer</string>
   <string name="listsystem">lista</string>
+  <string name="sizer_title">SlimSizer</string>
   <string name="caution">Vigyázat!</string>
   <string name="sizer_message_startup">Ezzel az eszközzel törölheti a rendszer szintű programokat. Kérjük, óvatosan használja és csak olyan applikációkat töröljön, amelyek biztonsággal eltávolíthatók.</string>
   <string name="cancel">Mégsem</string>
@@ -85,6 +88,8 @@
   <string name="sizer_message_filesuccess">Profil létrehozva.</string>
   <string name="sizer_message_filefail">A profil létrehozása nem sikerült.</string>
   <string name="sizer_message_noselect">Semmi sincs kiválasztva.</string>
+  <string name="sizer_profile_load">Profil betöltése</string>
+  <string name="sizer_profile_save">profil mentése</string>
   <string name="aboutslim_title">SlimRoms</string>
   <string name="devs">Fejlesztő</string>
   <string name="slim_website_title">Slim Weboldal</string>
@@ -96,6 +101,7 @@
   <string name="slim_source_title">Slim Forrás</string>
   <string name="slim_source_summary">SlimRoms teljesen nyílt forrású.\nForrás: github.com/SlimRoms</string>
   <string name="no_irc">SlimIRC alkalmazás nem található.</string>
+  <string name="no_irc_unofficial">SlimIRC nem áll rendelkezése a nem hivatalos építésű ROM-nál</string>
   <string name="center_summary"><b>SlimCenter</b> eszközők &amp; információk melyek segítenek jobban élvezni a SlimRoms-t. Automatikus frissítés az újabb ROM verzióra a <b>SlimOTA</b> segítségével és eltávolithatod a szükségtelen alkalmazásokat a  <b>SlimSizer</b>  használatával.</string>
   <string name="slim_bugreport">Hibajelentés</string>
   <string name="slim_bugreport_summary">Teljes hibajelentés készítése.</string>
