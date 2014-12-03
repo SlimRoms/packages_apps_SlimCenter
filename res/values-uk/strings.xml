@@ -48,11 +48,7 @@
   <string name="short_cut_faq_summary">Показати Slim FAQ</string>
   <string name="short_cut_news_title">Новини</string>
   <string name="short_cut_news_summary">Читайте про останні новини Slim</string>
-  <string name="short_cut_download_title">Завантажити SlimKat</string>
-  <string name="short_cut_download_uptodate_summary">Завантажити SlimKat ROM</string>
   <string name="short_cut_download_gapps_title">Завантажити gapps</string>
-  <string name="short_cut_download_gapps_summary">Завантажити аддони до SlimKat</string>
-  <string name="notification_message">Доступна SlimKat ROM oновлення</string>
   <string name="about_license">Open source ліцензії</string>
   <string name="listsystem">Список</string>
   <string name="caution">Увага!</string>

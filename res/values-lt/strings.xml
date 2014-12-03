@@ -47,18 +47,13 @@
   <string name="short_cut_release_title">Susiję su ROM</string>
   <string name="short_cut_changelog_title">Pakeitimų sąrašas</string>
   <string name="short_cut_changelog_summary_update_available">Svarbu!!! Įdėmiai perskaitykite pakeitimų sąrašą ir diegimo instrukcijas</string>
-  <string name="short_cut_download_summary_update_available">Galimas SlimKat atnaujinimas. Atsisiųsti čia!</string>
   <string name="short_cut_changelog_summary">Rodyti pakeitimų sąrašus ir diegimo instrukcijas</string>
   <string name="short_cut_additional_title">Papildomas</string>
   <string name="short_cut_faq_title">DUK</string>
   <string name="short_cut_faq_summary">Rodyti Slim DUK</string>
   <string name="short_cut_news_title">Naujienos</string>
   <string name="short_cut_news_summary">Skaityti Slim naujienas</string>
-  <string name="short_cut_download_title">Atsisiųsti SlimKat</string>
-  <string name="short_cut_download_uptodate_summary">Atsisiųsti SlimKat ROM</string>
   <string name="short_cut_download_gapps_title">Atsisiųsti Google programėles</string>
-  <string name="short_cut_download_gapps_summary">Atsisiųsti SlimKat papildinių paketus</string>
-  <string name="notification_message">Galimas SlimKat ROM atnaujinimas</string>
   <string name="about_slim_ota">SlimOTA leidžia jums visada turėti \nnaujausią programinę įrangą</string>
   <string name="about_contact"><a href="http://otaslim.slimroms.net/contact.htm">Contact us</a></string>
   <string name="about_contact_text">Rašykite atsiliepimus \narba praneškite apie klaidas</string>

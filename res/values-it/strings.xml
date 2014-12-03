@@ -51,18 +51,18 @@
   <string name="short_cut_release_title">ROM info</string>
   <string name="short_cut_changelog_title">Changelog</string>
   <string name="short_cut_changelog_summary_update_available">Importante! Leggi il changelog e le istruzioni di installazione attentamente.</string>
-  <string name="short_cut_download_summary_update_available">Nuovo aggiornamento della ROM disponibile. Scaricalo qui!</string>
+  <string name="short_cut_download_summary_update_available">Nuovo aggiornamento SlimRom disponibile. Scarica qui!</string>
   <string name="short_cut_changelog_summary">Mostra changelog e istruzioni di installazione</string>
   <string name="short_cut_additional_title">Aggiuntive</string>
   <string name="short_cut_faq_title">FAQ</string>
   <string name="short_cut_faq_summary">Visualizza Slim FAQ</string>
   <string name="short_cut_news_title">News</string>
   <string name="short_cut_news_summary">Leggi le ultime notizie sulla Slim</string>
-  <string name="short_cut_download_title">Download Slim ROM</string>
-  <string name="short_cut_download_uptodate_summary">Download Slim ROM</string>
+  <string name="short_cut_download_title">Scarica SlimRom</string>
+  <string name="short_cut_download_uptodate_summary">Scarica SlimRom</string>
   <string name="short_cut_download_gapps_title">Download GApps</string>
-  <string name="short_cut_download_gapps_summary">Download del pacchetto GApps</string>
-  <string name="notification_message">Aggiornamento Slim ROM disponibile</string>
+  <string name="short_cut_download_gapps_summary">Scarica pacchetti Slim GApps</string>
+  <string name="notification_message">Aggiornamento SlimRom disponibile</string>
   <string name="about_slim_ota">SlimCenter ti permette di gestire facilmente\n la tua ROM!</string>
   <string name="about_contact"><a href="http://otaslim.slimroms.net/contact.htm">Contattaci</a></string>
   <string name="about_contact_text">Dicci cosa pensi o segnalaci un bug o problema</string>
@@ -88,6 +88,8 @@
   <string name="sizer_message_filesuccess">Profilo creato.</string>
   <string name="sizer_message_filefail">Creazione profilo non riuscita.</string>
   <string name="sizer_message_noselect">Nessuna selezione.</string>
+  <string name="sizer_profile_load">Carica profilo</string>
+  <string name="sizer_profile_save">Salva profilo</string>
   <string name="aboutslim_title">SlimRoms</string>
   <string name="devs">Sviluppatori</string>
   <string name="slim_website_title">Sito web Slim</string>

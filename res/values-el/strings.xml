@@ -32,6 +32,9 @@
   <string name="error_reading_title">Σφάλμα ανάγνωσης ρυθμίσεων SlimOTA</string>
   <string name="update_file_title">Ενημέρωση:</string>
   <string name="ota_title">SlimOTA</string>
+  <string name="reboot">Όλα έγιναν! Επανεκκινήστε τη συσκευή σας τώρα.</string>
+  <string name="reboot_ok">Επανεκκίνηση τώρα</string>
+  <string name="reboot_cancel">Μη επανεκκίνηση</string>
   <string name="settings_title">Ρυθμίσεις SlimOTA</string>
   <string name="about_title">Σχετικά</string>
   <string name="update_interval_title">Περίοδος αυτόματου ελέγχου ενημερώσεων</string>
@@ -48,18 +51,18 @@
   <string name="short_cut_release_title">Σχετικά με τη ROM</string>
   <string name="short_cut_changelog_title">Αρχείο αλλαγών</string>
   <string name="short_cut_changelog_summary_update_available">Σημαντικό!!! Διαβάστε το αρχείο αλλαγών και τις οδηγίες εγκατάστασης με προσοχή</string>
-  <string name="short_cut_download_summary_update_available">Νέα ενημέρωση SlimKat ROM διαθέσιμη. Κατεβάστε εδώ!</string>
+  <string name="short_cut_download_summary_update_available">Νέα διαθέσιμη ενημερωμένη έκδοση SlimRom. Κατεβάστε εδώ!</string>
   <string name="short_cut_changelog_summary">Προβολή αρχείου αλλαγών και οδηγιών εγκατάστασης</string>
   <string name="short_cut_additional_title">Έξτρα</string>
   <string name="short_cut_faq_title">FAQ</string>
   <string name="short_cut_faq_summary">Προβολή Slim FAQ</string>
   <string name="short_cut_news_title">Νέα</string>
   <string name="short_cut_news_summary">Διαβάστε τα τελευταία νέα της Slim</string>
-  <string name="short_cut_download_title">Λήψη SlimKat</string>
-  <string name="short_cut_download_uptodate_summary">Κατεβάστε τη SlimKat ROM</string>
+  <string name="short_cut_download_title">Κατεβάστε SlimRom</string>
+  <string name="short_cut_download_uptodate_summary">Κατεβάστε SlimRom</string>
   <string name="short_cut_download_gapps_title">Λήψη gapps</string>
-  <string name="short_cut_download_gapps_summary">Λήψη SlimKat addon packages</string>
-  <string name="notification_message">Διαθέσιμη ενημέρωση SlimKat ROM</string>
+  <string name="short_cut_download_gapps_summary">Κατεβάστε πρόσθετα πακέτα SlimRoms</string>
+  <string name="notification_message">Διαθέσιμη ενημερωμένη έκδοση SlimRom</string>
   <string name="about_slim_ota">Το SlimCenter επιτρέπει την εύκολη διαχείρηση\n ROM σας!</string>
   <string name="about_contact"><a href="http://otaslim.slimroms.net/contact.htm">Επικοινωνήστε μαζί μας</a></string>
   <string name="about_contact_text">Πείτε μας τι σκέφτεστε\nενημερώστε μας σχετικα με κάποιο πρόβλημα ή σφάλμα </string>
@@ -85,6 +88,8 @@
   <string name="sizer_message_filesuccess">Το προφίλ δημιουργήθηκε.</string>
   <string name="sizer_message_filefail">Αδυναμία δημιουργίας προφιλ.</string>
   <string name="sizer_message_noselect">Κενή επιλογή.</string>
+  <string name="sizer_profile_load">Φόρτωση προφίλ</string>
+  <string name="sizer_profile_save">Αποθήκευση προφίλ</string>
   <string name="aboutslim_title">SlimRoms</string>
   <string name="devs">Προγραμματιστής</string>
   <string name="slim_website_title">Ιστότοπος Slim</string>
@@ -96,6 +101,7 @@
   <string name="slim_source_title">Κώδικας Slim</string>
   <string name="slim_source_summary">Οι SlimRoms ειναι πλήρως ανοιχτού κώδικα.\nΠηγαίος κώδικας στο github.com/SlimRoms</string>
   <string name="no_irc">Η εφαρμογή SlimIRC δέν βρέθηκε.</string>
+  <string name="no_irc_unofficial">SlimIRC δεν είναι διαθέσιμη σε ανεπίσημες κατασκευές.</string>
   <string name="center_summary">Το <b>SlimCenter</b> παρέχει εργαλεία &amp; πληροφορίες για να βελτιώσει την εμπειρία σας με τις SlimRoms. Ενημερώστε αυτόματα στην τελευταία έκδοση της ROM μας με το <b>SlimOTA</b> και αφαιρέστε ανεπιθύμητες εφαρμογές συστήματος με το <b>SlimSizer</b></string>
   <string name="slim_bugreport">Αναφορά Σφάλματος</string>
   <string name="slim_bugreport_summary">Δημιουργήστε πλήρη αναφορά σφάλματος.</string>
