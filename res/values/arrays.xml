@@ -32,8 +32,8 @@
     </string-array>
 
     <string-array name="slimsizer_profile_array" translatable="false">
-        <item>>@string/sizer_profile_load</item>
-        <item>>@string/sizer_profile_save</item>
+        <item>@string/sizer_profile_load</item>
+        <item>@string/sizer_profile_save</item>
     </string-array>
 
 </resources>
