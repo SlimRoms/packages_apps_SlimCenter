@@ -46,7 +46,7 @@
   <string name="system_prop_error">Systemeigenschaften können nicht gelesen werden</string>
   <string name="bad_url">Download-Bereich ist nicht erreichbar.\nBitte informieren Sie die Entwickler von SlimROM!</string>
   <string name="menu_update">Jetzt nach Aktualisierung suchen</string>
-  <string name="toast_text">Suche ROM-Aktualisierungen...</string>
+  <string name="toast_text">Suche nach ROM-Aktualisierungen, bitte warten.</string>
   <string name="toast_no_data_text">Keine Datenverbindung. Bitte einschalten!</string>
   <string name="short_cut_release_title">ROM abhängig</string>
   <string name="short_cut_changelog_title">Änderungsprotokoll</string>

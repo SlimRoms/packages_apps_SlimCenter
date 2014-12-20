@@ -88,6 +88,8 @@
   <string name="sizer_message_filesuccess">Profil créé.</string>
   <string name="sizer_message_filefail">Impossible de créer le profil.</string>
   <string name="sizer_message_noselect">Rien n\'est sélectionné.</string>
+  <string name="sizer_profile_load">Charger le profil</string>
+  <string name="sizer_profile_save">Enregistrer le profil</string>
   <string name="aboutslim_title">SlimRoms</string>
   <string name="devs">Développeur</string>
   <string name="slim_website_title">Site web Slim</string>
@@ -99,6 +101,7 @@
   <string name="slim_source_title">Slim Source</string>
   <string name="slim_source_summary">Les SlimRoms sont entièrement open source.\nSource sur github.com/SlimRoms</string>
   <string name="no_irc">SlimIRC App introuvable.</string>
+  <string name="no_irc_unofficial">SlimIRC n\'est pas disponible sur les versions non officielles.</string>
   <string name="center_summary"><b>SlimCenter</b> fournit des outils et des informations pour aider à rendre votre expérience avec SlimRoms encore meilleure. Mettez automatiquement à jour vers la dernière version de notre ROM avec SlimOTA et supprimez des applications système non désirées avec SlimSizer</string>
   <string name="slim_bugreport">Rapport de bug</string>
   <string name="slim_bugreport_summary">Créer un rapport de bug complet.</string>
