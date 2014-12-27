@@ -24,12 +24,14 @@
   <string name="version_title">Версія:</string>
   <string name="file_name_title">Файл:</string>
   <string name="curVer">Актуальна версія</string>
+  <string name="ok">OK</string>
   <string name="title_update">Оновлення</string>
   <string name="device_info_title">Відомості про пристрій</string>
   <string name="up_to_date_title">Ваша система є актуальна</string>
   <string name="no_data_title">Немає підключення</string>
   <string name="error_reading_title">Не вдалося прочитати властивості SlimOTA</string>
   <string name="update_file_title">Оновлення:</string>
+  <string name="ota_title">SlimOTA</string>
   <string name="settings_title">Параметри SlimOTA</string>
   <string name="about_title">Про SlimOTA</string>
   <string name="update_interval_title">Інтервал перевірки автоматичного оновлення</string>
@@ -48,7 +50,11 @@
   <string name="short_cut_faq_summary">Показати Slim FAQ</string>
   <string name="short_cut_news_title">Новини</string>
   <string name="short_cut_news_summary">Читайте про останні новини Slim</string>
+  <string name="short_cut_download_title">Завантажити SlimRom</string>
+  <string name="short_cut_download_uptodate_summary">Завантажити SlimRom</string>
   <string name="short_cut_download_gapps_title">Завантажити gapps</string>
+  <string name="short_cut_download_gapps_summary">Завантажити додатки для SlimRom</string>
+  <string name="notification_message">Доступне oновлення SlimRom</string>
   <string name="about_license">Open source ліцензії</string>
   <string name="listsystem">Список</string>
   <string name="caution">Увага!</string>
@@ -62,5 +68,6 @@
   <string name="sizer_message_sdnoread">Не вдалося прочитати з SD-карти.</string>
   <string name="sizer_message_filesuccess">Профіль створен.</string>
   <string name="sizer_message_filefail">Не вдалося створити профіль.</string>
-  <string name="sizer_message_noselect">Нічого не є вибрано.</string>
+  <string name="sizer_message_noselect">Нічого не вибрано.</string>
+  <string name="slim_irc_title">SlimIRC</string>
 </resources>
