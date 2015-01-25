@@ -72,13 +72,13 @@
   <string name="listsystem">Liste</string>
   <string name="sizer_title">SlimSizer</string>
   <string name="caution">Vorsicht!</string>
-  <string name="sizer_message_startup">Dieses Tool erlaubt das Entfernen von System Apps. Verwenden Sie es mit Vorsicht und entfernen Sie nur Apps, bei denen Sie sich absolut sicher sind.</string>
+  <string name="sizer_message_startup">Dieses Tool erlaubt das Löschen von System-Apps. Verwenden Sie es mit Vorsicht und löschen Sie nur Apps, von denen Sie sicher wissen, dass sie entfernt werden können.</string>
   <string name="cancel">Abbrechen</string>
   <string name="sizer_message_delete">Sind Sie sicher, dass Sie diese App entfernen möchten?</string>
   <string name="sizer_message_delete_multi_one">Sind Sie sicher, dass Sie die ausgewählte App entfernen möchten?</string>
   <string name="sizer_message_delete_multi">Sind Sie sicher, dass Sie die ausgewählten Apps entfernen möchten?</string>
   <string name="btn_delete">Ausgewählte Apps werden nun gelöscht!</string>
-  <string name="delete_progress_title">Löschen</string>
+  <string name="delete_progress_title">Wird gelöscht</string>
   <string name="delete_progress">Ausgewählte Apps werden gelöscht. Bitte warten.</string>
   <string name="delete_success">Entfernt</string>
   <string name="delete_fail">Entfernen nicht möglich</string>
@@ -93,7 +93,7 @@
   <string name="aboutslim_title">SlimRoms</string>
   <string name="devs">Entwickler</string>
   <string name="slim_website_title">Slim Webseite</string>
-  <string name="slim_website_summary">www.slimroms.net\nHier finden Sie alle Nachrichten zu Slim</string>
+  <string name="slim_website_summary">www.slimroms.net\nHier finden Sie alle Neuigkeiten zu Slim</string>
   <string name="slim_irc_title">SlimIRC</string>
   <string name="slim_irc_summary">Treten Sie unserem IRC-Channel bei!\nChatten Sie mit dem Slim Team und anderen Anwendern</string>
   <string name="slim_donate_title">Spenden</string>
