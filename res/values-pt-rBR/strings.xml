@@ -48,7 +48,7 @@
   <string name="menu_update">Procurar atualizações agora</string>
   <string name="toast_text">Procurando por atualizações da ROM, por favor aguarde.</string>
   <string name="toast_no_data_text">Nenhuma conexão de dados. Por favor, ligue-a</string>
-  <string name="short_cut_release_title">Relacionado com a ROM</string>
+  <string name="short_cut_release_title">Informações da ROM</string>
   <string name="short_cut_changelog_title">Lista de alterações</string>
   <string name="short_cut_changelog_summary_update_available">Importante!!! Leia a lista de alterações e as instruções de instalação cuidadosamente</string>
   <string name="short_cut_download_summary_update_available">Nova atualização da ROM SlimKat disponível. Baixe aqui!</string>
@@ -76,7 +76,7 @@
   <string name="cancel">Cancelar</string>
   <string name="sizer_message_delete">Tem certeza que deseja excluir este aplicativo?</string>
   <string name="sizer_message_delete_multi_one">Tem certeza que deseja excluir o aplicativo selecionado?</string>
-  <string name="sizer_message_delete_multi">Tem certeza que quer excluir as aplicações selecionadas?</string>
+  <string name="sizer_message_delete_multi">Tem certeza que deseja excluir os aplicativos selecionados?</string>
   <string name="btn_delete">Remover aplicativos selecionados agora!</string>
   <string name="delete_progress_title">Excluíndo</string>
   <string name="delete_progress">Os arquivos selecionados estão sendo excluídos, por favor aguarde.</string>
@@ -100,7 +100,7 @@
   <string name="slim_donate_summary">Doar para a equipe SlimRoms</string>
   <string name="slim_source_title">Código fonte Slim</string>
   <string name="slim_source_summary">SlimRoms são totalmente em código aberto.\nCódigo fonte em github.com/SlimRoms</string>
-  <string name="no_irc">Aplicativo SlimIRC não encontrada.</string>
+  <string name="no_irc">Aplicativo SlimIRC não encontrado.</string>
   <string name="no_irc_unofficial">SlimIRC não está disponível em compilações não oficiais.</string>
   <string name="center_summary"><b>SlimCenter</b> fornece ferramentas &amp; informação para ajudar a melhorar ainda mais a sua experiência com Slimroms. Atualize automaticamente para a versão mais recente da nossa ROM com <b>SlimOTA</b> e elimine aplicações de sistema não desejadas com <b>SlimSizer</b>.</string>
   <string name="slim_bugreport">Relatório de erros</string>
